@@ -1,0 +1,493 @@
+%% This is a sample manuscript marked up using the
+%% AASTeX v5.x LaTeX 2e macros.
+
+%% The first piece of markup in an AASTeX v5.x document
+%% is the \documentclass command. LaTeX will ignore
+%% any data that comes before this command.
+
+%% The command below calls the preprint style
+%% which will produce a one-column, single-spaced document.
+%% Examples of commands for other substyles follow. Use
+%% whichever is most appropriate for your purposes.
+%%
+
+%\documentclass[11pt,preprint2]{aastex}
+% manuscript produces a one-column, double-spaced document:
+%\documentclass[manuscript]{aastex}
+%% preprint2 produces a double-column, single-spaced document:
+
+%\documentclass{emulateapj}
+\documentclass[preprint]{aastex}
+
+\usepackage{natbib}
+\usepackage{amsmath}
+\bibliographystyle{apj}
+\usepackage{graphicx}
+
+\newcommand{\IR}{\text{IR}}
+\newcommand{\ir}{\text{IR}}
+\newcommand{\therm}{\text{therm}}
+\newcommand{\cosmo}{\text{cosmo}}
+\newcommand{\fg}{\text{fg}}
+\newcommand{\res}{\text{res}}
+\newcommand{\shot}{\text{shot}}
+\newcommand{\SNR}{\text{SNR}}
+
+
+%% Sometimes a paper's abstract is too long to fit on the
+%% title page in preprint2 mode. When that is the case,
+%% use the longabstract style option.
+
+%% \documentclass[preprint2,longabstract]{aastex}
+
+%% If you want to create your own macros, you can do so
+%% using \newcommand. Your macros should appear before
+%% the \begin{document} command.
+%%
+%% If you are submitting to a journal that translates manuscripts
+%% into SGML, you need to follow certain guidelines when preparing
+%% your macros. See the AASTeX v5.x Author Guide
+%% for information.
+
+%% You can insert a short comment on the title page using the command below.
+
+%\slugcomment{Not to appear in Nonlearned J., 45.}
+
+%% If you wish, you may supply running head information, although
+%% this information may be modified by the editorial offices.
+%% The left head contains a list of authors,
+%% usually a maximum of three (otherwise use et al.).  The right
+%% head is a modified title of up to roughly 44 characters.
+%% Running heads will not print in the manuscript style.
+
+\shorttitle{21cm--Infrared cross correlation experiments}
+\shortauthors{Neben et al.}
+
+%% This is the end of the preamble.  Indicate the beginning of the
+%% paper itself with \begin{document}.
+
+
+
+\begin{document}
+
+\title{Foreground and sensitivity analysis for 21cm/Infrared intensity mapping correlation studies from the Epoch of Reionization}
+
+%% Use \author, \affil, and the \and command to format
+%% author and affiliation information.
+%% Note that \email has replaced the old \authoremail command
+%% from AASTeX v4.0. You can use \email to mark an email address
+%% anywhere in the paper, not just in the front matter.
+%% As in the title, use \\ to force line breaks.
+
+\author{Abraham R. Neben\altaffilmark{1},
+Brian Stalder\altaffilmark{2},
+John L. Tonry\altaffilmark{2},
+Jacqueline N. Hewitt\altaffilmark{1}}
+
+\affil{\altaffilmark{1}MIT Kavli Institute, Massachusetts Institute of Technology, Cambridge, MA, 02139 USA}
+\affil{\altaffilmark{2}Institute for Astronomy, University of Hawaii, 2680 Woodlawn Drive, Honolulu HI 96822}
+
+%% Notice that each of these authors has alternate affiliations, which
+%% are identified by the \altaffilmark after each name.  Specify alternate
+%% affiliation information with \altaffiltext, with one command per each
+%% affiliation.
+
+%% Mark off your abstract in the ``abstract'' environment. In the manuscript
+%% style, abstract will output a Received/Accepted line after the
+%% title and affiliation information. No date will appear since the author
+%% does not have this information. The dates will be filled in by the
+%% editorial office after submission.
+
+\begin{abstract}
+aoeu
+\end{abstract}
+
+\keywords{cosmology: observations --- dark ages, reionization, first stars}
+
+\section{Introduction}
+
+Deep radio and infrared observations are nearing detection of the first stars and galaxies from the cosmic dawn. As such sources form, they are thought to blow out ionized bubbles, eventually merging and reionizing the universe \citep{FurlanettoReview,miguelreview,PritchardLoebReview}. First generation 21\,cm observatories such the Murchison Widefield Array (MWA) \citep{tingay13,mwascience} and the Precision Array for Probing the Epoch of Reionization (PAPER) \citep{parsons14,ali15,PoberPAPER64Heating,DannyMultiRedshift} are setting ever tighter limits on redshifted neutral hydrogen emission from the neutral regions between these bubbles, and the now-underway Hydrogen Epoch of Reionization Array (HERA) \citep{deboer16} is expected to detect and characterize the EOR power spectrum in the coming years. Ultimately, the Square Kilometer Array (SKA) will image the EOR over redshift, revealing the hydrogen reionization history of the universe in detail \citep{ska}. 
+
+At the same time, deeper galaxy redshift surveys are beginning to constrain the reionizing sources themselves. Hubble deep field observations \citep{Bouwens2011,Illingworth2013,Dunlop2013} and cluster lensing surveys are finding tens of galaxies at $6<z<10$ down to UV magnitudes of $M_{AB}\sim-17$, and extremely wide surveys are underway aiming to find rare extremely bright ones ones \citep{Schmidt2014,Trenti2011,Bradley2012}. However, current models require the contribution of far fainter galaxies down to $M_{AB}\sim-13$ \citep{Robertson2013,Alvarez2012} in order to agree with optical depth measurements \citep{planck16} from the cosmic microwave background. Deeper observations with the James Webb Space Telescope (JWST) \citep{Gardner2006} and the Wide Field Infrared Space Telescope (WFIRST) \citep{Spergel2013} will be needed to probe this crucial faint population \citep{Atek2015}.
+
+Infrared intensity mapping offers several advantages compared to surveys. Power spectrum analysis can be sensitive to an EOR component even if the signal-to-noise in individual pixels small, and instead of being limited to the brightst galaxies, intensity mapping is sensitive to the cumulative light from \textit{all} sources. Indeed,  ionizing and Lyman-alpha radiation from EOR galaxies at $z\sim6-8$ redshifts into the near infrared, motivating intensity mapping at micron-scale wavelengths. Working around foregrounds is challenging, though. While early studies suggested angular fluctuations in infrared intensity maps traced EOR galaxies \citep[e.g.,][]{kash1,kash2,kash3}, \citet{kash4} find that given current constraints on the EOR, this is unlikely. In fact, \citet{cooray12,zemcov14} argue that intrahalo light, consisting of tidally stripped stars dispersed throughout host halos, is the best explanation for the observed fluctuation excess over known galaxy populations. This implies that even after significant foreground masking, EOR foreground emission in wide field infrared surveys is of order $10^4$ times brighter than EOR emission at $\sim10'$ scales.
+
+Given these bright foregrounds, cross correlation with 21\,cm maps may in fact be the \textit{only} way to extract the diffuse EOR component of the near infrared background. The synergy is clear: the galaxies sourcing reionization generate strong Ly-$\alpha$ emission, while the neutral regions between them glow at rest frame 21\,cm. On scales larger than typical ionized bubbles, bright spots in IR maps likely correspond to ionized regions, and thus, 21\,cm dark spots, and vice versa, sourcing an anticorrelation seen in EOR simulations by \citet{StarsAndReionization,silva12,mao14,heneka16}. 
+
+A similar anticorrelation on large scales is found by \citet{lidz09,park14} in simulations 21\,cm cross correlation with galaxy surveys, but conducting redshift surveys both wide and deep enough to cross correlate with 21\,cm maps is an  challenge due to the wildly different spatial scales probed by 21\,cm experiments and deep galaxy surveys. The Hubble Ultra Deep Field, for instance, could fit inside a single resolution element in an MWA map. It may be possible to cross-check the ionization environment of deep JWST sources by comparing the brightness temperature in the 21\,cm map \citep{beardsley15}, but even after order $\sim100$\,hour integrations such detections will be near JWST limiting sensitivities \citet{zackrisson11}.
+
+In contrast, intensity allows similar science with shallower observations, though imperfect radio and infrared foreground subtraction will leak largely uncorrelated power into the cross correlation analysis which must be averaged out over large fields of view. Fortunately the planned Transiting Exoplanet Survey Satellite \citep{ricker14} and the proposed SPHEREx mission \citep{ScienceWithSpherex,SpherexWhitePaper} would collect all sky near infrared maps, and many ground-based near infrared surveys with few degree fields such as the Dark Energy Survey \citep{des16}, Pan-STARRS \citep{tonry12}, and the Asteroid Terrestrial-impact Last Alert System (ATLAS) \citep{tonry11} are coming online. In the low frequency radio, the MWA has performed a deep survey of 400 square degrees at high galactic latitude \citep{beardsley16}, and HERA will survey $\sim2000$ square degrees along a zenith strip \citep{dillonmapmaking}. 
+
+With wide and deep surveys on the horizon, we study in this paper the real world prospects of detecting the cross correlation of diffuse 21cm and Ly-alpha emission from the EOR. We begin in Section 1 with a cross correlation analysis of radio and near infrared catalogs, setting upper limits on the level of foreground correlation, the presence of which would mask the cosmological correlation in sufficiently deep images. We then assess the correlation of faint, unresolved emission through a prototype 21cm/IR correlation analysis between wide band MWA and ATLAS images over a 10 degree field of view. After foreground subtraction and masking, we estimate typical foreground residual levels, and synthesize these with noise predictions into a sensitivity analysis for a larger scale image cross correlation experiment. We also make sensitivity predictions for a cube cross correlation experiment, quantifying the required infrared spectral resolution and taking advantage of avoidance of radio foregrounds using the ``EOR window''.
+
+\section{Observations}
+
+The MWA is a low frequency radio interferometer in Western Australia consisting of 128 phased array tiles, each with $\sim20^\circ$ field of view and steerable in few degree increments with a delay line beamformer. We use MWA low frequency radio observations of a quiet field at (RA,Dec)=($0^\circ$,$-30^\circ$) J2000 recorded over a 30.72\,MHz bandwidth centered at 186\,MHz processed by \citet{beardsley16}, corresponding to $z=$6.0--7.3. They form image cubes are formed by stacking 32 hours of calibrated, naturally weighted image cubes reduced using the Fast Holographic Deconvolution\footnote{https://github.com/EoRImaging/FHD}. The image products include the naturally weighted cubes, the synthesized beam cube, and a model cube generated from deconvolved diffuse and point source emission \citep{beardsley16,PattiCatalog1}. We flag the upper and lower 80\,kHz channels in each of 24 coarse channels across the band, and average the remaining channels in frequency to make a broad band image. 
+
+ATLAS is a 0.5\,m (f/2.0) telescope \citep{tonry11} in Hawaii designed to perform a wide field sky survey for near earth asteroids. The detector is a 10.5k $\times$10.5k CCD array (STA-1600), with a pixel scale of 1.86'', with an overall field of view of $5.5^\circ$. We observe in the I band centered spanning $\lambda=$731--881\,nm, corresponding to $z=$5.1--6.3. While this redshift range doesn't exactly match that of our r radio observations, it overlaps sufficiently for our purpose of characterizing the effects of noise foregrounds in 21cm--IR cross correlation experiments.
+
+\subsection{Correlation of resolved foreground sources}
+
+We first ask whether a correlation between resolved low frequency radio and near infrared sources can be seen in our data, and if so, at what level. Given that many infrared sources are AGN, roughly 10\% of which are known to be radio loud, it would not be unexpected to find such a correlation. Indeed, galaxy radio continuum fluxes are known to be correlated with far infrared emission \citep{helou85,dejong85,yun01}, likely due to massive star formation. Such stars emit ionizing radiation which is reprocessed into infrared by dust, and also create HII regions which emit radio synchrotron \citep{xu94}. A secondary radio mechanism is synchrotron radiation from acceleration of cosmic ray electrons in these stars' supernovae. For a 21cm/Ly-alpha correlation experiment we hope the \textit{near} infrared--radio correlation is negligible either intrinsically, or after significant foreground masking and subtraction lest it mask any cosmological correlation.
+
+We study the cross correlation of the MWA radio catalog of \citet{PattiCatalog1} with two different infrared catalogs, both over a 15$^\circ$ field of view centered on (RA,Dec)=($0^\circ$,$-30^\circ$) J2000. The first infrared catalog we consider is from the 3.6\,$\mu$m ALLWISE\footnote{http://wise2.ipac.caltech.edu/docs/release/allwise/} data release of the WISE all sky infrared survey \citep{Wright2010}. We download all sources in our field in the ALLWISE catalog from the NASA/IPAC Infrared Science Archive\footnote{http://irsa.ipac.caltech.edu/applications/Gator/index.html}. The second infrared catalog we use is generated from our own ATLAS observations of this field, using Sextractor\footnote{http://www.astromatic.net/software/sextractor} \citep{sextractor} for deep source finding in $\sim15$\,min stacks. 
+
+In Fig. \ref{fig:irhists} we plot a histogram of source fluxes in each of these three catalogs limited to our field, and in Fig. \ref{fig:irimages} we show images of these catalogs with 5' resolution after various percentile cuts (0--10 \% top row, 0--90 \% middle row, 0--100 \% bottom row). We choose this resolution to match that of the MWA, far coarser than the order arcsecond resolution of the IR surveys. As such, there are far fewer (1927) MWA sources in our field, than there are ALLWISE sources (46 million) or ATLAS sources (0.16 million). We make these images both to study what level of percentile cut removes most of the stars without exposing slight variation in survey depth across the field. Only the 10--90 \% ALLWISE cut passes both criteria, though all the ATLAS and MWA cuts appear to. (Note that many bright sources ($>0.1$\,Jy) were already removed from the ATLAS catalog out of saturation concerns, and so the 0--100 \% image of this catalog is not corrupted by stars.) Also note that the ATLAS catalog images shown in this figure extend only over a 5$^\circ$ field of view, but in our next analysis we use data from four different 5$^\circ$ fields centered on our main field center.
+
+
+\begin{figure}[h]
+\includegraphics[width=6.8in]{images/ir_hists.pdf}
+\caption{5' pixels}
+\label{fig:irhists}
+\end{figure}
+
+
+\begin{figure}[h]
+\includegraphics[width=6.8in]{images/ir_images.pdf}
+\caption{5' pixels}
+\label{fig:irimages}
+\end{figure}
+
+In Fig. \ref{fig:corgrid} we plot the cross correlation between the radio and IR catalogs. We compute the cross correlation as $r=P_{21,\ir}/\sqrt{P_{21}P_{\ir}}$, where all factors are functions of $\ell$. We use Hann windowed FFTs to compute these cross and auto spectra, and compute the error bars assuming zero cross correlation: $\Delta r(\ell) = [(1+r^2)/2N_\ell]^{1/2}$, where $N_\ell$ is the effective number of $\vec{\ell}$ modes in each $\ell$ bin. Our use of a 2D hann window on the images reduces $N_\ell$ by a factor of 4.
+
+We show the cross correlation as a function of $\ell$ for 0--10 \% (top row), 0--90 \% (middle row), and 0--100 \% (bottom row) percentile cuts of the infrared catalog, with the 0--95 \% percentile cuts of the MWA catalog (black lines). No significant correlation is observed between the ATLAS and MWA catalogs (left column), as many of the error bars pass through zero, and there are roughly equal numbers of negative and positive points. We also print the average correlation values and their uncertainties to confirm this. The ALLWISE cross correlation with the MWA catalog (right column) has smaller error bars because the field of view is roughly a factor of four larger, and in fact we observe a significant (6$\sigma$) positive correlation with the 0--90 \% ALLWISE cut. The correlation vanishes if we don't cut out the top 10 \% of sources, as expected given that these are largely stars, and also vanishes if we cut out the upper 90 \% of either ALLWISE or MWA sources. As a further check that this correlation is real, we plot the correlations after flipping the MWA image (faint red) and observe that all non-detections remain non-detections, and the one detection becomes a non-detection. 
+
+\begin{figure}[h]
+\includegraphics[width=6.8in]{images/cor_grid.pdf}
+\caption{aoeuaoeuaoeu}
+\label{fig:corgrid}
+\end{figure}
+
+\section{Correlation of unresolved foreground sources}
+
+We consider here the 3D cross correlation experiment in order to quantify the advantages and disadvantages from the point of view of foregrounds and noise, in comparison to the 2D experiment considered above, and discuss what sort of experiment is needed for its detection. 
+
+We first build intuition by asking how much of an overlap there is in the fourier space probed by 21\,cm and IR cubes from existing and planned experiments. 
+
+Let's first compare the informa 21\,cm and IR intensity mapping experiments to have overlapping 
+
+what we've learned:
+moon
+stacking to mitigate airglow flucts
+per-night flat fielding to mitigate amp-region errors
+current limits % https://www.evernote.com/shard/s316/nl/2147483647/d4684946-3f99-4458-9f8d-280a0951b921/
+MWA model averaging % https://www.evernote.com/shard/s316/nl/2147483647/bd9fe7eb-69a8-4b57-8e3a-15389f86da44/
+ IR poly subtraction
+ 
+ todo:
+ deeper, non-dithered observations, without moon
+ repeated on two consecutive nights to compute cross correlation vs ell
+ this FG residual level is input to 2D sensitivity study
+
+
+\section{2D sensitivity study}
+done:
+still waiting on Marta's model cubes
+2D thermal and photon shot noise calculations
+relation between kperp and ell
+
+todo:
+
+\section{3D sensitivity study}
+
+what is our general strategy here
+why not use silva cubes/results
+assume perfect correlation
+
+2D k space overlap
+
+MWA sensitivity math
+IR shot noise math
+
+cross and auto spectrum sensitivity results, with and without wedge
+
+\begin{figure}[h]
+\includegraphics[width=6.25in]{images/kspace_overlap.pdf}
+\caption{aoeuaoeuaoeu}
+\label{fig:corgrid}
+\end{figure}
+
+\begin{figure}[h]
+\includegraphics[width=7in]{images/cross_and_auto_sensitivity.pdf}
+\caption{aoeuaoeuaoeu}
+\label{fig:corgrid}
+\end{figure}
+
+
+done:
+3D thermal and photon shot noise calculations
+auto spectrum sensitivities
+xspec sensitivity % https://www.evernote.com/shard/s316/nl/2147483647/9dbae53e-0733-4a9d-80ba-5f6bf3136694/
+opt/pess
+wedgecut
+cf adam's sensitivity study % https://www.evernote.com/shard/s316/nl/2147483647/d29aae66-7877-438a-be8a-73f6b82b6282/
+
+todo:
+still waiting on Marta's model cubes
+evaluate SNRs for current/proposed expts % https://www.evernote.com/shard/s316/nl/2147483647/fff4c996-31a3-4b2f-8fb1-4e2a1d164e11/
+
+
+
+
+
+
+\section{Power spectra of foreground residuals}
+
+introduction:
+	brief reminder of why need to do an analysis of foreground auto power spectra,
+	they go into the sensitivity analysis
+	they tell us about foreground subtraction and masking
+
+\subsection{Power spectrum conventions}
+\label{sec:pspecconventions}
+
+We define the 3D power spectrum $P(\vec{k})$ of the image cube $I(x,y,z)$ following \citet{ewallwice14} as 
+\begin{equation}
+	P(\vec{k}) = \frac{\langle|\tilde{I}(\vec{k})|^2\rangle}{V}
+\end{equation}
+where
+\begin{equation}
+	\tilde{I}(\vec{k})=dV\sum_{\vec{x}}I(\vec{x})e^{i\vec{k}\cdot\vec{x}}
+\end{equation}
+and $V$ is the survey volume and $dV$ is the voxel size.
+
+Similarly, over narrow fields of view, the spherical power spectrum $C_\ell$ of an image $I(\vec{\theta})$ can be shown to be approximately
+\begin{equation}
+\label{eqn:Cldef0}
+	C(\vec{\ell}) = \frac{\langle|\tilde{I}(\vec{\ell})|^2\rangle}{\Omega} 
+\end{equation}
+where
+\begin{equation}
+	\tilde{I}(\vec{\ell})=d\Omega\sum_{\vec{\theta}}I(\vec{\theta})e^{i\vec{\ell}\cdot\vec{\theta}}
+\end{equation}
+and $\Omega$ is the survey solid angle and $d\Omega$ is the pixel size. Thus, we need only evaluate a fourier transform in order to estimate $C_\ell$ over a narrow field of view. Writing this out in detail, we find 
+\begin{equation}
+\label{eqn:Cldef}
+	C(\ell(a,b))=\left\langle\left|\sum_{m,n}I(m,n)\exp\left(-\frac{2\pi i}{N}  (am+bn)\right)\right|^2\right\rangle\frac{d\theta^2}{N^2}
+\end{equation}
+where $d\theta^2$ is the pixel solid angle, $N\equiv N_x=N_y$ is number of pixels on a side of a square image, and $\ell=\sqrt{\ell_x^2+\ell_y^2}$, where 
+\begin{eqnarray}
+\ell_x&=&2\pi a/N d\theta \label{eqn:elldef}\\
+\ell_y&=&2\pi b/Nd\theta \label{eqn:elldef2}
+\end{eqnarray}
+Note that $C_\ell$ has the units of $[I(m,n)^2d\theta^2]$. We will generally work with the dimensionally more intuitive power spectrum $\Delta(\ell)$, given by
+\begin{equation}
+	\Delta(\ell)=\sqrt{\frac{\ell^2}{2\pi}C(\ell)}
+\end{equation}
+Note that $\ell$ has units of 1/rad, so $\Delta_\ell$ has the same units as I. In Appendix \ref{sec:pspecrelation} we derive a relation between the 3D power spectrum and the spherical angular power spectrum which we make use of later in this section.
+
+\subsection{21\,cm foreground power spectra}
+\label{sec:pspec21fg}
+
+% why the MWA?
+In this section we perform a wide band power spectrum and foreground analysis on MWA observations. Details on the MWA instrument are given by \citet{tingay13}, but we summarize here the salient details. The MWA is an ideal instrument for a 21\,cm--IR cross correlation experiment owing to its high surface brightness sensitivity and wide field of view, permitting analysis of many sky fourier modes in a short amount of time, necessary for averaging down foreground residuals in the cross spectrum. The array is comprised of 128 antenna tiles, each with $\sim20\,\text{m}^2$ collecting area over $150-200\,$MHz, spread quasi-randomly over a radius of 1.5\,km to achieve nearly complete $uv$ coverage in wide band images even without rotation synthesis. Each tile is a $4\times4$ phased array of dual-polarization bowtie dipoles summed by a delay-line beamformer, whose output beam is steerable in few degree increments across the sky. 
+
+% observations
+SHOULD PROBABLY GIVE THE DATES AND TIMES FOR WHEN THESE DATA WERE COLLECTED
+To assess both the level of systematics and noise in the MWA images and their ramifications for our cross correlation analysis, we perform our power spectrum analysis on observations of four different depths: 2\,min, 26\,min, 3\,hr, and 32\,hr. We use data from the MWA's high band study of its ``EOR0'' deep integration field, centered at $(\text{RA}, \text{Dec})=(0,-27^\circ)$. The two shallower observations are zenith pointed at hour angles centered on 00:00, while the two deeper observations synthesize pointed observations at the EOR0 field center observed from hour angles on either side of 00:00. For simplicity and because we are not sensitivity limited, we only use the EW instrumental polarization.
+
+%wide band power spectrum processing (note related to k//=0 bin of the cube power spectrum, see Appendix)
+Quality control, calibration, and processing into image cubes in described in detail by \citet{beardsley16}. In brief, the COTTER package \citep{AndreMWARFI}, based on AOFlagger\footnote{http://aoflagger.sourceforge.net} \citep{aoflagger} is used for initial identification and flagging of radio frequency interference, as well as time and frequency averaging to 2\,sec and 80\,kHz. Deeper quality cuts are performed using the delay transform \citep{parsons12b} to identify observations with subtle frequency structure due to wide band RFI or instrumental problems. A per-antenna, per-frequency calibration was performed to a sky model based the deep source catalogs of \citet{carroll16} and \citet{mwacs}, restricted such that only polynomial amplitudes and phases are allowed to vary between antennas. 
+
+The calibration is a variant of StEFCal \citep{stefcal}, implemented as part of the Fast Holographic Deconvolution\footnote{https://github.com/EoRImaging/FHD} \citep{fhd} software used for imaging. FHD is run in ``first pass'' mode in which no deconvolution is performed, instead naturally weighted dirty images are produced from the measured and modeled visibilities, respectively, as well as a image of the point spread function (ie, fourier transform of the $uvf$ space sampling function). FHD outputs these ``cubes'' in HEALPix format per frequency. Note that this processing is performed in parallel on ``odd'' and ``even'' data cubes whose data are interleaved in time to allow more leverage on estimating the magnitude of the noise and the noise bias.
+
+From here we average the cubes in frequency, rotate them so the EOR0 field center lies at the north pole, and project the pixels into the $xy$ plane, resulting in an orthographic projection to the plane tangent to  $(\text{RA}, \text{Dec})=(0,-27^\circ)$. We apply uniform weighting by dividing by the absolute value of the fourier transform of the point spread function image, then form the inverse variance weighted power spectrum estimate as
+\begin{equation}
+	C(\ell)=\frac{\sum_{\vec{\ell}}|\tilde{I}_\text{uni}(\vec{\ell})w(\vec{\ell})|^2}{\sum_{\vec{\ell}}|w(\vec{\ell})|^2}
+\end{equation}
+where $w(\vec{\ell})=\text{FT}[I_\text{PSF}(\theta)](\vec{\ell})$. We estimate the thermal noise power spectrum by computing the power spectrum as above but using the odd minus even difference cube which contains only thermal noise.
+
+SHOW THE UNIFORMLY WEIGHTED IMAGE AND THE SAMPLING
+
+%take-aways
+Figure XX shows XNTHOUNSTHESNTUHSNTOHUNETHUNTHEUNOT
+	show both the 2 minute, and the 32 hour, and make the point that just as with IR, averaging is not necessary for noise, but for systematics
+
+\subsection{IR foreground power spectra}
+\label{sec:pspecIRfg}
+
+I band overlaps with the EOR0 high band, but doesn't match exactly
+but that's okay because we are primarily concerned with characterizing the effects of foregrounds in this paper
+
+
+We compute the mean in source-free regions, and find a maximum airglow of roughly $5\times10^3$ kJy/sr across all the observations, of order 19 AB mag/arcsec$^2$. This value is consistent with the worst cases observed in the continuum airglow near $1\mu$m by \citet{sullivan12}.
+
+Appendix \ref{sec:Pshot}
+
+\section{Sensitivity and Experimental Design Study}
+
+Having quantified realistic levels of foreground residuals in current 21\,cm and IR observations, we assess the sensitivity of current experiments to the cosmological cross correlation, and examine what improvements are necessary for unambiguous detection. We first consider the cross spectrum and its renormalized cousin, the cross correlation, as possible statistics to quantify the relation between the 21\,cm and IR fields, and argue for focusing on the cross spectrum in the near term.
+
+\subsection{Cross spectrum vs coherence}
+
+We first extend the definition of the angular power spectrum given in Eqn. \ref{eqn:Cldef0} to the cross spectrum case as
+\begin{equation}
+\label{eqn:Cldefcross}
+	C_{A,B}(\vec{\ell}) = \frac{\langle \tilde{I}_A^*(\vec{\ell})\tilde{I}_B(\vec{\ell})\rangle}{\Omega}
+\end{equation}
+where $A$ and $B$ denote the 21\,cm and the IR fields. The cross spectrum is a quantity which ranges from $-\sqrt{C_{A}(\vec{\ell})C_{B}(\vec{\ell})}$ to $\sqrt{C_{A}(\vec{\ell})C_{B}(\vec{\ell})}$, depending on how correlated or anti-correlated the two fields are. 
+
+The cross spectrum is thus often computed with a different normalization
+\begin{equation}
+\label{eqn:Cldefcross}
+	\rho_{A,B}(\vec{\ell}) = \frac{C_{A,B}(\vec{\ell}) }{\sqrt{C_A(\vec{\ell})  C_B(\vec{\ell}) }}
+\end{equation}
+which equals -1, 0, on 1 in the cases of perfect anti-correlation, zero correlation, or perfect correlation, respectively. We refer to this re-normalized cross correlation as the coherence. The coherence has the advantage of quantifying the percent correlation between the two fields, that is, it is insensitive to a simple rescaling of either field. However, the large foreground residuals afflicting present observations afflicting both auto power spectra will substantially bias the coherence towards zero. 
+
+Another way to say this is that the error bars on the coherence are larger than those on the cross spectrum because we must subtract from each auto power spectrum in the denominator an estimate of the foreground power spectrum \citep{lidz09,furlanettolidz07}. The only physical information likely to be robust against bias is its sign. Given this, we we opt to simply work with the cross spectrum itself from which the same sign information is available.
+
+\subsection{Sensitivity framework}
+
+We adapt the cross spectrum sensitivity results of \citet{lidz09} to our case of measuring the 21\,cm--IR cross spectrum of broadband images with noise and foreground residuals. 
+\begin{equation}
+\label{eqn:sense1}
+	\sigma_{21,\IR}^2(\vec{\ell})=\frac{1}{2}[C^2_{21,\IR}(\vec{\ell})+\sigma_{21}(\vec{\ell})\sigma_{\IR}(\vec{\ell})]
+\end{equation}
+\begin{equation}
+\label{eqn:sense2}
+	\sigma_{21}^2(\vec{\ell})=[C_{21,\cosmo}(\vec{\ell})+C_{21,\fg}(\vec{\ell})+C_{21,\therm}(\vec{\ell})]^2
+\end{equation}
+
+\begin{equation}
+\label{eqn:sense3}
+	\sigma_{\IR}^2(\vec{\ell})=[C_{\IR,\cosmo}(\vec{\ell})+C_{\IR,\fg}(\vec{\ell})+C_{\IR,\shot}(\vec{\ell})]^2
+\end{equation}
+where $\cosmo$ signifies the cosmological component of the signal from the EOR, $\fg$ signifies residual foregrounds, $\therm$ signifies thermal noise in 21\,cm images, and $\shot$ signifies photon shot noise in IR images. 
+
+Though these are the general forms of these equations, we omit the thermal and photon shot noise contributions in the rest of this section, as we have shown them to be negligible in Sections \ref{sec:pspec21fg} and \ref{sec:pspecIRfg}. We also omit the sample variance terms as they become important only in the SNR $\sim1$ regime. 
+
+Now suppose we evaluate the 2D cross spectrum as in Eqn. \ref{eqn:Cldefcross}, and bin it in annuli such that bin $\ell$ contains containing $N_\ell$ $\ell$ cells. Then the noise decreases as
+\begin{equation}
+	\sigma_{21,\IR}^2(\ell) = \frac{\sigma_{21,\IR}^2(\vec{\ell}) }{N_\ell}
+\end{equation}
+
+Then substituting Eqns. \ref{eqn:sense1}-\ref{eqn:sense3} into the above equation and omitting factors of order unity, we find that the signal to noise ratio $\SNR(\ell)$ of the measurement of cross spectrum mode $\ell$ is given by
+\begin{equation}
+	\SNR(\ell) = \sqrt{
+		2N_\ell
+	\left(\frac{C_{21,\cosmo}(\vec{\ell})  }{ C_{21,\fg}(\vec{\ell}) }\right)
+	\left(\frac{C_{\IR,\cosmo}(\vec{\ell})  }{ C_{\IR,\fg}(\vec{\ell}) }\right)
+	}
+\end{equation}
+
+Let us optimize the SNR by using only two bins, $\ell_1=\ell_\text{max}/4$ and $\ell_2=3\ell_\text{max}/4$, where $\ell_\text{max}=\pi/d\theta$ and the cell size is given by $d\ell=2\ell_\text{max}/N=2\pi/\theta_\text{FOV}$. Now let's derive some intuition into $N_\ell$ by writing it as $N_\ell=(\ell_\text{max}/d\ell)^2F_\ell=(\theta_\text{FOV}/2d\theta)^2F_\ell$, where $F_\ell$ is an order unity quantity equal to the fraction of all $\vec{\ell}$ cells included in bin $\ell$.
+
+%\begin{equation}
+%	\SNR(\ell) = \frac{\theta_\text{FOV}}{2d\theta}  \sqrt{2F_\ell
+%	\left(\frac{C_{21,\cosmo}(\vec{\ell})  }{ C_{21,\fg}(\vec{\ell}) }\right)
+%	\left(\frac{C_{\IR,\cosmo}(\vec{\ell})  }{ C_{\IR,\fg}(\vec{\ell}) }\right)
+%	}
+%\end{equation}
+
+\begin{eqnarray}
+	\SNR(\ell)&=&XX \left(\frac{\theta_\text{FOV}}{20^\circ}\right)\left(\frac{5'}{d\theta}\right)\left(\frac{F_\ell}{1}\right)^{1/2}\left(\frac{\alpha_{21}}{0.1}\right)^{1/2}
+\end{eqnarray}
+where the fraction of 21\,cm foregrounds remaining after subtraction is given by $\alpha_{21}\equiv C_{21,\res}/C_{21,\fg}$, and the fraction of IR foregrounds removed by masking is assumed to be XXX. REMEMBER, WE CAN'T MASK OUR WAY TO THE SIGNAL BECAUSE OF THE INTRAHALO
+-LIGHT
+
+
+so there are several ways to increase SNR
+larger field of view
+higher 21cm resolution
+better 21cm FG subtraction
+better IR FG subtraction
+
+
+\section{Cross spectrum results}
+
+
+
+\section{Discussion}
+
+\appendix
+
+\section{Power spectrum of photon shot noise}
+\label{sec:Pshot}
+
+In Sec. \ref{sec:pspecIRfg} we measure the maximum airglow to be $I_\text{air}=5\times10^3$ kJy/sr, and in this appendix we calculate the power spectrum of this photon shot noise. We must observe that the mean number of photons collected by a pixel during each observation is $\langle N_\text{ph}\rangle=I_\text{air}At_\text{int} \Delta f d\theta^2/hf$, where $A=(0.5\,\text{m})^2$ is the collecting area of ATLAS, $t_\text{int}=30\,$sec, $\Delta f$ and $f$ are the frequency bandwidth and center frequency of I band, and $d\theta$ is the pixel size. The passband has $\Delta\lambda=150\,$nm and $\lambda=800\,$nm. 
+
+The shot noise contribution to the power spectrum is given by
+\begin{equation}
+C_{\IR, \shot}(\vec{\ell}) = \left\langle\left|\sum_{m,n}I_\shot(m,n)e^{-2\pi i(ma+nb)/N}\right|^2\right\rangle \frac{d\theta^2}{N^2}
+\end{equation}
+where $I_\shot(m,n)\equiv I(m,n)-\langle I(m,n)\rangle$ denotes the photon shot noise contribution to pixel (m,n), and $N$ is the number of pixels on each side of the square image. Then using the fact that the shot noise is uncorrelated between different pixels, we find
+\begin{equation}
+C_{\IR, \shot}(\vec{\ell}) = \sum_{m,n}\langle I^2_\shot(m,n)\rangle \frac{d\theta^2}{N^2}
+\end{equation}
+Note that $I(m,n)=N_\text{ph}(m,n)hf/\Delta f A t_\text{int}d\theta^2$ and $\langle N_\text{ph}^2\rangle = \langle N_\text{ph}\rangle$, so we have
+\begin{equation}
+C_{\IR, \shot}(\vec{\ell}) = \langle N_\text{ph}\rangle \left(\frac{hf}{\Delta f A t_\text{int}d\theta^2}\right)^2 d\theta^2
+\end{equation}
+
+\begin{equation}
+C_{\IR, \shot}(\vec{\ell}) =\frac{I_\text{air}h\lambda}{\Delta \lambda A t_\text{int}}
+\end{equation}
+
+NOTE THAT $C_\shot$ DECREASES WITH BINNING IN THE CROSS SPECTRUM, BUT NOT IN THE AUTO SPECTRUM!!!!!!!!!!!!!!!!!!!!!!!
+
+\section{Relation between the power spectrum of image cubes and broadband images}
+\label{sec:pspecrelation}
+
+We focus in this paper on the spherical power spectrum of broadband images, $C_\ell$,  instead of that of image cubes, $P(\vec{k})$, as 21\,cm observations have focused on. Here we work out the relation between the two to facilitate comparison with past 21\,cm power spectrum results. In particular, we calculate the scaling factor $B$ relating the purely transverse modes of the power spectrum $P(k_\perp,k_\parallel=0)$ of a image cube $I(\theta_x,\theta_y,f)$ to the spherical power spectrum of a broad band image $C_\ell$ as
+\begin{equation}
+P(k_\perp,k_\parallel=0) = B C_{\ell(k_\perp)}
+\end{equation}
+
+Using the fourier transform convention discussed in Sec. \ref{sec:pspecconventions}, the left side of the equation is given by
+\begin{equation}
+P(k_\perp,k_\parallel=0) = \frac{1}{N_\perp^2 N_\parallel dV}\langle|\tilde{I}(k_x,k_y,k_\parallel=0)|^2\rangle
+\end{equation}
+where $N_\perp\equiv N_x=N_y$ is the number of pixels in each of the two transverse dimensions of the image cube, and $N_\parallel$ is the number of pixels in the line of sight (ie, frequency) dimension. The comoving pixel volume is $dV = (D_c d\theta)^2 (\Delta D_c/N_\parallel)$, where $D_c$ is the line of sight comoving distance from the present day to the center of the cube, and $\Delta D_c$ is the comoving line of sight thickness of the cube. Lastly, recall that $k_\perp$ is related to $k_x$ and $k_y$ as $k_\perp=\sqrt{k_x^2+k_y^2}$.
+
+Now substituting the definition of the fourier transform, we find
+
+\begin{equation}
+P(k_\perp,k_\parallel=0) =\frac{1}{N_\perp^2 N_\parallel dV}\left\langle\left|dV\sum_{\theta_x,\theta_y,f}I(\theta_x,\theta_y,f)e^{iD_c(k_x\theta_x+k_y\theta_y)}\right|^2\right\rangle
+\end{equation}
+
+Simplifying and writing this in terms of the broadband image $I_{\Delta f}(\theta_x,\theta_y)\equiv\frac{1}{N_\parallel}\sum_f  I(\theta_x,\theta_y,f)$, we find
+
+\begin{equation}
+P(k_\perp,k_\parallel=0) =(D_c^2 \Delta D_c)
+\frac{d\theta^2}{N_\perp^2}\left\langle\left|\sum_{\theta_x,\theta_y}I_{\Delta f}(\theta_x,\theta_y)e^{iD_c(k_x\theta_x+k_y\theta_y)}\right|^2\right\rangle
+\end{equation}
+
+Now denote $k_x=a\cdot dk$, $k_y=b\cdot dk$, $\theta_x=m\cdot d\theta$, and $\theta_y=n\cdot d\theta$, where $dk = 1/N_\perp D_c d\theta$. 
+
+\begin{equation}
+P(k_\perp(\ell(a,b)),k_\parallel=0) =(D_c^2 \Delta D_c)
+\frac{d\theta^2}{N_\perp^2}\left\langle\left|\sum_{m,n}I_{\Delta f}(m,n)e^{2\pi i(am + bn)/N_\perp}\right|^2\right\rangle
+\end{equation}
+
+Comparing with Equations \ref{eqn:Cldef}, \ref{eqn:elldef}, and \ref{eqn:elldef2}, we see that $B\equiv P(k_\perp,k_\parallel=0)/ C_{\ell(k_\perp)}=D_c^2 \Delta D_c$ and $\ell=D_c k_\perp$.
+
+%% The reference list follows the main body and any appendices.
+%% Use LaTeX's thebibliography environment to mark up your reference list.
+%% Note \begin{thebibliography} is followed by an empty set of
+%% curly braces.  If you forget this, LaTeX will generate the error
+%% "Perhaps a missing \item?".
+%%
+%% thebibliography produces citations in the text using \bibitem-\cite
+%% cross-referencing. Each reference is preceded by a
+%% \bibitem command that defines in curly braces the KEY that corresponds
+%% to the KEY in the \cite commands (see the first section above).
+%% Make sure that you provide a unique KEY for every \bibitem or else the
+%% paper will not LaTeX. The square brackets should contain
+%% the citation text that LaTeX will insert in
+%% place of the \cite commands.
+
+%% We have used macros to produce journal name abbreviations.
+%% AASTeX provides a number of these for the more frequently-cited journals.
+%% See the Author Guide for a list of them.
+
+%% Note that the style of the \bibitem labels (in []) is slightly
+%% different from previous examples.  The natbib system solves a host
+%% of citation expression problems, but it is necessary to clearly
+%% delimit the year from the author name used in the citation.
+%% See the natbib documentation for more details and options.
+
+%\bibliography{xcor_paper}
+\bibliography{xcor_paper_new}
+
+
+\end{document}

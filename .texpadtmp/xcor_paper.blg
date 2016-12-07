@@ -1,0 +1,121 @@
+This is BibTeX, Version 0.99d (TeX Live 2012)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: /Users/abrahamn/Documents/Physics/papers/xcor_paper/.texpadtmp/xcor_paper.aux
+The style file: ../apj.bst
+Database file #1: ../xcor_paper_new.bib
+Repeated entry---line 1886 of file ../xcor_paper_new.bib
+ : @article{mwascience
+ :                    ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 1895 of file ../xcor_paper_new.bib
+ : @article{tingay13
+ :                  ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2245 of file ../xcor_paper_new.bib
+ : @article{miguelreview
+ :                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2260 of file ../xcor_paper_new.bib
+ : @article{PritchardLoebReview
+ :                             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2693 of file ../xcor_paper_new.bib
+ : @article{tingay13
+ :                  ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2933 of file ../xcor_paper_new.bib
+ : @article{FurlanettoReview
+ :                          ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2946 of file ../xcor_paper_new.bib
+ : @article{miguelreview
+ :                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2961 of file ../xcor_paper_new.bib
+ : @article{PritchardLoebReview
+ :                             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3013 of file ../xcor_paper_new.bib
+ : @article{mwascience
+ :                    ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3359 of file ../xcor_paper_new.bib
+ : @article{MWACS
+ :               ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3394 of file ../xcor_paper_new.bib
+ : @article{parsons12b
+ :                    ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3893 of file ../xcor_paper_new.bib
+ : @article{PritchardLoebReview
+ :                             ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 5004 of file ../xcor_paper_new.bib
+ : @article{FurlanettoReview
+ :                          ,
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 5536 of file ../xcor_paper_new.bib
+ :   
+ :   url =   {http://reionization.org/},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Repeated entry---line 5586 of file ../xcor_paper_new.bib
+ : @article{miguelreview
+ :                      ,
+I'm skipping whatever remains of this entry
+I was expecting an "="---line 5837 of file ../xcor_paper_new.bib
+ :    
+ :    volume = 499,
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Repeated entry---line 6269 of file ../xcor_paper_new.bib
+ : @article{MWACS
+ :               ,
+I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "helou85"
+Warning--I didn't find a database entry for "ewallwice14"
+Warning--I didn't find a database entry for "carroll16"
+Warning--empty publisher in ska
+You've used 59 entries,
+            2988 wiz_defined-function locations,
+            996 strings with 34585 characters,
+and the built_in function-call counts, 37407 in all, are:
+= -- 2101
+> -- 4408
+< -- 10
++ -- 1471
+- -- 1406
+* -- 4127
+:= -- 7549
+add.period$ -- 59
+call.type$ -- 59
+change.case$ -- 362
+chr.to.int$ -- 59
+cite$ -- 60
+duplicate$ -- 1091
+empty$ -- 1578
+format.name$ -- 1621
+if$ -- 6853
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 58
+newline$ -- 181
+num.names$ -- 236
+pop$ -- 365
+preamble$ -- 1
+purify$ -- 362
+quote$ -- 0
+skip$ -- 922
+stack$ -- 0
+substring$ -- 1171
+swap$ -- 14
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 528
+warning$ -- 1
+while$ -- 165
+width$ -- 0
+write$ -- 586
+(There were 17 error messages)
