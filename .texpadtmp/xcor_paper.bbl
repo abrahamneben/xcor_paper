@@ -1,4 +1,4 @@
-\begin{thebibliography}{59}
+\begin{thebibliography}{61}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Ali} {et~al.}(2015){Ali}, {Parsons}, {Zheng}, {Pober}, {Liu},
@@ -148,6 +148,11 @@ Dillon, J.~S., {et~al.} 2015, Phys. Rev. D, 91, 023002
 Dunlop, J.~S., {et~al.} 2013, Monthly Notices of the Royal Astronomical
   Society, 432, 3520
 
+\bibitem[{{Ewall-Wice} {et~al.}(2014){Ewall-Wice}, {Dillon}, {Mesinger}, \&
+  {Hewitt}}]{ewallwice14}
+{Ewall-Wice}, A., {Dillon}, J.~S., {Mesinger}, A., \& {Hewitt}, J. 2014,
+  \mnras, 441, 2476
+
 \bibitem[{{Fernandez} {et~al.}(2014){Fernandez}, {Zaroubi}, {Iliev}, {Mellema},
   \& {Jeli{\'c}}}]{StarsAndReionization}
 {Fernandez}, E.~R., {Zaroubi}, S., {Iliev}, I.~T., {Mellema}, G., \&
@@ -242,7 +247,8 @@ Illingworth, G.~D., {et~al.} 2013, The Astrophysical Journal Supplement Series,
   {Srivani}, {Staveley-Smith}, {Subrahmanyan}, {Sullivan}, {Tegmark},
   {Thyagarajan}, {Tingay}, {Trott}, {Webster}, {Williams}, {Williams}, {Wu},
   {Wyithe}, \& {Zheng}}]{AndreMWARFI}
-{Offringa}, A.~R., {et~al.} 2015, \pasa, 32, e008
+{Offringa}, A.~R., {et~al.} 2015, Publications of the Astronomical Society of
+  the Pacific, 32, e008
 
 \bibitem[{{Park} {et~al.}(2014){Park}, {Kim}, {Wyithe}, \& {Lacey}}]{park14}
 {Park}, J., {Kim}, H.-S., {Wyithe}, J.~S.~B., \& {Lacey}, C.~G. 2014, \mnras,
@@ -326,6 +332,11 @@ Spergel, D., {et~al.} 2013, ArXiv e-prints, 190
 
 \bibitem[{{Sullivan} \& {Simcoe}(2012)}]{sullivan12}
 {Sullivan}, P.~W., \& {Simcoe}, R.~A. 2012, \pasp, 124, 1336
+
+\bibitem[{{Thacker} {et~al.}(2015){Thacker}, {Gong}, {Cooray}, {De Bernardis},
+  {Smidt}, \& {Mitchell-Wynne}}]{thacker15}
+{Thacker}, C., {Gong}, Y., {Cooray}, A., {De Bernardis}, F., {Smidt}, J., \&
+  {Mitchell-Wynne}, K. 2015, \apj, 811, 125
 
 \bibitem[{Tingay {et~al.}(2013)Tingay, Goeke, Bowman, Emrich, Ord, Mitchell,
   Morales, Booler, Crosse, Wayth, Lonsdale, Tremblay, Pallot, Colegate,
