@@ -1,4 +1,4 @@
-\begin{thebibliography}{61}
+\begin{thebibliography}{68}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Ali} {et~al.}(2015){Ali}, {Parsons}, {Zheng}, {Pober}, {Liu},
@@ -20,6 +20,18 @@ Atek, H., {et~al.} 2015, The Astrophysical Journal, 814, 69
 {Beardsley}, A.~P., {Morales}, M.~F., {Lidz}, A., {Malloy}, M., \& {Sutter},
   P.~M. 2015, \apj, 800, 128
 
+\bibitem[{{Beardsley} {et~al.}(2013){Beardsley}, {Hazelton}, {Morales},
+  {Arcus}, {Barnes}, {Bernardi}, {Bowman}, {Briggs}, {Bunton}, {Cappallo},
+  {Corey}, {Deshpande}, {deSouza}, {Emrich}, {Gaensler}, {Goeke}, {Greenhill},
+  {Herne}, {Hewitt}, {Johnston-Hollitt}, {Kaplan}, {Kasper}, {Kincaid},
+  {Koenig}, {Kratzenberg}, {Lonsdale}, {Lynch}, {McWhirter}, {Mitchell},
+  {Morgan}, {Oberoi}, {Ord}, {Pathikulangara}, {Prabu}, {Remillard}, {Rogers},
+  {Roshi}, {Salah}, {Sault}, {Udaya}, {Srivani}, {Stevens}, {Subrahmanyan},
+  {Tingay}, {Wayth}, {Waterson}, {Webster}, {Whitney}, {Williams}, {Williams},
+  \& {Wyithe}}]{beardsley13}
+{Beardsley}, A.~P., {et~al.} 2013, Monthly Notices of The Royal Astronomical
+  Society, 429, L5
+
 \bibitem[{{Beardsley} {et~al.}(2016){Beardsley}, {Hazelton}, {Sullivan},
   {Carroll}, {Barry}, {Rahimi}, {Pindor}, {Trott}, {Line}, {Jacobs}, {Morales},
   {Pober}, {Bernardi}, {Bowman}, {Busch}, {Briggs}, {Cappallo}, {Corey}, {de
@@ -31,10 +43,17 @@ Atek, H., {et~al.} 2015, The Astrophysical Journal, 814, 69
   {Riding}, {Rogers}, {Roshi}, {Udaya Shankar}, {Sethi}, {Srivani},
   {Subrahmanyan}, {Tegmark}, {Tingay}, {Waterson}, {Wayth}, {Webster},
   {Whitney}, {Williams}, {Williams}, {Wu}, \& {Wyithe}}]{beardsley16}
-{Beardsley}, A.~P., {et~al.} 2016, ArXiv e-prints
+---. 2016, ArXiv e-prints
 
 \bibitem[{{Bertin} \& {Arnouts}(1996)}]{sextractor}
 {Bertin}, E., \& {Arnouts}, S. 1996, \aaps, 117, 393
+
+\bibitem[{{Bertin} {et~al.}(2002){Bertin}, {Mellier}, {Radovich}, {Missonnier},
+  {Didelon}, \& {Morin}}]{swarp}
+{Bertin}, E., {Mellier}, Y., {Radovich}, M., {Missonnier}, G., {Didelon}, P.,
+  \& {Morin}, B. 2002, in Astronomical Society of the Pacific Conference
+  Series, Vol. 281, Astronomical Data Analysis Software and Systems XI, ed.
+  D.~A. {Bohlender}, D.~{Durand}, \& T.~H. {Handley}, 228
 
 \bibitem[{Bouwens {et~al.}(2011)Bouwens, Illingworth, Oesch, Labb{\'{e}},
   Trenti, van Dokkum, Franx, Stiavelli, Carollo, Magee, \&
@@ -75,6 +94,15 @@ Bradley, L., {et~al.} 2012, The Astrophysical Journal, 760, 108
   Ashby, Eisenhardt, Frazer, Gonzalez, Kochanek, Koz{\l}owski, \&
   Wright}]{cooray12}
 Cooray, A., {et~al.} 2012, Nature, 490, 514
+
+\bibitem[{{Cutri} {et~al.}(2013){Cutri}, {Wright}, {Conrow}, {Fowler},
+  {Eisenhardt}, {Grillmair}, {Kirkpatrick}, {Masci}, {McCallon}, {Wheelock},
+  {Fajardo-Acosta}, {Yan}, {Benford}, {Harbut}, {Jarrett}, {Lake}, {Leisawitz},
+  {Ressler}, {Stanford}, {Tsai}, {Liu}, {Helou}, {Mainzer}, {Gettings},
+  {Gonzalez}, {Hoffman}, {Marsh}, {Padgett}, {Skrutskie}, {Beck}, {Papin}, \&
+  {Wittman}}]{allwise}
+{Cutri}, R.~M., {et~al.} 2013, {Explanatory Supplement to the AllWISE Data
+  Release Products}, Tech. rep.
 
 \bibitem[{{Dark Energy Survey Collaboration} {et~al.}(2016){Dark Energy Survey
   Collaboration}, {Abbott}, {Abdalla}, {Aleksi{\'c}}, {Allam}, {Amara},
@@ -179,6 +207,10 @@ Gardner, J.~P., {et~al.} 2006, Space Science Reviews, 123, 485
 {Helgason}, K., {Ricotti}, M., {Kashlinsky}, A., \& {Bromm}, V. 2016, \mnras,
   455, 282
 
+\bibitem[{{Helou} {et~al.}(1985){Helou}, {Soifer}, \&
+  {Rowan-Robinson}}]{helou85}
+{Helou}, G., {Soifer}, B.~T., \& {Rowan-Robinson}, M. 1985, \apjl, 298, L7
+
 \bibitem[{{Heneka} {et~al.}(2016){Heneka}, {Cooray}, \& {Feng}}]{heneka16}
 {Heneka}, C., {Cooray}, A., \& {Feng}, C. 2016, ArXiv e-prints
 
@@ -227,9 +259,19 @@ Illingworth, G.~D., {et~al.} 2013, The Astrophysical Journal Supplement Series,
 \bibitem[{{Mao}(2014)}]{mao14}
 {Mao}, X.-C. 2014, \apj, 790, 148
 
+\bibitem[{{McMahon} {et~al.}(2002){McMahon}, {White}, {Helfand}, \&
+  {Becker}}]{mcmahon02}
+{McMahon}, R.~G., {White}, R.~L., {Helfand}, D.~J., \& {Becker}, R.~H. 2002,
+  \apjs, 143, 1
+
 \bibitem[{{Morales} \& {Wyithe}(2010)}]{miguelreview}
 {Morales}, M.~F., \& {Wyithe}, J.~S.~B. 2010, Annual Reviews of Astronomy and
   Astrophysics, 48, 127
+
+\bibitem[{{Nikutta} {et~al.}(2014){Nikutta}, {Hunt-Walker}, {Nenkova},
+  {Ivezi{\'c}}, \& {Elitzur}}]{nikutta14}
+{Nikutta}, R., {Hunt-Walker}, N., {Nenkova}, M., {Ivezi{\'c}}, {\v Z}., \&
+  {Elitzur}, M. 2014, \mnras, 442, 3361
 
 \bibitem[{{Offringa} {et~al.}(2010){Offringa}, {de Bruyn}, {Biehl}, {Zaroubi},
   {Bernardi}, \& {Pandey}}]{aoflagger}
@@ -268,6 +310,11 @@ Illingworth, G.~D., {et~al.} 2013, The Astrophysical Journal Supplement Series,
   {Aghanim}, {Arnaud}, {Ashdown}, {Aumont}, {Baccigalupi}, {Banday},
   {Barreiro}, {Bartlett}, \& et~al.}]{planck16}
 {Planck Collaboration} {et~al.} 2016, \aap, 594, A13
+
+\bibitem[{Pober {et~al.}(2014)Pober, Liu, Dillon, Aguirre, Bowman, Bradley,
+  Carilli, DeBoer, Hewitt, Jacobs, McQuinn, Morales, Parsons, Tegmark, \&
+  Werthimer}]{PoberNextGen}
+Pober, J.~C., {et~al.} 2014, The Astrophysical Journal, 782, 66
 
 \bibitem[{{Pober} {et~al.}(2015){Pober}, {Ali}, {Parsons}, {McQuinn},
   {Aguirre}, {Bernardi}, {Bradley}, {Carilli}, {Cheng}, {DeBoer}, {Dexter},

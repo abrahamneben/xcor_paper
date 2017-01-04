@@ -2,119 +2,130 @@ This is BibTeX, Version 0.99d (TeX Live 2012)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: /Users/abrahamn/Documents/Physics/papers/xcor_paper/.texpadtmp/xcor_paper.aux
 The style file: ../apj.bst
-Database file #1: xcor_paperNotes.bib
-Database file #2: ../xcor_paper_new.bib
-Repeated entry---line 1931 of file ../xcor_paper_new.bib
+Database file #1: ../xcor_paper_new.bib
+Repeated entry---line 1976 of file ../xcor_paper_new.bib
  : @article{mwascience
  :                    ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 1940 of file ../xcor_paper_new.bib
+Repeated entry---line 1985 of file ../xcor_paper_new.bib
  : @article{tingay13
  :                  ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 2290 of file ../xcor_paper_new.bib
+Repeated entry---line 2335 of file ../xcor_paper_new.bib
  : @article{miguelreview
  :                      ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 2305 of file ../xcor_paper_new.bib
+Repeated entry---line 2350 of file ../xcor_paper_new.bib
  : @article{PritchardLoebReview
  :                             ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 2738 of file ../xcor_paper_new.bib
+Repeated entry---line 2390 of file ../xcor_paper_new.bib
+ : @article{PoberNextGen
+ :                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2783 of file ../xcor_paper_new.bib
  : @article{tingay13
  :                  ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 2978 of file ../xcor_paper_new.bib
+Repeated entry---line 3023 of file ../xcor_paper_new.bib
  : @article{FurlanettoReview
  :                          ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 2991 of file ../xcor_paper_new.bib
+Repeated entry---line 3036 of file ../xcor_paper_new.bib
  : @article{miguelreview
  :                      ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 3006 of file ../xcor_paper_new.bib
+Repeated entry---line 3051 of file ../xcor_paper_new.bib
  : @article{PritchardLoebReview
  :                             ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 3058 of file ../xcor_paper_new.bib
+Repeated entry---line 3091 of file ../xcor_paper_new.bib
+ : @article{PoberNextGen
+ :                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 3103 of file ../xcor_paper_new.bib
  : @article{mwascience
  :                    ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 3404 of file ../xcor_paper_new.bib
+Repeated entry---line 3449 of file ../xcor_paper_new.bib
  : @article{MWACS
  :               ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 3439 of file ../xcor_paper_new.bib
+Repeated entry---line 3484 of file ../xcor_paper_new.bib
  : @article{parsons12b
  :                    ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 3938 of file ../xcor_paper_new.bib
+Repeated entry---line 3983 of file ../xcor_paper_new.bib
  : @article{PritchardLoebReview
  :                             ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 5049 of file ../xcor_paper_new.bib
+Repeated entry---line 5094 of file ../xcor_paper_new.bib
  : @article{FurlanettoReview
  :                          ,
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 5581 of file ../xcor_paper_new.bib
+I was expecting a `,' or a `}'---line 5626 of file ../xcor_paper_new.bib
  :   
  :   url =   {http://reionization.org/},
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Repeated entry---line 5631 of file ../xcor_paper_new.bib
+Repeated entry---line 5676 of file ../xcor_paper_new.bib
  : @article{miguelreview
  :                      ,
 I'm skipping whatever remains of this entry
-I was expecting an "="---line 5882 of file ../xcor_paper_new.bib
+I was expecting an "="---line 5927 of file ../xcor_paper_new.bib
  :    
  :    volume = 499,
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Repeated entry---line 6314 of file ../xcor_paper_new.bib
+Repeated entry---line 6338 of file ../xcor_paper_new.bib
+ : @article{PoberNextGen
+ :                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 6359 of file ../xcor_paper_new.bib
  : @article{MWACS
  :               ,
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "helou85"
+Warning--empty institution in allwise
 Warning--empty publisher in ska
-You've used 61 entries,
+You've used 68 entries,
             2988 wiz_defined-function locations,
-            1005 strings with 35008 characters,
-and the built_in function-call counts, 38494 in all, are:
-= -- 2188
-> -- 4500
-< -- 10
-+ -- 1503
-- -- 1436
-* -- 4228
-:= -- 7754
-add.period$ -- 61
-call.type$ -- 61
-change.case$ -- 380
-chr.to.int$ -- 61
-cite$ -- 62
-duplicate$ -- 1129
-empty$ -- 1633
-format.name$ -- 1657
-if$ -- 7062
+            1044 strings with 38147 characters,
+and the built_in function-call counts, 42828 in all, are:
+= -- 2453
+> -- 4984
+< -- 11
++ -- 1665
+- -- 1591
+* -- 4695
+:= -- 8612
+add.period$ -- 68
+call.type$ -- 68
+change.case$ -- 430
+chr.to.int$ -- 68
+cite$ -- 70
+duplicate$ -- 1268
+empty$ -- 1824
+format.name$ -- 1837
+if$ -- 7862
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 60
-newline$ -- 187
-num.names$ -- 244
-pop$ -- 384
+missing$ -- 65
+newline$ -- 208
+num.names$ -- 273
+pop$ -- 441
 preamble$ -- 1
-purify$ -- 380
+purify$ -- 429
 quote$ -- 0
-skip$ -- 954
+skip$ -- 1060
 stack$ -- 0
-substring$ -- 1216
-swap$ -- 14
-text.length$ -- 1
+substring$ -- 1337
+swap$ -- 22
+text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 546
-warning$ -- 1
-while$ -- 173
+type$ -- 609
+warning$ -- 2
+while$ -- 195
 width$ -- 0
-write$ -- 606
-(There were 17 error messages)
+write$ -- 676
+(There were 20 error messages)
