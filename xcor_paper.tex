@@ -24,6 +24,9 @@
 \bibliographystyle{apj}
 \usepackage{graphicx}
 
+\newcommand{\mintext}{\text{min}}
+\newcommand{\maxtext}{\text{max}}
+\newcommand{\rad}{\text{rad}}
 \newcommand{\IR}{\text{IR}}
 \newcommand{\ir}{\text{IR}}
 \newcommand{\therm}{\text{therm}}
@@ -278,30 +281,45 @@ The 185\,MHz and 4.5\,$\mu$m catalogs exhibit a positive correlation peaking at 
 
 To understand these findings, we begin by digging deeper into the 4.5\,$\mu$m catalog. We select the subset of sources detected in WISE 3.4\,$\mu$m, 4.5\,$\mu$m, and 12\,$\mu$m bands and plot them (Fig. \ref{fig:wisecolorcolor}, left panel) in the $W_{23}\equiv$[4.6\,$\mu$m] -- [12\,$\mu$m] versus $W_{12}\equiv$[3.4\,$\mu$m] -- [4.6\,$\mu$m] color-color space used by \citet{Wright2010} to illustrate the separation of stars and various types of non-active and active galaxies. \citet{nikutta14} study how these different sources separate more quantitatively, finding that stars separate clearly from all other sources in the region $W{12}=-0.04\pm0.03$, $W_{23}=0.05\pm0.04$ (1$\sigma$). In the right panel, we plot the faintest 90\% of sources (fainter than 18.25 mags at 4.6\,$\mu$m) in the same color-color space and observe that all stars are excluded. This explains why before masking this brightest 10\%, we observed zero correlation with 185\,MHz sources, and why afterward the correlation suddenly emerges, after all, nearly all radio sources are non-stellar (i.e., extragalactic). 
 
-\begin{figure*}[h]
+\begin{figure}[h]
 \centering
 \includegraphics[width=6in]{images/wise_color_color_figure.pdf}
 \caption{5' pixels}
 \label{fig:wisecolorcolor}
-\end{figure*}
+\end{figure}
 
+To further probe which infrared sources are responsible for this correlation, we make a simple cut to separate quasars (QSOs) and active galactic nuclei (AGNs) ($W_{12}>0.16$) from luminous red galaxies (LRGs) and starburst galaxies (SFs) ($W_{12}<0.16$) \citep{nikutta14,kurcz16}. In Fig. \ref{fig:wisexspec} we plot the power spectrum of 185\,MHz sources (left panel), the spectra of our QSO/AGN and LRG/SF cuts of 4.5\,$\mu$m sources (center panel), and the coherence (i.e., correlation coefficient versus $\ell$) of each of these cuts with the 185\,MHz catalog (right panel). The QSO/AGN subset exhibits no significant correlation with the 185\,MHz sources, while the LRG/SF cut exhibits a significant correlation rising from a few percent at $\ell\sim7000$ to 13\% at $\ell\sim300$. The falloff towards high $\ell$ is due to the 2' resolution of the MWA synthesized beam at 185\,MHz, corresponding to a maximum $\ell$ of roughly 6000. 
 
-
-where have I seen slight radio--IR luminosity correlations?
-seymour07,
-Willott03
-mauch07
-
-
-
-\begin{figure*}[h]
+\begin{figure}[h]
 \centering
 \includegraphics[width=7in]{images/mwa_wise_qsoagn_gal_xspec.pdf}
 \caption{5' pixels}
 \label{fig:wisexspec}
-\end{figure*}
+\end{figure}
 
+%argue that LRGs are negligible in terms of radio emission compared to LRGs
 
+The fall of the correlation towards high $\ell$ is due to the similar fall in the 4.5\,$\mu$m catalog power spectrum towards high $\ell$. Both the falling 4.5\,$\mu$m catalog power spectrum and the relatively  which are complex functions of the survey properties. \citet{tegmark02,dodelson02} show that the galaxy angular power spectrum $C_\ell$ is approximately equal to the 3D matter power spectrum $P(k(\ell))$ convolved with with a window function which depends on the redshift coverage and flux limit of the sample. The matter power spectrum is known to rise as $k^{1}$ for $k\lesssim0.02$\,h/Mpc, above which it falls as $k^{-3}$. Galaxy surveys typically probe the regime just above the turnover where the slope is transitioning from 0 to -3 \citep{tegmark02b}. In order to maximize its sensitivity to low surface EOR 21\,cm emission, the MWA was designed as a relatively compact array in comparison to higher resolution radio interferometers such as the Very Large Array. This low resolution makes the MWA catalog severely flux limited \citep{PattiCatalog1}, which in turn effectively masks many galaxies which would otherwise be seen. This large spatial mask translates into a wide fourier convolution kernel, explaining why the MWA catalog power spectrum is so flat.
+
+Let us now turn to addressing why the 4.5\,$\mu$mu LRG/SF sample is 5--15\% correlated with the 185\,MHz catalog, while the QSO/AGN sample is not. Of course some slight correlation is expected at some level as brighter AGN are typically in more massive galaxies, which are typically brighter in stars as well (see, for instance, Fig. 1 in \citep{seymour07} or Fig. 4 in \citep{Willott03}) however \citet{mauch07} find no evidence of a radio/near-infrared luminosity correlation anywhere near as strong as that between radio and far-infrared emission. 
+
+As discussed above, broadband intensity mapping is concerned not with a luminosity correlation, but with a flux correlation, and we thus attempt quantify to what extent fluxes in two different bands may appear correlated due to distance effects even when their intrinsic luminosities are completely independent of each other. By distance effects we refer to to the effect that more distant objects are generally weaker in all bands than nearer objects, and broadband intensity mapping is unable to remove this induced correlation.
+
+INTRODUCE MY LUMINOSITY_FLUX ANALYTIC CALCULATION, AND DO IT USING THE RADIO AND IR LUMINOSITY FUNCTIONS IN THE "good luminosity functs" mendeley folder
+
+% https://www.evernote.com/shard/s316/nl/2147483647/8270de10-6438-4d98-847a-a13e40ff9a14/
+\begin{equation}
+	c = \frac{\langle F_\rad F_\ir \rangle-\langle F_\rad\rangle\langle F_\ir\rangle}{\sqrt{(\langle F_\rad^2\rangle-\langle F_\rad\rangle^2)(\langle F_\ir^2\rangle-\langle F_\ir\rangle^2)}}
+\end{equation}
+Using $F_i=L_i/4\pi d^2$ for $i=\rad,\ir$, we find
+\begin{equation}
+	c = \frac{\beta-1}{(\beta\alpha_\rad-1)(\beta\alpha_\ir-1)}
+\end{equation}
+where $\beta\equiv\langle d^{-4}\rangle/\langle d^{-2}\rangle^2$ and $\alpha_i=\langle L_i^2\rangle/\langle L_i\rangle^2$.
+do this per source instead of per-pixel. For a survey of a fixed angular field of view, the distribution of source distances $d$ grows as $d^2$, and 
+\begin{equation}
+	\beta\approx\frac{d_\maxtext^3-d_\mintext^3}{3d_\maxtext d_\mintext (d_\maxtext-d_\mintext)}
+\end{equation}
 
 \subsection{Unresolved foregrounds}
 

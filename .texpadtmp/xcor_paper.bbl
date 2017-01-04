@@ -1,4 +1,4 @@
-\begin{thebibliography}{68}
+\begin{thebibliography}{75}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Ali} {et~al.}(2015){Ali}, {Parsons}, {Zheng}, {Pober}, {Liu},
@@ -149,6 +149,16 @@ Cooray, A., {et~al.} 2012, Nature, 490, 514
   Morales, Neben, Parsons, \& Zheng}]{dillonmapmaking}
 Dillon, J.~S., {et~al.} 2015, Phys. Rev. D, 91, 023002
 
+\bibitem[{{Dodelson} {et~al.}(2002){Dodelson}, {Narayanan}, {Tegmark},
+  {Scranton}, {Budav{\'a}ri}, {Connolly}, {Csabai}, {Eisenstein}, {Frieman},
+  {Gunn}, {Hui}, {Jain}, {Johnston}, {Kent}, {Loveday}, {Nichol}, {O'Connell},
+  {Scoccimarro}, {Sheth}, {Stebbins}, {Strauss}, {Szalay}, {Szapudi},
+  {Vogeley}, {Zehavi}, {Annis}, {Bahcall}, {Brinkman}, {Doi}, {Fukugita},
+  {Hennessy}, {Ivezi{\'c}}, {Knapp}, {Kunszt}, {Lamb}, {Lee}, {Lupton}, {Munn},
+  {Peoples}, {Pier}, {Rockosi}, {Schlegel}, {Stoughton}, {Tucker}, {Yanny}, \&
+  {York}}]{dodelson02}
+{Dodelson}, S., {et~al.} 2002, \apj, 572, 140
+
 \bibitem[{{Dor{\'e}} {et~al.}(2014){Dor{\'e}}, {Bock}, {Ashby}, {Capak},
   {Cooray}, {de Putter}, {Eifler}, {Flagey}, {Gong}, {Habib}, {Heitmann},
   {Hirata}, {Jeong}, {Katti}, {Korngut}, {Krause}, {Lee}, {Masters},
@@ -251,6 +261,11 @@ Illingworth, G.~D., {et~al.} 2013, The Astrophysical Journal Supplement Series,
   {Moseley}}]{kash2}
 ---. 2007, \apjl, 657, L131
 
+\bibitem[{{Kurcz} {et~al.}(2016){Kurcz}, {Bilicki}, {Solarz}, {Krupa}, {Pollo},
+  \& {Ma{\l}ek}}]{kurcz16}
+{Kurcz}, A., {Bilicki}, M., {Solarz}, A., {Krupa}, M., {Pollo}, A., \&
+  {Ma{\l}ek}, K. 2016, \aap, 592, A25
+
 \bibitem[{{Lidz} {et~al.}(2009){Lidz}, {Zahn}, {Furlanetto}, {McQuinn},
   {Hernquist}, \& {Zaldarriaga}}]{lidz09}
 {Lidz}, A., {Zahn}, O., {Furlanetto}, S.~R., {McQuinn}, M., {Hernquist}, L., \&
@@ -258,6 +273,9 @@ Illingworth, G.~D., {et~al.} 2013, The Astrophysical Journal Supplement Series,
 
 \bibitem[{{Mao}(2014)}]{mao14}
 {Mao}, X.-C. 2014, \apj, 790, 148
+
+\bibitem[{{Mauch} \& {Sadler}(2007)}]{mauch07}
+{Mauch}, T., \& {Sadler}, E.~M. 2007, \mnras, 375, 931
 
 \bibitem[{{McMahon} {et~al.}(2002){McMahon}, {White}, {Helfand}, \&
   {Becker}}]{mcmahon02}
@@ -353,6 +371,12 @@ Robertson, B.~E., {et~al.} 2013, The Astrophysical Journal, 768, 71
   Holwerda, Shull, \& Stiavelli}]{Schmidt2014}
 Schmidt, K.~B., {et~al.} 2014, The Astrophysical Journal, 786, 57
 
+\bibitem[{{Seymour} {et~al.}(2007){Seymour}, {Stern}, {De Breuck}, {Vernet},
+  {Rettura}, {Dickinson}, {Dey}, {Eisenhardt}, {Fosbury}, {Lacy}, {McCarthy},
+  {Miley}, {Rocca-Volmerange}, {R{\"o}ttgering}, {Stanford}, {Teplitz}, {van
+  Breugel}, \& {Zirm}}]{seymour07}
+{Seymour}, N., {et~al.} 2007, \apjs, 171, 353
+
 \bibitem[{{Silva} {et~al.}(2013){Silva}, {Santos}, {Gong}, {Cooray}, \&
   {Bock}}]{silva12}
 {Silva}, M.~B., {Santos}, M.~G., {Gong}, Y., {Cooray}, A., \& {Bock}, J. 2013,
@@ -379,6 +403,19 @@ Spergel, D., {et~al.} 2013, ArXiv e-prints, 190
 
 \bibitem[{{Sullivan} \& {Simcoe}(2012)}]{sullivan12}
 {Sullivan}, P.~W., \& {Simcoe}, R.~A. 2012, \pasp, 124, 1336
+
+\bibitem[{{Tegmark} \& {Zaldarriaga}(2002)}]{tegmark02b}
+{Tegmark}, M., \& {Zaldarriaga}, M. 2002, \prd, 66, 103508
+
+\bibitem[{{Tegmark} {et~al.}(2002){Tegmark}, {Dodelson}, {Eisenstein},
+  {Narayanan}, {Scoccimarro}, {Scranton}, {Strauss}, {Connolly}, {Frieman},
+  {Gunn}, {Hui}, {Jain}, {Johnston}, {Kent}, {Loveday}, {Nichol}, {O'Connell},
+  {Sheth}, {Stebbins}, {Szalay}, {Szapudi}, {Vogeley}, {Zehavi}, {Annis},
+  {Bahcall}, {Brinkmann}, {Csabai}, {Doi}, {Fukugita}, {Hennessy},
+  {Ivez{\'{\i}}c}, {Knapp}, {Lamb}, {Lee}, {Lupton}, {McKay}, {Kunszt}, {Munn},
+  {Peoples}, {Pier}, {Richmond}, {Rockosi}, {Schlegel}, {Stoughton}, {Tucker},
+  {Yanny}, \& {York}}]{tegmark02}
+{Tegmark}, M., {et~al.} 2002, \apj, 571, 191
 
 \bibitem[{{Thacker} {et~al.}(2015){Thacker}, {Gong}, {Cooray}, {De Bernardis},
   {Smidt}, \& {Mitchell-Wynne}}]{thacker15}
@@ -407,6 +444,11 @@ Tingay, S.~J., {et~al.} 2013, PASA, 30
 \bibitem[{Trenti {et~al.}(2011)Trenti, Bradley, Stiavelli, Oesch, Treu,
   Bouwens, Shull, MacKenty, Carollo, \& Illingworth}]{Trenti2011}
 Trenti, M., {et~al.} 2011, The Astrophysical Journal, 727, L39
+
+\bibitem[{{Willott} {et~al.}(2003){Willott}, {Rawlings}, {Jarvis}, \&
+  {Blundell}}]{Willott03}
+{Willott}, C.~J., {Rawlings}, S., {Jarvis}, M.~J., \& {Blundell}, K.~M. 2003,
+  \mnras, 339, 173
 
 \bibitem[{Wright {et~al.}(2010)Wright, Eisenhardt, Mainzer, Ressler, Cutri,
   Jarrett, Kirkpatrick, Padgett, McMillan, Skrutskie, Stanford, Cohen, Walker,
