@@ -147,7 +147,7 @@ where
 \begin{equation}
 	\tilde{I}(\vec{\ell})=d\Omega\sum_{\vec{\theta}}I(\vec{\theta})e^{i\vec{\ell}\cdot\vec{\theta}}
 \end{equation}
-and $\Omega$ is the survey solid angle, and $d\Omega$ is the pixel size. Thus, we need only evaluate a fourier transform to estimate $C_\ell$ over a narrow field of view. Writing this out in detail, we find\footnote{Note that the normalization of $d\theta^2/N^2$ has been misstated as $1/N^2$ by \citet{zemcov14} (Eqn. 3 of their supplement), $d\theta$ by \citet{cooray12} (Eqn. 1 of their supplement), and $N^2d\ell^2/(2\pi)^2$ by \citet{thacker15} (Eqn. B3). Using Eqn. \ref{eqn:elldef}, the last form can be shown equal $1/d\theta^2$.} 
+and $\Omega$ is the survey solid angle, and $d\Omega$ is the pixel size. Thus, we need only evaluate a fourier transform to estimate $C_\ell$ over a narrow field of view. Writing this out in detail, we find\footnote{IS IT REALLY RIGHT THAT ALL THESE PEOPLE WROTE IT UP WRONG? ARE THERE DIFFERENT NORMALIZATIONS OF C$\ell$ ? Note that the normalization of $d\theta^2/N^2$ has been misstated as $1/N^2$ by \citet{zemcov14} (Eqn. 3 of their supplement), $d\theta$ by \citet{cooray12} (Eqn. 1 of their supplement), and $N^2d\ell^2/(2\pi)^2$ by \citet{thacker15} (Eqn. B3). Using Eqn. \ref{eqn:elldef}, the last form can be shown equal $1/d\theta^2$.} 
 \begin{equation}
 \label{eqn:Cldef}
 	C(\ell(a,b))=\left\langle\left|\sum_{m,n}I(m,n)\exp\left(-\frac{2\pi i}{N}  (am+bn)\right)\right|^2\right\rangle\frac{d\theta^2}{N^2}
@@ -202,7 +202,7 @@ In Fig. \ref{fig:respspecspacingsstudy} we compare the power spectra of the deep
 \begin{figure}[h]
 \centering
 \includegraphics[width=4in]{images/res_pspec_of_100_obsids_with_diff_spacings.pdf}
-\caption{5' pixels}
+\caption{CHANGE  ''DIFFERENCE'' TO THERMAL NOISE, CHANGE THE NUMBER OF DAYS TO BE THE NUMBER OF DIFFERENT NIGHTS OBSERVED, NOT SIMPLY THE END DAY MINUS THE FIRST DAY, WHICH INCLUDES WEEKENDS}
 \label{fig:respspecspacingsstudy}
 \end{figure}
 
@@ -305,7 +305,7 @@ Let us now turn to addressing why the 4.5\,$\mu$mu LRG/SF sample is 5--15\% corr
 
 As discussed above, broadband intensity mapping is concerned not with a luminosity correlation, but with a flux correlation, and we thus attempt quantify to what extent fluxes in two different bands may appear correlated due to distance effects even when their intrinsic luminosities are completely independent of each other. By distance effects we refer to to the effect that more distant objects are generally weaker in all bands than nearer objects, and broadband intensity mapping is unable to remove this induced correlation.
 
-INTRODUCE MY LUMINOSITY_FLUX ANALYTIC CALCULATION, AND DO IT USING THE RADIO AND IR LUMINOSITY FUNCTIONS IN THE "good luminosity functs" mendeley folder
+INTRODUCE MY LUMINOSITY--FLUX ANALYTIC CALCULATION, AND DO IT USING THE RADIO AND IR LUMINOSITY FUNCTIONS IN THE "good luminosity functs" mendeley folder
 
 % https://www.evernote.com/shard/s316/nl/2147483647/8270de10-6438-4d98-847a-a13e40ff9a14/
 \begin{equation}
@@ -313,7 +313,7 @@ INTRODUCE MY LUMINOSITY_FLUX ANALYTIC CALCULATION, AND DO IT USING THE RADIO AND
 \end{equation}
 Using $F_i=L_i/4\pi d^2$ for $i=\rad,\ir$, we find
 \begin{equation}
-	c = \frac{\beta-1}{(\beta\alpha_\rad-1)(\beta\alpha_\ir-1)}
+	c = \frac{\beta-1}{\sqrt{(\beta\alpha_\rad-1)(\beta\alpha_\ir-1)}}
 \end{equation}
 where $\beta\equiv\langle d^{-4}\rangle/\langle d^{-2}\rangle^2$ and $\alpha_i=\langle L_i^2\rangle/\langle L_i\rangle^2$.
 do this per source instead of per-pixel. For a survey of a fixed angular field of view, the distribution of source distances $d$ grows as $d^2$, and 
@@ -321,9 +321,11 @@ do this per source instead of per-pixel. For a survey of a fixed angular field o
 	\beta\approx\frac{d_\maxtext^3-d_\mintext^3}{3d_\maxtext d_\mintext (d_\maxtext-d_\mintext)}
 \end{equation}
 
+
+
 \subsection{Unresolved foregrounds}
 
-
+NEED TO START REWRITING THIS SECTION...to frame it as both a study of the unresolved broadband foreground residuals (ie, after point source masking/subtraction) and the first limits on the cosmological cross spectrum
 
 % why the MWA?
 In this section we perform a wide band power spectrum and foreground analysis on MWA observations. Details on the MWA instrument are given by \citet{tingay13}, but we summarize here some salient facts. The MWA is an ideal instrument for a 21\,cm--IR cross correlation experiment owing to its high surface brightness sensitivity and wide field of view, permitting analysis of many sky fourier modes in a short amount of time, necessary for averaging down foreground residuals in the cross spectrum. The array is comprised of 128 antenna tiles, each with $\sim20\,\text{m}^2$ collecting area over $150-200\,$MHz, spread quasi-randomly over a radius of 1.5\,km to achieve nearly complete $uv$ coverage in wide band images even without rotation synthesis. Each tile is a $4\times4$ phased array of dual-polarization bowtie dipoles summed by a delay-line beamformer, whose output beam is steerable in few degree increments across the sky. 
@@ -358,8 +360,12 @@ We compute the mean in source-free regions, and find a maximum airglow of roughl
 
 Appendix \ref{sec:Pshot}
 
+\subsection{Sensitivity study}
+
 
 \section{3D intensity mapping}
+
+NEED TO START REJIGGERING THIS SECTION
 
 \subsection{Sensitivity framework}
 We adapt the cross spectrum sensitivity results of \citet{lidz09} to our case of measuring the 21\,cm--IR cross spectrum of broadband images with noise and foreground residuals. 
@@ -463,6 +469,8 @@ NOTE THAT $C_\shot$ DECREASES WITH BINNING IN THE CROSS SPECTRUM, BUT NOT IN THE
 
 \section{Relation between the power spectrum of image cubes and broadband images}
 \label{sec:pspecrelation}
+
+NOTE THAT THIS ONLY HOLDS FOR LARGE ELL OVER A SMALL FIELD OF VIEW
 
 We focus in this paper on the spherical power spectrum of broadband images, $C_\ell$,  instead of that of image cubes, $P(\vec{k})$, as 21\,cm observations have focused on. Here we work out the relation between the two to facilitate comparison with past 21\,cm power spectrum results. In particular, we calculate the scaling factor $B$ relating the purely transverse modes of the power spectrum $P(k_\perp,k_\parallel=0)$ of a image cube $I(\theta_x,\theta_y,f)$ to the spherical power spectrum of a broad band image $C_\ell$ as
 \begin{equation}
