@@ -123,6 +123,9 @@ In contrast, intensity allows similar science with shallower observations, thoug
 
 With wide and deep IR and low frequency radio surveys happening now and on the horizon, we study in this paper the real world prospects of detecting the cross correlation of diffuse 21cm and Ly-alpha emission from the EOR. We begin in Section 1 with a cross correlation analysis of radio and near infrared catalogs, setting upper limits on the level of foreground correlation, the presence of which would mask the cosmological correlation in sufficiently deep images. We then assess the correlation of faint, unresolved emission through a prototype 21cm/IR correlation analysis between wide band MWA and ATLAS images over a 10 degree field of view. After foreground subtraction and masking, we estimate typical foreground residual levels, and synthesize these with noise predictions into a sensitivity analysis for a larger scale image cross correlation experiment. We also make sensitivity predictions for a cube cross correlation experiment, quantifying the required infrared spectral resolution and taking advantage of avoidance of radio foregrounds using the ``EOR window''.
 
+NEED TO INCORPORATE THIS PARAGRAPH
+In this section we characterize the 21\,cm and IR foregrounds relevant to cross correlation measurements. We begin with bright point source foregrounds, demonstrating that distance variation of the sources combined with their finite luminosity distribution may introduce slight foreground correlations which compete with the cosmological signal. We study how well point source power spectra can be minimized with subtraction and masking, and after using these techniques we set the first limits on the 21\,cm--Ly$\alpha$ cross spectrum at $z=7$ using data from the MWA and ATLAS. Lastly, we calculate the sensitivities of several fiducial experiments, illustrating what it will take to realize this measurement.
+
 \section{Power spectrum and correlation conventions}
 \label{sec:pspecconventions}
 
@@ -227,13 +230,12 @@ Our second campaign is a deep survey designed to better mitigate airglow fluctua
 
 We stack the frames in each of the four deep fields using {\tt swarp}, saving only the central $4^\circ\times 4^\circ$ region over which all nine 30\,sec frames overlap (red squares). Otherwise slight background discontinuities would be introduced by the different temporal coverage of different regions of the stack. In this stacking, we disable background subtraction for the purpose of studying later on the effects of airglow-induced diffuse backgrounds.
 
-\section{Broad band intensity mapping}
 
-In this section we characterize the 21\,cm and IR foregrounds relevant to cross correlation measurements. We begin with bright point source foregrounds, demonstrating that distance variation of the sources combined with their finite luminosity distribution may introduce slight foreground correlations which compete with the cosmological signal. We study how well point source power spectra can be minimized with subtraction and masking, and after using these techniques we set the first limits on the 21\,cm--Ly$\alpha$ cross spectrum at $z=7$ using data from the MWA and ATLAS. Lastly, we calculate the sensitivities of several fiducial experiments, illustrating what it will take to realize this measurement.
 
-\subsection{Point source foregrounds}
 
-\subsubsection{Catalogs}
+\section{Point source foregrounds}
+
+\subsection{Catalogs}
 
 To characterize the bright sources relevant to 21\,cm--Ly$\alpha$ and  21\,cm--H$\alpha$ intensity mapping correlation measurements we calculate the correlations between catalogs at 185\,MHz, 850\,nm, and 4.5\,um as a function of mask depth. These bands correspond roughly to 21\,cm, Ly$\alpha$, and H$\alpha$ at $z\sim6-7$. 
 
@@ -256,7 +258,7 @@ Lastly, we run SExtractor\footnote{http://www.astromatic.net/software/sextractor
 
 flux-induced correlation calculations and maybe simulations of how flux cuts affect the correlations
 
-\subsubsection{Point source correlations}
+\subsection{Point source correlations}
 
 Having prepared catalogs of point source foregrounds in our three bands, we proceed to study how they manifest in intensity mapping correlation experiments. Traditionally, radio/optical/infrared correlations have been studied by cross matching high frequency radio detections with optical and infrared sources coincident within a few arcseconds, and plotting radio versus optical or infrared luminosity. Such studies have revealed the well known radio--far infrared correlation (CITATIONS) thought to be due to massive star formation \citep[e.g.][]{helou85,dejong85,yun01,xu94}. Such stars emit ionizing radiation which is reprocessed into far-infrared by dust, and also create HII regions which emit radio synchrotron \citep{xu94}. A secondary radio mechanism is synchrotron radiation from acceleration of cosmic ray electrons in these stars' supernovae. 
 
@@ -307,6 +309,18 @@ As discussed above, broadband intensity mapping is concerned not with a luminosi
 
 INTRODUCE MY LUMINOSITY--FLUX ANALYTIC CALCULATION, AND DO IT USING THE RADIO AND IR LUMINOSITY FUNCTIONS IN THE "good luminosity functs" mendeley folder
 
+\citet{mauch07}
+\citet{fu10}
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=6in]{images/sim_rad_ir_luminosity_functions.pdf}
+\caption{5' pixels}
+\label{fig:luminosityfunctions}
+\end{figure}
+talk about matching the number densities by fiddling with the minimum luminosities, and say a few words about how it doesn't really matter
+
 % https://www.evernote.com/shard/s316/nl/2147483647/8270de10-6438-4d98-847a-a13e40ff9a14/
 \begin{equation}
 	c = \frac{\langle F_\rad F_\ir \rangle-\langle F_\rad\rangle\langle F_\ir\rangle}{\sqrt{(\langle F_\rad^2\rangle-\langle F_\rad\rangle^2)(\langle F_\ir^2\rangle-\langle F_\ir\rangle^2)}}
@@ -323,7 +337,21 @@ do this per source instead of per-pixel. For a survey of a fixed angular field o
 
 
 
-\subsection{Unresolved foregrounds}
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=6in]{images/sim_correlation_agn_and_sf.pdf}
+\caption{5' pixels}
+\label{fig:simagnlfcorrelations}
+\end{figure}
+
+
+
+
+
+
+\section{Residual foregrounds and cross power spectrum limits}
 
 NEED TO START REWRITING THIS SECTION...to frame it as both a study of the unresolved broadband foreground residuals (ie, after point source masking/subtraction) and the first limits on the cosmological cross spectrum
 
@@ -360,14 +388,13 @@ We compute the mean in source-free regions, and find a maximum airglow of roughl
 
 Appendix \ref{sec:Pshot}
 
-\subsection{Sensitivity study}
+\section{Sensitivity study}
 
 
-\section{3D intensity mapping}
+
 
 NEED TO START REJIGGERING THIS SECTION
 
-\subsection{Sensitivity framework}
 We adapt the cross spectrum sensitivity results of \citet{lidz09} to our case of measuring the 21\,cm--IR cross spectrum of broadband images with noise and foreground residuals. 
 \begin{equation}
 \label{eqn:sense1}
@@ -384,7 +411,6 @@ We adapt the cross spectrum sensitivity results of \citet{lidz09} to our case of
 \end{equation}
 where $\cosmo$ signifies the cosmological component of the signal from the EOR, $\fg$ signifies residual foregrounds, $\therm$ signifies thermal noise in 21\,cm images, and $\shot$ signifies photon shot noise in IR images. 
 
-\subsection{Broad band correlation experiment sensitivity}
 
 Though these are the general forms of these equations, we omit the thermal and photon shot noise contributions in the rest of this section, as we have shown them to be negligible in Sections \ref{sec:pspec21fg} and \ref{sec:pspecIRfg}. We also omit the sample variance terms as they become important only in the SNR $\sim1$ regime. 
 
@@ -416,23 +442,6 @@ Let us optimize the SNR by using only two bins, $\ell_1=\ell_\text{max}/4$ and $
 \end{eqnarray}
 where the fraction of 21\,cm foregrounds remaining after subtraction is given by $\alpha_{21}\equiv C_{21,\res}/C_{21,\fg}$, and the fraction of IR foregrounds removed by masking is assumed to be XXX. REMEMBER, WE CAN'T MASK OUR WAY TO THE SIGNAL BECAUSE OF THE INTRAHALO
 -LIGHT
-
-
-\subsection{3D correlation experiment sensitivity}
-
-\begin{figure*}[h]
-\centering
-\includegraphics[width=6.5in]{images/kspace_overlap.pdf}
-\caption{aoeuaoeuaoeu}
-\label{fig:corgrid}
-\end{figure*}
-
-\begin{figure*}[h]
-\centering
-\includegraphics[width=7in]{images/cross_and_auto_sensitivity_for_diff_expts.pdf}
-\caption{aoeuaoeuaoeu}
-\label{fig:corgrid}
-\end{figure*}
 
 
 
