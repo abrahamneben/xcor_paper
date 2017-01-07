@@ -253,12 +253,7 @@ We use the W2 band of ALLWISE \citep{Wright2010,allwise} as our 4.5\,um catalog.
 Lastly, we run SExtractor\footnote{http://www.astromatic.net/software/sextractors} \citep{sextractor} on our wide $20^\circ$ wide ATLAS composite image to generate an 850\,nm catalog. We allow local background bias and noise estimation, and set pixel saturation at 20,000 counts to avoid artifacts. We find the catalog is complete to roughly a mJy (right panel in Fig. \ref{fig:cataloghistograms}). 
 
 
-
-
-
-flux-induced correlation calculations and maybe simulations of how flux cuts affect the correlations
-
-\subsection{Point source correlations}
+\subsection{Catalog radio--infrared flux correlations}
 
 Having prepared catalogs of point source foregrounds in our three bands, we proceed to study how they manifest in intensity mapping correlation experiments. Traditionally, radio/optical/infrared correlations have been studied by cross matching high frequency radio detections with optical and infrared sources coincident within a few arcseconds, and plotting radio versus optical or infrared luminosity. Such studies have revealed the well known radio--far infrared correlation (CITATIONS) thought to be due to massive star formation \citep[e.g.][]{helou85,dejong85,yun01,xu94}. Such stars emit ionizing radiation which is reprocessed into far-infrared by dust, and also create HII regions which emit radio synchrotron \citep{xu94}. A secondary radio mechanism is synchrotron radiation from acceleration of cosmic ray electrons in these stars' supernovae. 
 
@@ -273,6 +268,7 @@ Our approach is different. For all the advantages of broad band intensity mappin
 
 We begin by gridding all three catalog fluxes in Jy to the $20^\circ\times20^\circ$ grid centered at (RA,Dec) = $(0, -30^\circ)$ depicted in Fig. \ref{fig:surveyoverview}, and calculating the zero delay correlations between the images $I_i(\theta_x,\theta_y)$ as
 \begin{equation}
+\label{eqn:imagecorrdef}
 	c = \frac{\langle I_1I_2\rangle-\langle I_1\rangle\langle I_2\rangle}{\sqrt{(\langle I_1^2\rangle -\langle I_1\rangle^2)(\langle I_2^2\rangle -\langle I_2\rangle^2)}}
 \end{equation}
 where the sample variance in the case of small or zero correlation is dominated by the numerator and is given by $1/\sqrt{N_\text{pix}}$, where $N_\text{pix}$ is the total number of pixels in the image. Between MWA and WISE catalogs we find $c=-0.003\pm0.005$ and between MWA and ATLAS catalogs we find $c=0.0013\pm0.005$. Both are consistent with zero, which is not necessarily unexpected. The brightest sources in both infrared catalogs are likely stars, whose radio emission is vanishingly small. To illustrate, we calculate the correlations after excluding the brightest 10\% of sources in all three catalogs, and find $c_\text{MWA--WISE}=0.031\pm0.005$ and $c_\text{MWA--ATLAS}=0.0086\pm0.005$. The former is a $6\sigma$ detection, and merits some investigation. How does this apparent correlation depend on the flux cut? What is it due to? And what does it mean for broad band correlation experiments? Further, does the MWA--ATLAS correlation remain consistent with zero at stricter flux cuts?
@@ -303,15 +299,24 @@ To further probe which infrared sources are responsible for this correlation, we
 
 The fall of the correlation towards high $\ell$ is due to the similar fall in the 4.5\,$\mu$m catalog power spectrum towards high $\ell$. Both the falling 4.5\,$\mu$m catalog power spectrum and the relatively  which are complex functions of the survey properties. \citet{tegmark02,dodelson02} show that the galaxy angular power spectrum $C_\ell$ is approximately equal to the 3D matter power spectrum $P(k(\ell))$ convolved with with a window function which depends on the redshift coverage and flux limit of the sample. The matter power spectrum is known to rise as $k^{1}$ for $k\lesssim0.02$\,h/Mpc, above which it falls as $k^{-3}$. Galaxy surveys typically probe the regime just above the turnover where the slope is transitioning from 0 to -3 \citep{tegmark02b}. In order to maximize its sensitivity to low surface EOR 21\,cm emission, the MWA was designed as a relatively compact array in comparison to higher resolution radio interferometers such as the Very Large Array. This low resolution makes the MWA catalog severely flux limited \citep{PattiCatalog1}, which in turn effectively masks many galaxies which would otherwise be seen. This large spatial mask translates into a wide fourier convolution kernel, explaining why the MWA catalog power spectrum is so flat.
 
-Let us now turn to addressing why the 4.5\,$\mu$mu LRG/SF sample is 5--15\% correlated with the 185\,MHz catalog, while the QSO/AGN sample is not. Of course some slight correlation is expected at some level as brighter AGN are typically in more massive galaxies, which are typically brighter in stars as well (see, for instance, Fig. 1 in \citep{seymour07} or Fig. 4 in \citep{Willott03}) however \citet{mauch07} find no evidence of a radio/near-infrared luminosity correlation anywhere near as strong as that between radio and far-infrared emission. 
+\subsection{Simulations of distance-induced flux correlation}
 
-As discussed above, broadband intensity mapping is concerned not with a luminosity correlation, but with a flux correlation, and we thus attempt quantify to what extent fluxes in two different bands may appear correlated due to distance effects even when their intrinsic luminosities are completely independent of each other. By distance effects we refer to to the effect that more distant objects are generally weaker in all bands than nearer objects, and broadband intensity mapping is unable to remove this induced correlation.
+Let us now turn to addressing why the 4.5\,$\mu$mu LRG/SF sample is 5--15\% correlated with the 185\,MHz catalog, while the QSO/AGN sample is not. Of course some slight correlation is expected at some level as brighter AGN are typically in more massive galaxies, which are typically brighter in stars as well (see, for instance, Fig. 1 in \citep{seymour07} or Fig. 4 in \citep{Willott03}) however \citet{mauch07} find no evidence of a radio/near-infrared luminosity correlation anywhere near as strong as that between radio and far-infrared emission.  However, as discussed above, broadband intensity mapping correlation experiments are affected not only by luminosity correlations between different bands, but flux correlations as well. We thus attempt to quantify to what extent fluxes in two different bands may appear correlated due to distance effects even when their intrinsic luminosities are completely independent of each other. By distance effects we refer to to the effect that more distant objects are generally weaker in all bands than nearer objects. 
 
-INTRODUCE MY LUMINOSITY--FLUX ANALYTIC CALCULATION, AND DO IT USING THE RADIO AND IR LUMINOSITY FUNCTIONS IN THE "good luminosity functs" mendeley folder
-
-\citet{mauch07}
-\citet{fu10}
-
+We first make a few approximations to get intuition for the effect, and then simulate the effect as a function of stricter and stricter flux cuts due to deeper and deeper foreground masking. Consider a sky survey over a fixed field of view, and a set of objects with uncorrelated infrared and radio emission. By uncorrelated we mean that the infrared and radio luminosities are independent random variables determined by the infrared and radio luminosities, respectively. Assume that the objects are uniformly distributed in space out to $z\sim0.5$, and assume cartesian space. We are interested in the effective correlation between radio and infrared fluxes in the same sky pixels, but let us approximate this by calculating the correlation between source fluxes in the two bands. Starting from Eqn. \ref{eqn:imagecorrdef}, we have
+\begin{equation} % https://www.evernote.com/shard/s316/nl/2147483647/8270de10-6438-4d98-847a-a13e40ff9a14/
+	c = \frac{\langle F_\rad F_\ir \rangle-\langle F_\rad\rangle\langle F_\ir\rangle}{\sqrt{(\langle F_\rad^2\rangle-\langle F_\rad\rangle^2)(\langle F_\ir^2\rangle-\langle F_\ir\rangle^2)}}
+\end{equation}
+Then writing this in terms of source fluxes $F_i=L_i/4\pi d^2$ for $i=\rad,\ir$, we find
+\begin{equation}
+	c = \frac{\beta-1}{\sqrt{(\beta\alpha_\rad-1)(\beta\alpha_\ir-1)}}
+\end{equation}
+where $\beta\equiv\langle d^{-4}\rangle/\langle d^{-2}\rangle^2$ and $\alpha_i=\langle L_i^2\rangle/\langle L_i\rangle^2$.
+For a survey of a fixed angular field of view, uniform spatial distribution of objects, and cartesian spacetime, the distribution of source distances $d$ grows as $d^2$, which gives 
+\begin{equation}
+	\beta\approx\frac{d_\maxtext^3-d_\mintext^3}{3d_\maxtext d_\mintext (d_\maxtext-d_\mintext)}
+\end{equation}
+We observe that the radio--infrared flux correlation for some type of objects is a function of the radio and infrared luminosity function for that type of objects. In fact, we can see immediately that if the luminosity distributions are wide, their $\alpha$'s are large, and thus $c$ is small. Conversely, if the luminosity functions are narrow, then the distance to the sources plays a more significant role in determining the flux an object in question, and so $c$ is larger. 
 
 \begin{figure}[h]
 \centering
@@ -319,25 +324,10 @@ INTRODUCE MY LUMINOSITY--FLUX ANALYTIC CALCULATION, AND DO IT USING THE RADIO AN
 \caption{5' pixels}
 \label{fig:luminosityfunctions}
 \end{figure}
-talk about matching the number densities by fiddling with the minimum luminosities, and say a few words about how it doesn't really matter
 
-% https://www.evernote.com/shard/s316/nl/2147483647/8270de10-6438-4d98-847a-a13e40ff9a14/
-\begin{equation}
-	c = \frac{\langle F_\rad F_\ir \rangle-\langle F_\rad\rangle\langle F_\ir\rangle}{\sqrt{(\langle F_\rad^2\rangle-\langle F_\rad\rangle^2)(\langle F_\ir^2\rangle-\langle F_\ir\rangle^2)}}
-\end{equation}
-Using $F_i=L_i/4\pi d^2$ for $i=\rad,\ir$, we find
-\begin{equation}
-	c = \frac{\beta-1}{\sqrt{(\beta\alpha_\rad-1)(\beta\alpha_\ir-1)}}
-\end{equation}
-where $\beta\equiv\langle d^{-4}\rangle/\langle d^{-2}\rangle^2$ and $\alpha_i=\langle L_i^2\rangle/\langle L_i\rangle^2$.
-do this per source instead of per-pixel. For a survey of a fixed angular field of view, the distribution of source distances $d$ grows as $d^2$, and 
-\begin{equation}
-	\beta\approx\frac{d_\maxtext^3-d_\mintext^3}{3d_\maxtext d_\mintext (d_\maxtext-d_\mintext)}
-\end{equation}
+To quantify whether this effect can explain our measured radio--infrared correlation in SF galaxies and the lack of one in AGN, we use AGN and SF 1.4\,GHz luminosity functions from \citet{mauch07} (Fig. \ref{fig:luminosityfunctions}, right panel) and AGN and SF and SF 8\,$\mu$m luminosity functions from \citet{fu10} (left panel). The former describe galaxies at $z<0.3$, while the latter describe galaxies at $z\sim0.6$. This analysis could be extended using proper redshift-dependent luminosity functions, possibly from simulations, though this anaylsis suffices to explain our earlier measurements and we leave a more detailed study for future work. We use approximately the same range of luminosities used by \citet{mauch07} and \citet{fu10}, though we adjust the minimum luminosities slightly to achieve the same number density of AGN ($\sim0.0020$/Mpc$^3$) and SF ($\sim0.00011$/Mpc$^3$) in both radio and infrared surveys. In the end we find that our results are only slightly sensitive to these luminosity minima as their faint ends become less and less significant in real surveys. 
 
-
-
-
+We pick fiducial survey parameters of $d_\mintext=20$\,Mpc and $z_\maxtext=0.75$\,Mpc, giving $\beta\approx53.87$.  Using the above luminosity functions, we find $\alpha_{\text{SF,IR}}=1.474$, $\alpha_{\text{SF,rad}}=14.56$, $\alpha_{\text{AGN,IR}}=22.97$, $\alpha_{\text{AGN,rad}}=257.5$. These values agree with qualitative observation that the AGN luminosity function is wider than the SF luminosity function in both radio and infrared bands (Fig. \ref{fig:luminosityfunctions}). These values give a predicted radio--infrared correlation of 0.21 for SF and 0.01 for AGN agreeing with our finding of a significant radio--infrared correlation for SF and near-zero correlation for AGN. The exact values deviate from our measurements for a number of reasons. The MWA and WISE catalogs are not matched in depth or redshift coverage, and thus don't survey an exactly overlapping set of radio and infrared sources. Further, real world luminosity functions can exhibit significant redshift evolution. Of course, our measurement above did not even split up the MWA catalog into separate AGN and SF subsets as such detailed characterization of low frequency radio foregrounds remains an active area of research. 
 
 \begin{figure}[h]
 \centering
@@ -346,10 +336,7 @@ do this per source instead of per-pixel. For a survey of a fixed angular field o
 \label{fig:simagnlfcorrelations}
 \end{figure}
 
-
-
-
-
+Lastly, we ask to what extent this unwanted radio--infrared foreground correlation can be mitigated by masking the brightest sources. Using the luminosity functions discussed above, we simulate radio and infrared surveys for each of AGN and SF. We begin by generating the mock radio catalogs of AGN and SF, choosing a poisson random number of each in each of 400 logarithmic luminosity bins. We distribute the objects uniformly over a volume $D_\maxtext=cz_\maxtext/H_0=$3212\,Mpc deep and $\theta_{\text{FOV}}D_\maxtext=$1121\,Mpc wide. We then pick a random infrared luminosity for each radio object from the appropriate infrared luminosity function. Finally we plot in Fig. \ref{fig:simagnlfcorrelations}, along the lines of Fig. \ref{fig:correlationsandSNRs}, the 1.4\,GHz--8\,$\mu$m correlation of our mock AGN and SF catalogs after masking down to a maximum radio and infrared flux. As we saw above, without any flux cut we find a roughly 20\% radio--infrared correlation for AGN and only a percent level correlation for SF. As we mask fainter and fainter sources, the AGN correlation generally increases to the 5--10\% level, while the SF correlation first increases, then decreases after masking down to 10$^{-4}$\,Jy. With increasing mask depth, these correlations do not change monotonically and they do not generally approach zero, and more detailed modeling of effective foreground flux correlations will be necessary in real world intensity mapping correlation experiments probing the EOR. In the next section we move beyond the bright sources and study the magnitudes and correlation properties of the residual radio and infrared foregrounds in our MWA and ATLAS observations.
 
 \section{Residual foregrounds and cross power spectrum limits}
 
