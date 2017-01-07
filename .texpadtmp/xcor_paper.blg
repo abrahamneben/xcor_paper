@@ -2,7 +2,8 @@ This is BibTeX, Version 0.99d (TeX Live 2012)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: /Users/abrahamn/Documents/Physics/papers/xcor_paper/.texpadtmp/xcor_paper.aux
 The style file: ../apj.bst
-Database file #1: ../xcor_paper_new.bib
+Database file #1: xcor_paperNotes.bib
+Database file #2: ../xcor_paper_new.bib
 Repeated entry---line 2062 of file ../xcor_paper_new.bib
  : @article{mwascience
  :                    ,
@@ -89,7 +90,7 @@ Warning--empty institution in allwise
 Warning--empty publisher in ska
 You've used 76 entries,
             2988 wiz_defined-function locations,
-            1086 strings with 41593 characters,
+            1087 strings with 41608 characters,
 and the built_in function-call counts, 47661 in all, are:
 = -- 2750
 > -- 5508

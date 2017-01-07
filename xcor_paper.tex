@@ -16,8 +16,8 @@
 %\documentclass[manuscript]{aastex}
 %% preprint2 produces a double-column, single-spaced document:
 
-%\documentclass{emulateapj}
-\documentclass[preprint]{aastex}
+\documentclass{emulateapj}
+%\documentclass[preprint]{aastex}
 
 \usepackage{natbib}
 \usepackage{amsmath}
@@ -204,8 +204,8 @@ In Fig. \ref{fig:respspecspacingsstudy} we compare the power spectra of the deep
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=4in]{images/res_pspec_of_100_obsids_with_diff_spacings.pdf}
-\caption{CHANGE  ''DIFFERENCE'' TO THERMAL NOISE, CHANGE THE NUMBER OF DAYS TO BE THE NUMBER OF DIFFERENT NIGHTS OBSERVED, NOT SIMPLY THE END DAY MINUS THE FIRST DAY, WHICH INCLUDES WEEKENDS}
+\includegraphics[width=3.3in]{images/res_pspec_of_100_obsids_with_diff_spacings.pdf}
+\caption{the caption}
 \label{fig:respspecspacingsstudy}
 \end{figure}
 
@@ -213,14 +213,14 @@ In Fig. \ref{fig:respspecspacingsstudy} we compare the power spectra of the deep
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=4in]{images/survey_overview.pdf}
+\includegraphics[width=3.3in]{images/survey_overview.pdf}
 \caption{5' pixels}
 \label{fig:surveyoverview}
 \end{figure}
 
 ATLAS is a 0.5\,m (f/2.0) telescope \citep{tonry11} in Hawaii designed to perform a wide field sky survey for near earth asteroids. The detector is a 10,500 $\times$10,500 STA-1600 CCD array, with a pixel scale of 1.86'', with an overall field of view of $5.5^\circ$. We observe in the I band centered at 807\,nm with full width at half max 150\,nm, corresponding to $z=$5.1--6.3. While this redshift range doesn't exactly match that of our r radio observations, it overlaps sufficiently for our purpose of characterizing the effects of noise foregrounds in 21cm--IR cross correlation experiments. 
 
-We perform two separate observing campaigns, which we illustrate in Fig. \ref{surveyoverview}. We first perform a wide survey to best characterize bright foregrounds; . In the first campaign we raster scan a roughly $20^\circ\times20^\circ$ grid with $5^\circ$ spacing over the MWA field (dashed black circle), integrating for 2.5\,min at each pointing (blue square markers). The observations are conducted between 2016/09/07 22:00  and 2016/09/08 00:50 Hawaii-Aleutian Standard Time, when the moon was 36\% illuminated.  Later we will find that this is substantially more integration time than required to mitigate photon shot noise, but not enough to mitigate diffuse airglow structure and CCD array systematics. Still, it is sufficient for performing a source survey where source fluxes are estimated relative to the local background. 
+We perform two separate observing campaigns, which we illustrate in Fig. \ref{fig:surveyoverview}. We first perform a wide survey to best characterize bright foregrounds; . In the first campaign we raster scan a roughly $20^\circ\times20^\circ$ grid with $5^\circ$ spacing over the MWA field (dashed black circle), integrating for 2.5\,min at each pointing (blue square markers). The observations are conducted between 2016/09/07 22:00  and 2016/09/08 00:50 Hawaii-Aleutian Standard Time, when the moon was 36\% illuminated.  Later we will find that this is substantially more integration time than required to mitigate photon shot noise, but not enough to mitigate diffuse airglow structure and CCD array systematics. Still, it is sufficient for performing a source survey where source fluxes are estimated relative to the local background. 
 
 We then use {\tt swarp}\footnote{http://www.astromatic.net/software/swarp} \citep{swarp} to stack all these frames over $20^\circ$ orthographic field centered on (RA,Dec) = $(0^\circ,-30^\circ)$ (blue square) with 1.86'' resolution. We use the default background subtraction settings to mitigate temporal and spatial background variation. 
 
@@ -239,7 +239,7 @@ We stack the frames in each of the four deep fields using {\tt swarp}, saving on
 
 To characterize the bright sources relevant to 21\,cm--Ly$\alpha$ and  21\,cm--H$\alpha$ intensity mapping correlation measurements we calculate the correlations between catalogs at 185\,MHz, 850\,nm, and 4.5\,um as a function of mask depth. These bands correspond roughly to 21\,cm, Ly$\alpha$, and H$\alpha$ at $z\sim6-7$. 
 
-\begin{figure*}[h]
+\begin{figure*}[t]
 \centering
 \includegraphics[width=6.5in]{images/catalog_histograms.pdf}
 \caption{5' pixels}
@@ -279,21 +279,21 @@ The 185\,MHz and 4.5\,$\mu$m catalogs exhibit a positive correlation peaking at 
 
 To understand these findings, we begin by digging deeper into the 4.5\,$\mu$m catalog. We select the subset of sources detected in WISE 3.4\,$\mu$m, 4.5\,$\mu$m, and 12\,$\mu$m bands and plot them (Fig. \ref{fig:wisecolorcolor}, left panel) in the $W_{23}\equiv$[4.6\,$\mu$m] -- [12\,$\mu$m] versus $W_{12}\equiv$[3.4\,$\mu$m] -- [4.6\,$\mu$m] color-color space used by \citet{Wright2010} to illustrate the separation of stars and various types of non-active and active galaxies. \citet{nikutta14} study how these different sources separate more quantitatively, finding that stars separate clearly from all other sources in the region $W{12}=-0.04\pm0.03$, $W_{23}=0.05\pm0.04$ (1$\sigma$). In the right panel, we plot the faintest 90\% of sources (fainter than 18.25 mags at 4.6\,$\mu$m) in the same color-color space and observe that all stars are excluded. This explains why before masking this brightest 10\%, we observed zero correlation with 185\,MHz sources, and why afterward the correlation suddenly emerges, after all, nearly all radio sources are non-stellar (i.e., extragalactic). 
 
-\begin{figure}[h]
+\begin{figure*}[h]
 \centering
 \includegraphics[width=6in]{images/wise_color_color_figure.pdf}
 \caption{5' pixels}
 \label{fig:wisecolorcolor}
-\end{figure}
+\end{figure*}
 
 To further probe which infrared sources are responsible for this correlation, we make a simple cut to separate quasars (QSOs) and active galactic nuclei (AGNs) ($W_{12}>0.16$) from luminous red galaxies (LRGs) and starburst galaxies (SFs) ($W_{12}<0.16$) \citep{nikutta14,kurcz16}. In Fig. \ref{fig:wisexspec} we plot the power spectrum of 185\,MHz sources (left panel), the spectra of our QSO/AGN and LRG/SF cuts of 4.5\,$\mu$m sources (center panel), and the coherence (i.e., correlation coefficient versus $\ell$) of each of these cuts with the 185\,MHz catalog (right panel). The QSO/AGN subset exhibits no significant correlation with the 185\,MHz sources, while the LRG/SF cut exhibits a significant correlation rising from a few percent at $\ell\sim7000$ to 13\% at $\ell\sim300$. The falloff towards high $\ell$ is due to the 2' resolution of the MWA synthesized beam at 185\,MHz, corresponding to a maximum $\ell$ of roughly 6000. 
 
-\begin{figure}[h]
+\begin{figure*}[h]
 \centering
 \includegraphics[width=7in]{images/mwa_wise_qsoagn_gal_xspec.pdf}
 \caption{5' pixels}
 \label{fig:wisexspec}
-\end{figure}
+\end{figure*}
 
 %argue that LRGs are negligible in terms of radio emission compared to LRGs
 
@@ -318,23 +318,25 @@ For a survey of a fixed angular field of view, uniform spatial distribution of o
 \end{equation}
 We observe that the radio--infrared flux correlation for some type of objects is a function of the radio and infrared luminosity function for that type of objects. In fact, we can see immediately that if the luminosity distributions are wide, their $\alpha$'s are large, and thus $c$ is small. Conversely, if the luminosity functions are narrow, then the distance to the sources plays a more significant role in determining the flux an object in question, and so $c$ is larger. 
 
-\begin{figure}[h]
+\begin{figure*}[h]
 \centering
 \includegraphics[width=6in]{images/sim_rad_ir_luminosity_functions.pdf}
 \caption{5' pixels}
 \label{fig:luminosityfunctions}
-\end{figure}
+\end{figure*}
 
 To quantify whether this effect can explain our measured radio--infrared correlation in SF galaxies and the lack of one in AGN, we use AGN and SF 1.4\,GHz luminosity functions from \citet{mauch07} (Fig. \ref{fig:luminosityfunctions}, right panel) and AGN and SF and SF 8\,$\mu$m luminosity functions from \citet{fu10} (left panel). The former describe galaxies at $z<0.3$, while the latter describe galaxies at $z\sim0.6$. This analysis could be extended using proper redshift-dependent luminosity functions, possibly from simulations, though this anaylsis suffices to explain our earlier measurements and we leave a more detailed study for future work. We use approximately the same range of luminosities used by \citet{mauch07} and \citet{fu10}, though we adjust the minimum luminosities slightly to achieve the same number density of AGN ($\sim0.0020$/Mpc$^3$) and SF ($\sim0.00011$/Mpc$^3$) in both radio and infrared surveys. In the end we find that our results are only slightly sensitive to these luminosity minima as their faint ends become less and less significant in real surveys. 
 
 We pick fiducial survey parameters of $d_\mintext=20$\,Mpc and $z_\maxtext=0.75$\,Mpc, giving $\beta\approx53.87$.  Using the above luminosity functions, we find $\alpha_{\text{SF,IR}}=1.474$, $\alpha_{\text{SF,rad}}=14.56$, $\alpha_{\text{AGN,IR}}=22.97$, $\alpha_{\text{AGN,rad}}=257.5$. These values agree with qualitative observation that the AGN luminosity function is wider than the SF luminosity function in both radio and infrared bands (Fig. \ref{fig:luminosityfunctions}). These values give a predicted radio--infrared correlation of 0.21 for SF and 0.01 for AGN agreeing with our finding of a significant radio--infrared correlation for SF and near-zero correlation for AGN. The exact values deviate from our measurements for a number of reasons. The MWA and WISE catalogs are not matched in depth or redshift coverage, and thus don't survey an exactly overlapping set of radio and infrared sources. Further, real world luminosity functions can exhibit significant redshift evolution. Of course, our measurement above did not even split up the MWA catalog into separate AGN and SF subsets as such detailed characterization of low frequency radio foregrounds remains an active area of research. 
 
-\begin{figure}[h]
+BIG NOTE TO MYSELF ABOUT THIS COMPARISON OF SIMULATION TO DATA The average correlation over all $\ell$ (which is about 0.04) is pull down by the very small correlation large $\ell$ which is due to the low MWA resolution thus we should compare to the value at smaller $\ell$
+
+\begin{figure*}[h]
 \centering
 \includegraphics[width=6in]{images/sim_correlation_agn_and_sf.pdf}
 \caption{5' pixels}
 \label{fig:simagnlfcorrelations}
-\end{figure}
+\end{figure*}
 
 Lastly, we ask to what extent this unwanted radio--infrared foreground correlation can be mitigated by masking the brightest sources. Using the luminosity functions discussed above, we simulate radio and infrared surveys for each of AGN and SF. We begin by generating the mock radio catalogs of AGN and SF, choosing a poisson random number of each in each of 400 logarithmic luminosity bins. We distribute the objects uniformly over a volume $D_\maxtext=cz_\maxtext/H_0=$3212\,Mpc deep and $\theta_{\text{FOV}}D_\maxtext=$1121\,Mpc wide. We then pick a random infrared luminosity for each radio object from the appropriate infrared luminosity function. Finally we plot in Fig. \ref{fig:simagnlfcorrelations}, along the lines of Fig. \ref{fig:correlationsandSNRs}, the 1.4\,GHz--8\,$\mu$m correlation of our mock AGN and SF catalogs after masking down to a maximum radio and infrared flux. As we saw above, without any flux cut we find a roughly 20\% radio--infrared correlation for AGN and only a percent level correlation for SF. As we mask fainter and fainter sources, the AGN correlation generally increases to the 5--10\% level, while the SF correlation first increases, then decreases after masking down to 10$^{-4}$\,Jy. With increasing mask depth, these correlations do not change monotonically and they do not generally approach zero, and more detailed modeling of effective foreground flux correlations will be necessary in real world intensity mapping correlation experiments probing the EOR. In the next section we move beyond the bright sources and study the magnitudes and correlation properties of the residual radio and infrared foregrounds in our MWA and ATLAS observations.
 
