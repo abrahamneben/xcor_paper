@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  6 JAN 2017 22:37
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  22 JAN 2017 11:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -7,97 +7,26 @@ entering extended mode
 (./xcor_paper.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, dumylang, nohyphenation, german-x-2012-05-30, ngerman-x-2012-05-30, afrikaans, ancientgreek, ibycus, arabic, armenian, basque, bulgarian, catalan, pinyin, coptic, croatian, czech, danish, dutch, ukenglish, usenglishmax, esperanto, estonian, ethiopic, farsi, finnish, french, friulan, galician, german, ngerman, swissgerman, monogreek, greek, hungarian, icelandic, assamese, bengali, gujarati, hindi, kannada, malayalam, marathi, oriya, panjabi, tamil, telugu, indonesian, interlingua, irish, italian, kurmanji, latin, latvian, lithuanian, mongolian, mongolianlmc, bokmal, nynorsk, polish, portuguese, romanian, romansh, russian, sanskrit, serbian, serbianc, slovak, slovenian, spanish, swedish, turkish, turkmen, ukrainian, uppersorbian, welsh, loaded.
-(/usr/local/texlive/2012/texmf-dist/tex/latex/emulateapj/emulateapj.cls
-Document Class: emulateapj 
-\bibbaselineskip=\skip41
-(/usr/local/texlive/2012/texmf-dist/tex/latex/revtex/revtex4-1.cls
-Document Class: revtex4-1 2010/07/25/20:33:00 4.1r (http://publish.aps.org/revtex4/ for documentation)
- Copyright (c) 2009 The American Physical Society.
- mailto:revtex@aps.org
- Licensed under the LPPL:
-http://www.ctan.org/tex-archive/macros/latex/base/lppl.txt
- Arthur Ogawa <arthur_ogawa at sbcglobal dot net>
- Based on work by David Carlisle <david at dcarlisle.demon.co.uk>.
-ltxutil[2010/07/25/20:33:00 4.1r utilities package (portions licensed from W. E. Baxter web at superscript.com)]
-LaTeX Info: Redefining \@centercr on input line 308.
-Class revtex4-1 Info: Repairing broken LaTeX eqnarray on input line 358.
-\eqncolsep=\skip42
-Class revtex4-1 Info: Repairing hyperref-unfriendly LaTeX definition of \mpfootnote on input line 433.
-Class revtex4-1 Info: Repairing broken LateX \@sect on input line 755.
-\intertabularlinepenalty=\count79
-\@tbpen=\count80
-\@arstrutbox@hline=\box26
-Class revtex4-1 Info: Repairing broken LaTeX \@xbitor on input line 1786.
-Class revtex4-1 Info: Making \typeout \long on input line 2046.
-ltxfront[2010/07/25/20:33:00 4.1r frontmatter package (AO,DPC)]
-\c@affil=\count81
-\c@collab=\count82
-\absbox=\box27
-ltxgrid[2010/07/25/20:33:00 4.1r page grid package (portions licensed from W. E. Baxter web at superscript.com)]
-\c@linecount=\count83
-\output@latex=\toks14
-\box@size@1=\box28
-\box@size@2=\box29
-\@protection@box=\box30
-\@topmark@saved=\toks15
-\footins@saved=\box31
-\footins@recovered=\box32
-\column@recovered=\box33
-\pagesofar=\box34
-\footsofar=\box35
-\pagegrid@col=\count84
-Class revtex4-1 Info: Overriding \@vspace, \@vspacer, \@no@pgbk, \@newline, and \\  on input line 5578.
-\c@part=\count85
-\c@section=\count86
-\c@subsection=\count87
-\c@subsubsection=\count88
-\c@paragraph=\count89
-\c@subparagraph=\count90
-\abovecaptionskip=\skip43
-\belowcaptionskip=\skip44
-\c@figure=\count91
-\fbox@1=\box36
-\c@table=\count92
-\fbox@2=\box37
-\c@video=\count93
-\fbox@4=\box38
-\@bibdataout=\write3
-\widetext@top=\box39
-\widetext@bot=\box40
-
-Class revtex4-1 Warning: No Society specified, using default society aps.
-
-(/usr/local/texlive/2012/texmf-dist/tex/latex/revtex/aps4-1.rtx
-File: aps4-1 2010/07/25/20:33:00 4.1r (http://publish.aps.org/revtex4/ for documentation)
-Class revtex4-1 Info: RevTeX society APS selected on input line 31.
+(/usr/local/texlive/2012/texmf-dist/tex/latex/aastex/aastex.cls
+Document Class: aastex 2005/06/22 5.2/AAS markup document class
+Class aastex Info: Original \LaTeX2.09 style by Chris Biemesderfer (chris@seagoat.com). Adapted to \LaTeXe by A. Ogawa (ogawa@teleport.com) on input line 83.
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/size11.clo
+File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
-
-Class revtex4-1 Warning: No journal specified, using default pra.
-
-Class revtex4-1 Info: APS journal PRA selected on input line 7545.
-
-Class revtex4-1 Warning: No type size specified, using default 10.
-
-(/usr/local/texlive/2012/texmf-dist/tex/latex/revtex/aps10pt4-1.rtx
-File: aps10pt4-1 2010/07/25/20:33:00 4.1r (http://publish.aps.org/revtex4/ for documentation)
-Class revtex4-1 Info: RevTeX pointsize 10pt selected on input line 30.
-) (/usr/local/texlive/2012/texmf-dist/tex/latex/textcase/textcase.sty
-Package: textcase 2004/10/07 v0.07 Text only upper/lower case changing (DPC)
-) (/usr/local/texlive/2012/texmf-dist/tex/latex/url/url.sty
-\Urlmuskip=\muskip10
-Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
-) (/usr/local/texlive/2012/texmf-dist/tex/latex/natbib/natbib.sty
-Package: natbib 2010/09/13 8.31b (PWD, AO)
-\bibhang=\skip45
-\bibsep=\skip46
-LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count94
-)
-Class revtex4-1 Info: Repairing natbib's \BibitemShut on input line 7549.
- (/usr/local/texlive/2012/texmf-dist/tex/latex/revtex/revsymb4-1.sty
-Package: revsymb4-1 2010/07/25/20:33:00 4.1r (http://publish.aps.org/revtex4/ for documentation)
-LaTeX Info: Redefining \REV@mathfrak on input line 119.
-)) (/usr/local/texlive/2012/texmf-dist/tex/latex/base/latexsym.sty
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+) (/usr/local/texlive/2012/texmf-dist/tex/latex/base/latexsym.sty
 Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
 \symlasy=\mathgroup4
 LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
@@ -106,7 +35,7 @@ LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
  (/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
-\KV@toks@=\toks16
+\KV@toks@=\toks14
 ) (/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
  (/usr/local/texlive/2012/texmf-dist/tex/latex/graphics/trig.sty
@@ -122,165 +51,142 @@ Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 ) (/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
-\Gread@gobject=\count95
+\Gread@gobject=\count87
 ))
-\Gin@req@height=\dimen102
-\Gin@req@width=\dimen103
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
 ) (/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2009/06/22 v3.00
  (/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
-\@emptytoks=\toks17
+\@emptytoks=\toks15
 \symAMSa=\mathgroup5
 \symAMSb=\mathgroup6
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
-LaTeX Info: Redefining \frak on input line 99.
-LaTeX Info: Redefining \Bbb on input line 101.
-)) (/usr/local/texlive/2012/texmf-dist/tex/latex/tools/longtable.sty
-Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
-\LTleft=\skip47
-\LTright=\skip48
-\LTpre=\skip49
-\LTpost=\skip50
-\LTchunksize=\count96
-\LTcapwidth=\dimen104
-\LT@head=\box41
-\LT@firsthead=\box42
-\LT@foot=\box43
-\LT@lastfoot=\box44
-\LT@cols=\count97
-\LT@rows=\count98
-\c@LT@tables=\count99
-\c@LT@chunks=\count100
-\LT@p@ftn=\toks18
-) (/usr/local/texlive/2012/texmf-dist/tex/generic/epsf/epsf.sty
-This is `epsf.tex' v2.7.4 <14 February 2011>
-\epsffilein=\read1
-\epsfframemargin=\dimen105
-\epsfframethickness=\dimen106
-\epsfrsize=\dimen107
-\epsftmp=\dimen108
-\epsftsize=\dimen109
-\epsfxsize=\dimen110
-\epsfysize=\dimen111
-\pspoints=\dimen112
+)) (/usr/local/texlive/2012/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip43
+\bibsep=\skip44
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count88
+) (/usr/local/texlive/2012/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks16
+\verbatim@line=\toks17
+\verbatim@in@stream=\read1
 )
-\c@front@matter@foot@note=\count101
-\alt@affil@toks=\toks19
-\alt@affil@toks@count=\toks20
-\keys@width=\skip51
-\c@lastfootnote=\count102
-\c@remember@figure@num=\count103
-\c@remember@table@num=\count104
-\bibindent=\dimen113
-\plot@width=\skip52
-\c@table@save=\count105
-\table@note@skip=\skip53
-\deluxe@table@width=\skip54
-\@d@t@a=\skip55
-\c@deluxe@table@num=\count106
-\abovedeluxetableskip=\skip56
-\belowdeluxetableskip=\skip57
-\lastrowheight=\dimen114
-\DT@p@ftn=\toks21
-\pt@column=\count107
-\pt@ncol=\count108
+\@slugcmmntwidth=\dimen105
+\abstract@box=\box26
+\c@editornote=\count89
+\c@cureqno=\count90
+\tnotemarkskip=\skip45
+\@abovenoteskip=\dimen106
+\pt@box=\box27
+\pt@width=\dimen107
+\pt@line=\count91
+\pt@column=\count92
+\pt@nlines=\count93
+\pt@ncol=\count94
+\pt@page=\count95
+\tabbaseskip=\dimen108
+\pt@tmpcapwidth=\dimen109
+\spew@tblnotesbox=\box28
+\restof@tblnotesbox=\box29
+\noteheight=\dimen110
+\pt@tabnoteminht=\dimen111
+\firsttabskip=\dimen112
+\captionbox=\box30
+\pt@reduceline=\dimen113
+\extra@vspace=\dimen114
+\c@plate=\count96
+\my@footins=\box31
 ) (/usr/local/texlive/2012/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2000/07/18 v2.13 AMS math features
-\@mathmargin=\skip58
+\@mathmargin=\skip46
 
 For additional information on amsmath, use the `?' option.
 (/usr/local/texlive/2012/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01
  (/usr/local/texlive/2012/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
-\@emptytoks=\toks22
+\@emptytoks=\toks18
 \ex@=\dimen115
-)
-LaTeX Info: Redefining \text on input line 53.
-) (/usr/local/texlive/2012/texmf-dist/tex/latex/amsmath/amsbsy.sty
+)) (/usr/local/texlive/2012/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen116
 ) (/usr/local/texlive/2012/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
-\inf@bad=\count109
+\inf@bad=\count97
 LaTeX Info: Redefining \frac on input line 211.
-\uproot@=\count110
-\leftroot@=\count111
+\uproot@=\count98
+\leftroot@=\count99
 LaTeX Info: Redefining \overline on input line 307.
-\classnum@=\count112
-\DOTSCASE@=\count113
+\classnum@=\count100
+\DOTSCASE@=\count101
 LaTeX Info: Redefining \ldots on input line 379.
 LaTeX Info: Redefining \dots on input line 382.
 LaTeX Info: Redefining \cdots on input line 467.
-\Mathstrutbox@=\box45
-\strutbox@=\box46
+\Mathstrutbox@=\box32
+\strutbox@=\box33
 \big@size=\dimen117
 LaTeX Font Info:    Redeclaring font encoding OML on input line 567.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 568.
-\macc@depth=\count114
-\c@MaxMatrixCols=\count115
-\dotsspace@=\muskip11
-\c@parentequation=\count116
-\dspbrk@lvl=\count117
-\tag@help=\toks23
-\row@=\count118
-\column@=\count119
-\maxfields@=\count120
-\andhelp@=\toks24
+\macc@depth=\count102
+\c@MaxMatrixCols=\count103
+\dotsspace@=\muskip10
+\c@parentequation=\count104
+\dspbrk@lvl=\count105
+\tag@help=\toks19
+\row@=\count106
+\column@=\count107
+\maxfields@=\count108
+\andhelp@=\toks20
 \eqnshift@=\dimen118
 \alignsep@=\dimen119
 \tagshift@=\dimen120
 \tagwidth@=\dimen121
 \totwidth@=\dimen122
 \lineht@=\dimen123
-\@envbody=\toks25
-\multlinegap=\skip59
-\multlinetaggap=\skip60
-\mathdisplay@stack=\toks26
+\@envbody=\toks21
+\multlinegap=\skip47
+\multlinetaggap=\skip48
+\mathdisplay@stack=\toks22
 LaTeX Info: Redefining \[ on input line 2666.
 LaTeX Info: Redefining \] on input line 2667.
-)
-Class revtex4-1 Info: Patching LaTeX tabular. on input line 74.
-Class revtex4-1 Info: Patching longtable package on input line 74.
-Class revtex4-1 Info: Robustifying \LaTeX's \boldmath command on input line 74.
-Class revtex4-1 Info: cite was not loaded (OK!) on input line 74.
-Class revtex4-1 Info: mcite was not loaded (OK!) on input line 74.
-Class revtex4-1 Info: multicol was not loaded (OK!) on input line 74.
- (/Users/abrahamn/Documents/Physics/papers/xcor_paper/.texpadtmp/xcor_paper.aux
+) (/Users/abrahamn/Documents/Physics/papers/xcor_paper/.texpadtmp/xcor_paper.aux
 
 LaTeX Warning: Label `eqn:Cldefcross' multiply defined.
 
 )
 \openout1 = `xcor_paper.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
  (/usr/local/texlive/2012/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count121
+\scratchcounter=\count109
 \scratchdimen=\dimen124
-\scratchbox=\box47
-\nofMPsegments=\count122
-\nofMParguments=\count123
-\everyMPshowfont=\toks27
-\MPscratchCnt=\count124
+\scratchbox=\box34
+\nofMPsegments=\count110
+\nofMParguments=\count111
+\everyMPshowfont=\toks23
+\MPscratchCnt=\count112
 \MPscratchDim=\dimen125
-\MPnumerator=\count125
-\makeMPintoPDFobject=\count126
-\everyMPtoPDFconversion=\toks28
+\MPnumerator=\count113
+\makeMPintoPDFobject=\count114
+\everyMPtoPDFconversion=\toks24
 ) (/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO)
  (/usr/local/texlive/2012/texmf-dist/tex/generic/oberdiek/ifluatex.sty
@@ -317,238 +223,118 @@ Package grfext Info: Graphics extension search list:
  (/usr/local/texlive/2012/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-\openout3 = `xcor_paperNotes.bib'.
-
-LaTeX Font Info:    Try loading font information for U+lasy on input line 110.
- (/usr/local/texlive/2012/texmf-dist/tex/latex/base/ulasy.fd
+AAS preprint substyle, v5.2 <12 Dec 2003>.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 118.
+(/usr/local/texlive/2012/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 110.
+LaTeX Font Info:    Try loading font information for U+msa on input line 118.
  (/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 110.
+LaTeX Font Info:    Try loading font information for U+msb on input line 118.
  (/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
-) [1{/usr/local/texlive/2012/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 1028) in paragraph at lines 153--153
-[][]| [] []\OT1/cmr/m/n/8 IS IT RE-ALLY RIGHT THAT ALL THESE PEO-PLE
- []
+) [1
 
-
-Overfull \hbox (6.3389pt too wide) detected at line 157
-\OML/cmm/m/it/10 C\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 `\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a; b\OT1/cmr/m/n/10 )) = [] []
- []
-
-[2] <images/res_pspec_of_100_obsids_with_diff_spacings.pdf, id=25, 420.44768pt x 410.80264pt>
-File: images/res_pspec_of_100_obsids_with_diff_spacings.pdf Graphic file (type pdf)
- <use images/res_pspec_of_100_obsids_with_diff_spacings.pdf>
-Package pdftex.def Info: images/res_pspec_of_100_obsids_with_diff_spacings.pdf used on input line 207.
-(pdftex.def)             Requested size: 238.49121pt x 233.0191pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 208--208
-$[]$
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 208--208
-
- []
-
-<images/survey_overview.pdf, id=26, 633.03064pt x 614.66516pt>
+{/usr/local/texlive/2012/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4] [5] <images/survey_overview.pdf, id=32, 633.03064pt x 614.66516pt>
 File: images/survey_overview.pdf Graphic file (type pdf)
  <use images/survey_overview.pdf>
-Package pdftex.def Info: images/survey_overview.pdf used on input line 216.
+Package pdftex.def Info: images/survey_overview.pdf used on input line 215.
 (pdftex.def)             Requested size: 238.49121pt x 231.56807pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 217--217
-$[]$
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 217--217
-
- []
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[3 <./images/res_pspec_of_100_obsids_with_diff_spacings.pdf>]
-
-LaTeX Warning: A float is stuck (cannot be placed) on input line 223.
-
-
-LaTeX Warning: A float is stuck (cannot be placed) on input line 223.
-
-
-Class revtex4-1 Warning: Deferred float stuck during \clearpage processing.
-
-
-Underfull \hbox (badness 1342) in paragraph at lines 229--230
-\OT1/cmr/m/n/10 We se-lect four 5 deg fields po-si-tioned around the
- []
-
-
-Underfull \hbox (badness 3088) in paragraph at lines 229--230
-\OT1/cmr/m/n/10 MWA beam peak for best cross cor-re-la-tion pre-
- []
-
-
-Underfull \hbox (badness 1377) in paragraph at lines 229--230
-\OT1/cmr/m/n/10 ci-sion: (RA,Dec) = $(\OMS/cmsy/m/n/10 ^^@\OT1/cmr/m/n/10 2\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 5[]\OML/cmm/m/it/10 ; \OMS/cmsy/m/n/10 ^^@\OT1/cmr/m/n/10 24\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 5[])$, $(2\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 5[]\OML/cmm/m/it/10 ; \OMS/cmsy/m/n/10 ^^@\OT1/cmr/m/n/10 24\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 5[])$,
- []
-
-<images/catalog_histograms.pdf, id=57, 1175.65947pt x 330.92696pt>
+ [6 <./images/survey_overview.pdf>] <images/catalog_histograms.pdf, id=89, 1175.65947pt x 330.92696pt>
 File: images/catalog_histograms.pdf Graphic file (type pdf)
  <use images/catalog_histograms.pdf>
 Package pdftex.def Info: images/catalog_histograms.pdf used on input line 244.
 (pdftex.def)             Requested size: 469.75499pt x 132.22704pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 245--245
-$[]$
+ [7 <./images/catalog_histograms.pdf>]
+Overfull \hbox (7.71632pt too wide) in paragraph at lines 258--259
+\OT1/cmr/m/n/10.95 how they man-i-fest in in-ten-sity map-ping cor-re-la-tion ex-per-i-ments. Tra-di-tion-ally, ra-dio/optical/infrared
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 245--245
-
- []
-
-[4 <./images/survey_overview.pdf>] <images/source_correlation_grids_and_snrs.pdf, id=115, 619.11348pt x 497.2978pt>
+[8] <images/source_correlation_grids_and_snrs.pdf, id=147, 619.11348pt x 497.2978pt>
 File: images/source_correlation_grids_and_snrs.pdf Graphic file (type pdf)
  <use images/source_correlation_grids_and_snrs.pdf>
 Package pdftex.def Info: images/source_correlation_grids_and_snrs.pdf used on input line 264.
 (pdftex.def)             Requested size: 397.48499pt x 319.27873pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 265--265
-$[]$
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 265--265
-
- []
-
-
-Class revtex4-1 Warning: Float cannot be placed.
-
-[5 <./images/catalog_histograms.pdf>]
-
-LaTeX Warning: A float is stuck (cannot be placed) on input line 281.
-
-[6 <./images/source_correlation_grids_and_snrs.pdf>] <images/wise_color_color_figure.pdf, id=248, 697.60472pt x 266.2284pt>
+ [9 <./images/source_correlation_grids_and_snrs.pdf>] <images/wise_color_color_figure.pdf, id=228, 697.60472pt x 266.2284pt>
 File: images/wise_color_color_figure.pdf Graphic file (type pdf)
  <use images/wise_color_color_figure.pdf>
 Package pdftex.def Info: images/wise_color_color_figure.pdf used on input line 284.
 (pdftex.def)             Requested size: 433.62pt x 165.48238pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 285--285
-$[]$
- []
 
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-Underfull \hbox (badness 10000) in paragraph at lines 285--285
-
- []
-
-
-Class revtex4-1 Warning: Float cannot be placed.
-
-<images/mwa_wise_qsoagn_gal_xspec.pdf, id=249, 1060.64885pt x 264.58786pt>
+[10] <images/mwa_wise_qsoagn_gal_xspec.pdf, id=232, 1060.64885pt x 264.58786pt>
 File: images/mwa_wise_qsoagn_gal_xspec.pdf Graphic file (type pdf)
  <use images/mwa_wise_qsoagn_gal_xspec.pdf>
 Package pdftex.def Info: images/mwa_wise_qsoagn_gal_xspec.pdf used on input line 293.
 (pdftex.def)             Requested size: 505.89pt x 126.1973pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 294--294
-$[]$
+Overfull \hbox (36.13501pt too wide) in paragraph at lines 293--294
+ [][] 
  []
 
+[11 <./images/wise_color_color_figure.pdf> <./images/mwa_wise_qsoagn_gal_xspec.pdf
 
-Underfull \hbox (badness 10000) in paragraph at lines 294--294
-
- []
-
-
-Class revtex4-1 Warning: Float cannot be placed.
-
-<images/sim_rad_ir_luminosity_functions.pdf, id=250, 636.76334pt x 229.0934pt>
+pdfTeX warning: /usr/local/texlive/2012/bin/x86_64-darwin/pdflatex (file ./images/mwa_wise_qsoagn_gal_xspec.pdf): PDF inclusion: multiple pdfs with page group included in a single page
+>] [12] <images/sim_rad_ir_luminosity_functions.pdf, id=350, 636.76334pt x 229.0934pt>
 File: images/sim_rad_ir_luminosity_functions.pdf Graphic file (type pdf)
  <use images/sim_rad_ir_luminosity_functions.pdf>
 Package pdftex.def Info: images/sim_rad_ir_luminosity_functions.pdf used on input line 323.
 (pdftex.def)             Requested size: 433.62pt x 156.00867pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 324--324
-$[]$
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 324--324
-
- []
-
-
-Class revtex4-1 Warning: Float cannot be placed.
-
-[7]
-
-LaTeX Warning: A float is stuck (cannot be placed) on input line 331.
-
-[8 <./images/wise_color_color_figure.pdf> <./images/mwa_wise_qsoagn_gal_xspec.pdf
-
-pdfTeX warning: /usr/local/texlive/2012/bin/x86_64-darwin/pdflatex (file ./images/mwa_wise_qsoagn_gal_xspec.pdf): PDF inclusion: multiple pdfs with page group included in a single page
-> <./images/sim_rad_ir_luminosity_functions.pdf
-
-pdfTeX warning: /usr/local/texlive/2012/bin/x86_64-darwin/pdflatex (file ./images/sim_rad_ir_luminosity_functions.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->] <images/sim_correlation_agn_and_sf.pdf, id=432, 719.3972pt x 230.55197pt>
+ [13 <./images/sim_rad_ir_luminosity_functions.pdf>] <images/sim_correlation_agn_and_sf.pdf, id=419, 719.3972pt x 230.55197pt>
 File: images/sim_correlation_agn_and_sf.pdf Graphic file (type pdf)
  <use images/sim_correlation_agn_and_sf.pdf>
 Package pdftex.def Info: images/sim_correlation_agn_and_sf.pdf used on input line 336.
 (pdftex.def)             Requested size: 433.62pt x 138.96898pt.
+ [14 <./images/sim_correlation_agn_and_sf.pdf>] <images/res_pspec_of_100_obsids_with_diff_spacings_6amin.pdf, id=474, 420.44768pt x 410.80264pt>
+File: images/res_pspec_of_100_obsids_with_diff_spacings_6amin.pdf Graphic file (type pdf)
+ <use images/res_pspec_of_100_obsids_with_diff_spacings_6amin.pdf>
+Package pdftex.def Info: images/res_pspec_of_100_obsids_with_diff_spacings_6amin.pdf used on input line 367.
+(pdftex.def)             Requested size: 252.94499pt x 247.14166pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 337--337
-$[]$
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[15] [16 <./images/res_pspec_of_100_obsids_with_diff_spacings_6amin.pdf>] <images/big_foreground_masking_study_2.pdf, id=508, 993.52957pt x 1049.83195pt>
+File: images/big_foreground_masking_study_2.pdf Graphic file (type pdf)
+ <use images/big_foreground_masking_study_2.pdf>
+Package pdftex.def Info: images/big_foreground_masking_study_2.pdf used on input line 385.
+(pdftex.def)             Requested size: 505.89pt x 534.55821pt.
+
+Overfull \hbox (36.13501pt too wide) in paragraph at lines 385--386
+ [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 337--337
+LaTeX Warning: `h' float specifier changed to `ht'.
 
- []
-
-
-Class revtex4-1 Warning: Float cannot be placed.
-
-
-Underfull \hbox (badness 6927) in paragraph at lines 345--346
-[]\OT1/cmr/m/n/10 NEED TO START REWRIT-ING THIS SEC-
- []
-
-[9]
-
-LaTeX Warning: A float is stuck (cannot be placed) on input line 363.
-
-[10 <./images/sim_correlation_agn_and_sf.pdf>]
-Underfull \hbox (badness 1406) in paragraph at lines 364--365
-[]\OT1/cmr/m/n/10 SHOW THE UNI-FORMLY WEIGHTED IM-AGE
- []
+[17] [18] <images/big_foreground_masking_study_pspecs_2.pdf, id=515, 427.0354pt x 446.15118pt>
+File: images/big_foreground_masking_study_pspecs_2.pdf Graphic file (type pdf)
+ <use images/big_foreground_masking_study_pspecs_2.pdf>
+Package pdftex.def Info: images/big_foreground_masking_study_pspecs_2.pdf used on input line 420.
+(pdftex.def)             Requested size: 289.07999pt x 302.01724pt.
 
 
-Underfull \hbox (badness 1173) in paragraph at lines 367--369
-[]\OT1/cmr/m/n/10 Figure XX shows XN-THOUN-STHES-NTUH-SNTO-
- []
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[19]
+
+LaTeX Warning: Reference `sec:pspec21fg' on page 20 undefined on input line 469.
 
 
-LaTeX Warning: Reference `sec:pspec21fg' on page 11 undefined on input line 404.
+LaTeX Warning: Reference `sec:pspecIRfg' on page 20 undefined on input line 469.
 
+[20]
 
-LaTeX Warning: Reference `sec:pspecIRfg' on page 11 undefined on input line 404.
+LaTeX Warning: Reference `sec:pspecIRfg' on page 21 undefined on input line 513.
 
-
-LaTeX Warning: Reference `sec:pspecIRfg' on page 11 undefined on input line 447.
-
-[11] (/Users/abrahamn/Documents/Physics/papers/xcor_paper/.texpadtmp/xcor_paper.bbl [12]
-Missing character: There is no Ã in font cmr8!
-Missing character: There is no – in font cmr8!
-) [13] (/Users/abrahamn/Documents/Physics/papers/xcor_paper/.texpadtmp/xcor_paper.aux)
+[21] [22] [23] (/Users/abrahamn/Documents/Physics/papers/xcor_paper/.texpadtmp/xcor_paper.bbl [24] [25] [26]
+Missing character: There is no Ã in font cmr10!
+Missing character: There is no – in font cmr10!
+) [27] [28 <./images/big_foreground_masking_study_2.pdf>] [29 <./images/big_foreground_masking_study_pspecs_2.pdf>] (/Users/abrahamn/Documents/Physics/papers/xcor_paper/.texpadtmp/xcor_paper.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -557,18 +343,18 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 5228 strings out of 493488
- 71255 string characters out of 3141326
- 182306 words of memory out of 3000000
- 8446 multiletter control sequences out of 15000+200000
- 13343 words of font info for 55 fonts, out of 3000000 for 9000
+ 3656 strings out of 493488
+ 49638 string characters out of 3141326
+ 124331 words of memory out of 3000000
+ 6892 multiletter control sequences out of 15000+200000
+ 13673 words of font info for 55 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 39i,10n,26p,1734b,403s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/ncntrsbk/uncr8a.pfb>
-Output written on /Users/abrahamn/Documents/Physics/papers/xcor_paper/.texpadtmp/xcor_paper.pdf (13 pages, 585351 bytes).
+ 38i,10n,26p,1734b,403s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/ncntrsbk/uncr8a.pfb>
+Output written on /Users/abrahamn/Documents/Physics/papers/xcor_paper/.texpadtmp/xcor_paper.pdf (29 pages, 981571 bytes).
 PDF statistics:
- 569 PDF objects out of 1000 (max. 8388607)
- 207 compressed objects within 3 object streams
+ 851 PDF objects out of 1000 (max. 8388607)
+ 308 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 

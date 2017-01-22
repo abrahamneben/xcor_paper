@@ -1,9 +1,8 @@
 This is BibTeX, Version 0.99d (TeX Live 2012)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
-The top-level auxiliary file: /Users/abrahamn/Documents/Physics/papers/xcor_paper/.texpadtmp/xcor_paper.aux
+The top-level auxiliary file: xcor_paper.aux
 The style file: ../apj.bst
-Database file #1: xcor_paperNotes.bib
-Database file #2: ../xcor_paper_new.bib
+Database file #1: ../xcor_paper_new.bib
 Repeated entry---line 2062 of file ../xcor_paper_new.bib
  : @article{mwascience
  :                    ,
@@ -23,6 +22,10 @@ I'm skipping whatever remains of this entry
 Repeated entry---line 2476 of file ../xcor_paper_new.bib
  : @article{PoberNextGen
  :                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 2548 of file ../xcor_paper_new.bib
+ : @article{X13
+ :             ,
 I'm skipping whatever remains of this entry
 Repeated entry---line 2869 of file ../xcor_paper_new.bib
  : @article{tingay13
@@ -48,13 +51,13 @@ Repeated entry---line 3189 of file ../xcor_paper_new.bib
  : @article{mwascience
  :                    ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 3535 of file ../xcor_paper_new.bib
- : @article{MWACS
- :               ,
+Repeated entry---line 3359 of file ../xcor_paper_new.bib
+ : @article{X13
+ :             ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 3570 of file ../xcor_paper_new.bib
- : @article{parsons12b
- :                    ,
+Repeated entry---line 4036 of file ../xcor_paper_new.bib
+ : @article{X13
+ :             ,
 I'm skipping whatever remains of this entry
 Repeated entry---line 4069 of file ../xcor_paper_new.bib
  : @article{PritchardLoebReview
@@ -82,51 +85,47 @@ Repeated entry---line 6477 of file ../xcor_paper_new.bib
  : @article{PoberNextGen
  :                      ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 6498 of file ../xcor_paper_new.bib
- : @article{MWACS
- :               ,
-I'm skipping whatever remains of this entry
 Warning--empty institution in allwise
 Warning--empty publisher in ska
-You've used 76 entries,
+You've used 79 entries,
             2988 wiz_defined-function locations,
-            1087 strings with 41608 characters,
-and the built_in function-call counts, 47661 in all, are:
-= -- 2750
-> -- 5508
-< -- 13
-+ -- 1839
-- -- 1757
-* -- 5212
-:= -- 9569
-add.period$ -- 76
-call.type$ -- 76
-change.case$ -- 480
-chr.to.int$ -- 76
-cite$ -- 78
-duplicate$ -- 1416
-empty$ -- 2043
-format.name$ -- 2035
-if$ -- 8765
+            1104 strings with 42351 characters,
+and the built_in function-call counts, 49072 in all, are:
+= -- 2855
+> -- 5597
+< -- 14
++ -- 1867
+- -- 1782
+* -- 5344
+:= -- 9828
+add.period$ -- 79
+call.type$ -- 79
+change.case$ -- 492
+chr.to.int$ -- 79
+cite$ -- 81
+duplicate$ -- 1469
+empty$ -- 2138
+format.name$ -- 2069
+if$ -- 9054
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 73
-newline$ -- 232
-num.names$ -- 305
-pop$ -- 493
+missing$ -- 76
+newline$ -- 241
+num.names$ -- 317
+pop$ -- 502
 preamble$ -- 1
-purify$ -- 479
+purify$ -- 491
 quote$ -- 0
-skip$ -- 1187
+skip$ -- 1249
 stack$ -- 0
-substring$ -- 1514
+substring$ -- 1619
 swap$ -- 22
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 681
+type$ -- 708
 warning$ -- 2
-while$ -- 219
+while$ -- 227
 width$ -- 0
-write$ -- 756
+write$ -- 786
 (There were 20 error messages)
