@@ -42,6 +42,7 @@
 \newcommand{\Ab}{\mathbf{A}}
 \newcommand{\xb}{\mathbf{x}}
 \newcommand{\pb}{\mathbf{p}}
+\newcommand{\qb}{\mathbf{q}}
 \newcommand{\Wb}{\mathbf{W}}
 
 
@@ -254,6 +255,7 @@ Lastly, we run SExtractor\footnote{http://www.astromatic.net/software/sextractor
 
 
 \subsection{Catalog radio--infrared flux correlations}
+\label{sec:catcorrelations}
 
 Having prepared catalogs of point source foregrounds in our three bands, we proceed to study how they manifest in intensity mapping correlation experiments. Traditionally, radio/optical/infrared correlations have been studied by cross matching high frequency radio detections with optical and infrared sources coincident within a few arcseconds, and plotting radio versus optical or infrared luminosity. Such studies have revealed the well known radio--far infrared correlation (CITATIONS) thought to be due to massive star formation \citep[e.g.][]{helou85,dejong85,yun01,xu94}. Such stars emit ionizing radiation which is reprocessed into far-infrared by dust, and also create HII regions which emit radio synchrotron \citep{xu94}. A secondary radio mechanism is synchrotron radiation from acceleration of cosmic ray electrons in these stars' supernovae. 
 
@@ -411,6 +413,7 @@ The matrix of window functions (i.e., horizontal error bars) of the band powers 
 
 Now we turn to application of this formalism to power spectrum estimation from our maskeod IR images. Later we will adapt it to estimation of the 21\,cm--IR cross spectrum. We take $\xb$ to be a vector of all IR coarse (3.5') pixel values, with masked pixels set to zero. After gridding the high resolution images by a factor of $\sim10^4$ to reach this resolution, photon shot noise is negligible, and the covariance is the sum of the signal covariance $\Cb_\text{signal}$ and the masking covariance $\Cb_\text{mask}$. $\Cb_\text{mask}$ is a diagonal matrix with $\infty$ for masked pixels, and 0 otherwise. In practice, we replace $\infty$ with a number $10^10$ times larger than all eigenvalues of $\Cb_\text{signal}$, finding that the results are not sensitive to this parameter. The signal covariance is easily obtained by writing it in fourier space, where it is a diagonal matrix with a guess of the true power spectrum on the diagonal, then fourier transforming it into image space with fourier transform matrices $\mathcal{F}$. 
 \begin{equation}
+\label{eqn:covFTwithmask}
 	\Cb = \mathcal{F}\Cb_\text{ft}\mathcal{F}^\dagger+\Cb_\text{mask}
 \end{equation}
 Note that $\mathcal{F}$ is an $N\times N$ matrix with elements $\mathcal{F}_{ij}=\exp i \vec{\theta}_i\cdot\vec{\ell}_j$, where $i$ runs over all pixels and $j$ runs over all fourier cells. 
@@ -430,18 +433,17 @@ Lastly, excluding modes with $|\ell_x|<200$ or $|\ell_y|<200$ results in a spect
 
 \subsection{21\,cm--Ly$\alpha$ cross spectrum limits}
 
-Appendix \ref{sec:optimalestimatorforcrossspectrum}
-
+Having characterized the residual sky power spectrum at 185\,MHz and 850\,nm after significant foreground masking and subtraction, we now search for a correlation of the sort found between bright radio and infrared foregrounds in Sec. \ref{sec:catcorrelations}. To account for the the non-uniform $uv$ sampling of the MWA image and the image space masking of the ATLAS image, we again use the optimal quadratic estimator. In Appendix \ref{sec:optimalestimatorforcrossspectrum} we show that with the approximation that the correlation between the two images is small, the proper extension of the optimal quadratic estimator from the auto power spectrum case to the cross spectrum case is given by
 \begin{equation}
-q_\alpha \approx (\xb_1-\langle\xb_1\rangle)^\dagger \Cb_1^{-1} \Cb_{,\alpha}\Cb_2^{-1}(\xb_2-\langle\xb_2\rangle)
+q_\alpha \approx (\xb_{21}-\langle\xb_{21}\rangle)^\dagger \Cb_{21}^{-1} \Cb_{,\alpha}\Cb_\IR^{-1}(\xb_\IR-\langle\xb_\IR\rangle)
 \end{equation}
 \begin{equation}
-\Fb_{\alpha\beta}\approx\text{tr}\left(\Cb_1^{-1} \Cb_{,\alpha} \Cb_2^{-1}  \Cb_{,\alpha}  \right)	
+\Fb_{\alpha\beta}\approx\text{tr}\left(\Cb_{21}^{-1} \Cb_{,\alpha} \Cb_\IR^{-1}  \Cb_{,\alpha}  \right)	
 \end{equation}
-
-
-
-
+where $\Cb_{,\alpha}$ is the same matrix used in Sec. \ref{sec:resirfg}. As before we use $\Mb=F^{-1/2}$ to normalize the estimator in  $\pb=\Mb\qb$, and perform a final normalization using the peaks of the window functions $\Wb=\Mb\Fb$. We use the same IR covariance matrix given in Eqn. \ref{eqn:covFTwithmask}, and generate the 21\,cm covariance matrix by writing the diagonal covariance matrix due to sample variance and thermal noise in fourier space, then fourier transforming it as
+\begin{equation}
+\Cb_{21} = \mathcal{F}(\Cb_\text{21,signal,ft}+\Cb_\text{21,thermal,ft})\mathcal{F}^\dagger
+\end{equation}
 
 
 \section{Sensitivity study}
