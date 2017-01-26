@@ -1,8 +1,9 @@
 This is BibTeX, Version 0.99d (TeX Live 2012)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
-The top-level auxiliary file: xcor_paper.aux
+The top-level auxiliary file: /Users/abrahamn/Documents/Physics/papers/xcor_paper/.texpadtmp/xcor_paper.aux
 The style file: ../apj.bst
-Database file #1: ../xcor_paper_new.bib
+Database file #1: xcor_paperNotes.bib
+Database file #2: ../xcor_paper_new.bib
 Repeated entry---line 2062 of file ../xcor_paper_new.bib
  : @article{mwascience
  :                    ,
@@ -86,46 +87,48 @@ Repeated entry---line 6477 of file ../xcor_paper_new.bib
  :                      ,
 I'm skipping whatever remains of this entry
 Warning--empty institution in allwise
+Warning--empty journal in Gong2014
 Warning--empty publisher in ska
-You've used 79 entries,
+Warning--empty journal in Heneka2016
+You've used 81 entries,
             2988 wiz_defined-function locations,
-            1104 strings with 42351 characters,
-and the built_in function-call counts, 49072 in all, are:
-= -- 2855
-> -- 5597
+            1113 strings with 42793 characters,
+and the built_in function-call counts, 49918 in all, are:
+= -- 2923
+> -- 5665
 < -- 14
-+ -- 1867
-- -- 1782
-* -- 5344
-:= -- 9828
-add.period$ -- 79
-call.type$ -- 79
-change.case$ -- 492
-chr.to.int$ -- 79
-cite$ -- 81
-duplicate$ -- 1469
-empty$ -- 2138
-format.name$ -- 2069
-if$ -- 9054
++ -- 1890
+- -- 1803
+* -- 5418
+:= -- 9993
+add.period$ -- 81
+call.type$ -- 81
+change.case$ -- 507
+chr.to.int$ -- 81
+cite$ -- 85
+duplicate$ -- 1505
+empty$ -- 2182
+format.name$ -- 2096
+if$ -- 9209
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 76
-newline$ -- 241
-num.names$ -- 317
-pop$ -- 502
+missing$ -- 78
+newline$ -- 247
+num.names$ -- 325
+pop$ -- 523
 preamble$ -- 1
-purify$ -- 491
+purify$ -- 506
 quote$ -- 0
-skip$ -- 1249
+skip$ -- 1273
 stack$ -- 0
-substring$ -- 1619
+substring$ -- 1641
 swap$ -- 22
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 708
-warning$ -- 2
-while$ -- 227
+type$ -- 726
+warning$ -- 4
+while$ -- 233
 width$ -- 0
-write$ -- 786
+write$ -- 802
 (There were 20 error messages)

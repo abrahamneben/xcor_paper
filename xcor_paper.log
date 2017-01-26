@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  21 JAN 2017 22:44
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  24 JAN 2017 22:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -190,18 +190,18 @@ LaTeX Warning: Label `eqn:Cldefcross' multiply defined.
 )
 \openout1 = `xcor_paper.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 83.
+LaTeX Font Info:    ... okay on input line 83.
  (/usr/local/texlive/2012/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count109
@@ -264,268 +264,268 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 AAS preprint substyle, v5.2 <12 Dec 2003>.
-LaTeX Font Info:    Try loading font information for U+lasy on input line 118.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 119.
 (/usr/local/texlive/2012/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 118.
+LaTeX Font Info:    Try loading font information for U+msa on input line 119.
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 118.
+LaTeX Font Info:    Try loading font information for U+msb on input line 119.
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
 )
 
 Package natbib Warning: Citation `FurlanettoReview' on page 1 undefined on inpu
-t line 120.
+t line 121.
 
 
 Package natbib Warning: Citation `miguelreview' on page 1 undefined on input li
-ne 120.
+ne 121.
 
 
 Package natbib Warning: Citation `PritchardLoebReview' on page 1 undefined on i
-nput line 120.
+nput line 121.
 
 
 Package natbib Warning: Citation `tingay13' on page 1 undefined on input line 1
-20.
+21.
 
 
 Package natbib Warning: Citation `mwascience' on page 1 undefined on input line
- 120.
+ 121.
 
 
 Package natbib Warning: Citation `parsons14' on page 1 undefined on input line 
-120.
+121.
 
 
-Package natbib Warning: Citation `ali15' on page 1 undefined on input line 120.
+Package natbib Warning: Citation `ali15' on page 1 undefined on input line 121.
 
 
 
 Package natbib Warning: Citation `PoberPAPER64Heating' on page 1 undefined on i
-nput line 120.
+nput line 121.
 
 
 Package natbib Warning: Citation `DannyMultiRedshift' on page 1 undefined on in
-put line 120.
+put line 121.
 
 
 Package natbib Warning: Citation `deboer16' on page 1 undefined on input line 1
-20.
+21.
 
 
-Package natbib Warning: Citation `ska' on page 1 undefined on input line 120.
+Package natbib Warning: Citation `ska' on page 1 undefined on input line 121.
 
 
 Package natbib Warning: Citation `Bouwens2011' on page 1 undefined on input lin
-e 122.
+e 123.
 
 
 Package natbib Warning: Citation `Illingworth2013' on page 1 undefined on input
- line 122.
+ line 123.
 
 
 Package natbib Warning: Citation `Dunlop2013' on page 1 undefined on input line
- 122.
+ 123.
 
 
 Package natbib Warning: Citation `Schmidt2014' on page 1 undefined on input lin
-e 122.
+e 123.
 
 
 Package natbib Warning: Citation `Trenti2011' on page 1 undefined on input line
- 122.
+ 123.
 
 
 Package natbib Warning: Citation `Bradley2012' on page 1 undefined on input lin
-e 122.
+e 123.
 
 
 Package natbib Warning: Citation `Robertson2013' on page 1 undefined on input l
-ine 122.
+ine 123.
 
 
 Package natbib Warning: Citation `Alvarez2012' on page 1 undefined on input lin
-e 122.
+e 123.
 
 
 Package natbib Warning: Citation `planck16' on page 1 undefined on input line 1
-22.
+23.
 
 
 Package natbib Warning: Citation `Gardner2006' on page 1 undefined on input lin
-e 122.
+e 123.
 
 
 Package natbib Warning: Citation `Spergel2013' on page 1 undefined on input lin
-e 122.
+e 123.
 
 
 Package natbib Warning: Citation `Atek2015' on page 1 undefined on input line 1
-22.
+23.
 
 
-Package natbib Warning: Citation `kash1' on page 1 undefined on input line 124.
-
-
-
-Package natbib Warning: Citation `kash2' on page 1 undefined on input line 124.
+Package natbib Warning: Citation `kash1' on page 1 undefined on input line 125.
 
 
 
-Package natbib Warning: Citation `kash3' on page 1 undefined on input line 124.
+Package natbib Warning: Citation `kash2' on page 1 undefined on input line 125.
 
 
 
-Package natbib Warning: Citation `kash4' on page 1 undefined on input line 124.
+Package natbib Warning: Citation `kash3' on page 1 undefined on input line 125.
+
+
+
+Package natbib Warning: Citation `kash4' on page 1 undefined on input line 125.
 
 
 
 Package natbib Warning: Citation `cooray12' on page 1 undefined on input line 1
-24.
+25.
 
 
 Package natbib Warning: Citation `zemcov14' on page 1 undefined on input line 1
-24.
+25.
 
 [1
 
 {/usr/local/texlive/2012/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 
 Package natbib Warning: Citation `StarsAndReionization' on page 2 undefined on 
-input line 126.
+input line 127.
 
 
 Package natbib Warning: Citation `silva12' on page 2 undefined on input line 12
-6.
+7.
 
 
-Package natbib Warning: Citation `mao14' on page 2 undefined on input line 126.
+Package natbib Warning: Citation `mao14' on page 2 undefined on input line 127.
 
 
 
 Package natbib Warning: Citation `heneka16' on page 2 undefined on input line 1
-26.
+27.
 
 
-Package natbib Warning: Citation `lidz09' on page 2 undefined on input line 128
+Package natbib Warning: Citation `lidz09' on page 2 undefined on input line 129
 .
 
 
-Package natbib Warning: Citation `park14' on page 2 undefined on input line 128
+Package natbib Warning: Citation `park14' on page 2 undefined on input line 129
 .
 
 
 Package natbib Warning: Citation `beardsley15' on page 2 undefined on input lin
-e 128.
+e 129.
 
 
 Package natbib Warning: Citation `zackrisson11' on page 2 undefined on input li
-ne 128.
+ne 129.
 
 
 Package natbib Warning: Citation `ricker14' on page 2 undefined on input line 1
-30.
+31.
 
 
 Package natbib Warning: Citation `ScienceWithSpherex' on page 2 undefined on in
-put line 130.
+put line 131.
 
 
 Package natbib Warning: Citation `SpherexWhitePaper' on page 2 undefined on inp
-ut line 130.
+ut line 131.
 
 
-Package natbib Warning: Citation `des16' on page 2 undefined on input line 130.
+Package natbib Warning: Citation `des16' on page 2 undefined on input line 131.
 
 
 
 Package natbib Warning: Citation `tonry12' on page 2 undefined on input line 13
-0.
+1.
 
 
 Package natbib Warning: Citation `tonry11' on page 2 undefined on input line 13
-0.
+1.
 
 
 Package natbib Warning: Citation `beardsley16' on page 2 undefined on input lin
-e 130.
+e 131.
 
 
 Package natbib Warning: Citation `dillonmapmaking' on page 2 undefined on input
- line 130.
+ line 131.
 
 [2]
 
 Package natbib Warning: Citation `ewallwice14' on page 3 undefined on input lin
-e 142.
+e 143.
 
 
 Package natbib Warning: Citation `zemcov14' on page 3 undefined on input line 1
-61.
+62.
 
 
 Package natbib Warning: Citation `cooray12' on page 3 undefined on input line 1
-61.
+62.
 
 
 Package natbib Warning: Citation `thacker15' on page 3 undefined on input line 
-161.
+162.
 
 [3] [4]
 
-Package natbib Warning: Citation `lidz09' on page 5 undefined on input line 198
+Package natbib Warning: Citation `lidz09' on page 5 undefined on input line 199
 .
 
 
 Package natbib Warning: Citation `furlanettolidz07' on page 5 undefined on inpu
-t line 198.
+t line 199.
 
 
 Package natbib Warning: Citation `beardsley16' on page 5 undefined on input lin
-e 204.
+e 205.
 
 
 Package natbib Warning: Citation `AndreMWARFI' on page 5 undefined on input lin
-e 204.
+e 205.
 
 
 Package natbib Warning: Citation `aoflagger' on page 5 undefined on input line 
-204.
+205.
 
 
 Package natbib Warning: Citation `beardsley16' on page 5 undefined on input lin
-e 206.
+e 207.
 
 
-Package natbib Warning: Citation `fhd' on page 5 undefined on input line 206.
+Package natbib Warning: Citation `fhd' on page 5 undefined on input line 207.
 
 
 Package natbib Warning: Citation `beardsley16' on page 5 undefined on input lin
-e 206.
+e 207.
 
 
 Package natbib Warning: Citation `PattiCatalog1' on page 5 undefined on input l
-ine 206.
+ine 207.
 
 <images/survey_overview.pdf, id=30, 633.03064pt x 614.66516pt>
 File: images/survey_overview.pdf Graphic file (type pdf)
 
 <use images/survey_overview.pdf>
-Package pdftex.def Info: images/survey_overview.pdf used on input line 215.
+Package pdftex.def Info: images/survey_overview.pdf used on input line 216.
 (pdftex.def)             Requested size: 238.49121pt x 231.56807pt.
  [5]
 
 Package natbib Warning: Citation `tonry11' on page 6 undefined on input line 22
-0.
+1.
 
 
-Package natbib Warning: Citation `swarp' on page 6 undefined on input line 224.
+Package natbib Warning: Citation `swarp' on page 6 undefined on input line 225.
 
 
 [6 <./images/survey_overview.pdf>]
@@ -533,61 +533,61 @@ Package natbib Warning: Citation `swarp' on page 6 undefined on input line 224.
 File: images/catalog_histograms.pdf Graphic file (type pdf)
 
 <use images/catalog_histograms.pdf>
-Package pdftex.def Info: images/catalog_histograms.pdf used on input line 244.
+Package pdftex.def Info: images/catalog_histograms.pdf used on input line 245.
 (pdftex.def)             Requested size: 469.75499pt x 132.22704pt.
 
 
 Package natbib Warning: Citation `PattiCatalog1' on page 7 undefined on input l
-ine 249.
+ine 250.
 
 
 Package natbib Warning: Citation `PattiCatalog1' on page 7 undefined on input l
-ine 249.
+ine 250.
 
 [7 <./images/catalog_histograms.pdf>]
 
 Package natbib Warning: Citation `Wright2010' on page 8 undefined on input line
- 251.
+ 252.
 
 
 Package natbib Warning: Citation `allwise' on page 8 undefined on input line 25
-1.
+2.
 
 
 Package natbib Warning: Citation `sextractor' on page 8 undefined on input line
- 253.
+ 254.
 
 
-Package natbib Warning: Citation `helou85' on page 8 undefined on input line 25
-8.
+Package natbib Warning: Citation `helou85' on page 8 undefined on input line 26
+0.
 
 
 Package natbib Warning: Citation `dejong85' on page 8 undefined on input line 2
-58.
+60.
 
 
-Package natbib Warning: Citation `yun01' on page 8 undefined on input line 258.
+Package natbib Warning: Citation `yun01' on page 8 undefined on input line 260.
 
 
 
-Package natbib Warning: Citation `xu94' on page 8 undefined on input line 258.
+Package natbib Warning: Citation `xu94' on page 8 undefined on input line 260.
 
 
-Package natbib Warning: Citation `xu94' on page 8 undefined on input line 258.
+Package natbib Warning: Citation `xu94' on page 8 undefined on input line 260.
 
 
-Overfull \hbox (7.71632pt too wide) in paragraph at lines 258--259
+Overfull \hbox (7.71632pt too wide) in paragraph at lines 260--261
 \OT1/cmr/m/n/10.95 how they man-i-fest in in-ten-sity map-ping cor-re-la-tion e
 x-per-i-ments. Tra-di-tion-ally, ra-dio/optical/infrared
  []
 
 
 Package natbib Warning: Citation `mcmahon02' on page 8 undefined on input line 
-260.
+262.
 
 
 Package natbib Warning: Citation `PattiCatalog1' on page 8 undefined on input l
-ine 260.
+ine 262.
 
 
 <images/source_correlation_grids_and_snrs.pdf, id=145, 619.11348pt x 497.2978pt
@@ -595,7 +595,7 @@ ine 260.
 File: images/source_correlation_grids_and_snrs.pdf Graphic file (type pdf)
  <use images/source_correlation_grids_and_snrs.pdf>
 Package pdftex.def Info: images/source_correlation_grids_and_snrs.pdf used on i
-nput line 264.
+nput line 266.
 (pdftex.def)             Requested size: 397.48499pt x 319.27873pt.
 
 
@@ -604,18 +604,18 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [8] [9 <./images/source_correlation_grids_and_snrs.pdf>]
 
 Package natbib Warning: Citation `Wright2010' on page 10 undefined on input lin
-e 280.
+e 282.
 
 
 Package natbib Warning: Citation `nikutta14' on page 10 undefined on input line
- 280.
+ 282.
 
 <images/wise_color_color_figure.pdf, id=229, 697.60472pt x 266.2284pt>
 File: images/wise_color_color_figure.pdf Graphic file (type pdf)
 
 <use images/wise_color_color_figure.pdf>
 Package pdftex.def Info: images/wise_color_color_figure.pdf used on input line 
-284.
+286.
 (pdftex.def)             Requested size: 433.62pt x 165.48238pt.
 
 
@@ -623,11 +623,11 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 Package natbib Warning: Citation `nikutta14' on page 10 undefined on input line
- 289.
+ 291.
 
 
 Package natbib Warning: Citation `kurcz16' on page 10 undefined on input line 2
-89.
+91.
 
 [10]
 <images/mwa_wise_qsoagn_gal_xspec.pdf, id=233, 1060.64885pt x 264.58786pt>
@@ -635,40 +635,40 @@ File: images/mwa_wise_qsoagn_gal_xspec.pdf Graphic file (type pdf)
 
 <use images/mwa_wise_qsoagn_gal_xspec.pdf>
 Package pdftex.def Info: images/mwa_wise_qsoagn_gal_xspec.pdf used on input lin
-e 293.
+e 295.
 (pdftex.def)             Requested size: 505.89pt x 126.1973pt.
 
-Overfull \hbox (36.13501pt too wide) in paragraph at lines 293--294
+Overfull \hbox (36.13501pt too wide) in paragraph at lines 295--296
  [][] 
  []
 
 
 Package natbib Warning: Citation `tegmark02' on page 11 undefined on input line
- 300.
+ 302.
 
 
 Package natbib Warning: Citation `dodelson02' on page 11 undefined on input lin
-e 300.
+e 302.
 
 
 Package natbib Warning: Citation `tegmark02b' on page 11 undefined on input lin
-e 300.
+e 302.
 
 
 Package natbib Warning: Citation `PattiCatalog1' on page 11 undefined on input 
-line 300.
+line 302.
 
 
 Package natbib Warning: Citation `seymour07' on page 11 undefined on input line
- 304.
+ 306.
 
 
 Package natbib Warning: Citation `Willott03' on page 11 undefined on input line
- 304.
+ 306.
 
 
 Package natbib Warning: Citation `mauch07' on page 11 undefined on input line 3
-04.
+06.
 
 [11 <./images/wise_color_color_figure.pdf> <./images/mwa_wise_qsoagn_gal_xspec.
 pdf
@@ -681,7 +681,7 @@ File: images/sim_rad_ir_luminosity_functions.pdf Graphic file (type pdf)
 
 <use images/sim_rad_ir_luminosity_functions.pdf>
 Package pdftex.def Info: images/sim_rad_ir_luminosity_functions.pdf used on inp
-ut line 323.
+ut line 325.
 (pdftex.def)             Requested size: 433.62pt x 156.00867pt.
 
 
@@ -689,18 +689,18 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 Package natbib Warning: Citation `mauch07' on page 12 undefined on input line 3
-28.
+30.
 
 
-Package natbib Warning: Citation `fu10' on page 12 undefined on input line 328.
+Package natbib Warning: Citation `fu10' on page 12 undefined on input line 330.
 
 
 
 Package natbib Warning: Citation `mauch07' on page 12 undefined on input line 3
-28.
+30.
 
 
-Package natbib Warning: Citation `fu10' on page 12 undefined on input line 328.
+Package natbib Warning: Citation `fu10' on page 12 undefined on input line 330.
 
 
 [12] <images/sim_correlation_agn_and_sf.pdf, id=352, 719.3972pt x 230.55197pt>
@@ -708,7 +708,7 @@ File: images/sim_correlation_agn_and_sf.pdf Graphic file (type pdf)
 
 <use images/sim_correlation_agn_and_sf.pdf>
 Package pdftex.def Info: images/sim_correlation_agn_and_sf.pdf used on input li
-ne 336.
+ne 338.
 (pdftex.def)             Requested size: 433.62pt x 138.96898pt.
 
 
@@ -718,35 +718,35 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 on_agn_and_sf.pdf>]
 
 Package natbib Warning: Citation `beardsley13' on page 15 undefined on input li
-ne 351.
+ne 353.
 
 
 Package natbib Warning: Citation `PoberNextGen' on page 15 undefined on input l
-ine 351.
+ine 353.
 
 
-<images/res_pspec_of_100_obsids_with_diff_spacings_6amin.pdf, id=475, 420.44768
-pt x 410.80264pt>
+<images/res_pspec_of_100_obsids_with_diff_spacings_6amin.pdf, id=475, 406.71951
+pt x 400.68134pt>
 File: images/res_pspec_of_100_obsids_with_diff_spacings_6amin.pdf Graphic file 
 (type pdf)
 
 <use images/res_pspec_of_100_obsids_with_diff_spacings_6amin.pdf>
 Package pdftex.def Info: images/res_pspec_of_100_obsids_with_diff_spacings_6ami
-n.pdf used on input line 367.
-(pdftex.def)             Requested size: 252.94499pt x 247.14166pt.
+n.pdf used on input line 369.
+(pdftex.def)             Requested size: 252.94499pt x 249.19632pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [15] [16 <./images/res_pspec_of_100_obsids_with_diff_spacings_6amin.pdf>]
-<images/big_foreground_masking_study_2.pdf, id=509, 993.52957pt x 1049.83195pt>
+<images/big_foreground_masking_study_2.pdf, id=531, 993.52957pt x 1049.83195pt>
 File: images/big_foreground_masking_study_2.pdf Graphic file (type pdf)
 <use images/big_foreground_masking_study_2.pdf>
 Package pdftex.def Info: images/big_foreground_masking_study_2.pdf used on inpu
-t line 384.
+t line 387.
 (pdftex.def)             Requested size: 505.89pt x 534.55821pt.
 
-Overfull \hbox (36.13501pt too wide) in paragraph at lines 384--385
+Overfull \hbox (36.13501pt too wide) in paragraph at lines 387--388
  [][] 
  []
 
@@ -755,45 +755,45 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 Package natbib Warning: Citation `sullivan12' on page 17 undefined on input lin
-e 396.
+e 399.
 
 
 Package natbib Warning: Citation `Maxpowerspeclossless' on page 17 undefined on
- input line 398.
+ input line 401.
 
 
-Package natbib Warning: Citation `X13' on page 17 undefined on input line 398.
+Package natbib Warning: Citation `X13' on page 17 undefined on input line 401.
 
 
 Package natbib Warning: Citation `dillonneben' on page 17 undefined on input li
-ne 398.
+ne 401.
 
 
-Package natbib Warning: Citation `LT11' on page 17 undefined on input line 398.
+Package natbib Warning: Citation `LT11' on page 17 undefined on input line 401.
 
 
 
 Package natbib Warning: Citation `DillonFast' on page 17 undefined on input lin
-e 398.
+e 401.
 
 
-Package natbib Warning: Citation `ali15' on page 17 undefined on input line 398
+Package natbib Warning: Citation `ali15' on page 17 undefined on input line 401
 .
 
 
-Package natbib Warning: Citation `X13' on page 17 undefined on input line 398.
+Package natbib Warning: Citation `X13' on page 17 undefined on input line 401.
 
 [17]
 
-Package natbib Warning: Citation `X13' on page 18 undefined on input line 406.
+Package natbib Warning: Citation `X13' on page 18 undefined on input line 409.
 
 
-<images/big_foreground_masking_study_pspecs_2.pdf, id=513, 427.0354pt x 446.151
+<images/big_foreground_masking_study_pspecs_2.pdf, id=535, 427.0354pt x 446.151
 18pt>
 File: images/big_foreground_masking_study_pspecs_2.pdf Graphic file (type pdf)
  <use images/big_foreground_masking_study_pspecs_2.pdf>
 Package pdftex.def Info: images/big_foreground_masking_study_pspecs_2.pdf used 
-on input line 419.
+on input line 423.
 (pdftex.def)             Requested size: 289.07999pt x 302.01724pt.
 
 
@@ -802,53 +802,71 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [18]
 
 Package natbib Warning: Citation `zemcov14' on page 19 undefined on input line 
-426.
+430.
 
 
 Package natbib Warning: Citation `zemcov14' on page 19 undefined on input line 
-428.
+432.
 
 
 Package natbib Warning: Citation `cooray12' on page 19 undefined on input line 
-428.
+432.
 
 
-Package natbib Warning: Citation `kash3' on page 19 undefined on input line 428
+Package natbib Warning: Citation `kash3' on page 19 undefined on input line 432
 .
 
 
 Package natbib Warning: Citation `matsumoto11' on page 19 undefined on input li
-ne 428.
+ne 432.
 
 
 Package natbib Warning: Citation `zemcov14' on page 19 undefined on input line 
-428.
+432.
+
+
+Package natbib Warning: Citation `zemcov14' on page 19 undefined on input line 
+432.
 
 [19]
+<images/mwa_atlas_xspec_with_2Dsimtheory_and_2sigma_errors.pdf, id=544, 557.849
+99pt x 409.12787pt>
+File: images/mwa_atlas_xspec_with_2Dsimtheory_and_2sigma_errors.pdf Graphic fil
+e (type pdf)
+
+<use images/mwa_atlas_xspec_with_2Dsimtheory_and_2sigma_errors.pdf>
+Package pdftex.def Info: images/mwa_atlas_xspec_with_2Dsimtheory_and_2sigma_err
+ors.pdf used on input line 450.
+(pdftex.def)             Requested size: 361.34999pt x 265.01227pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 
 Package natbib Warning: Citation `lidz09' on page 20 undefined on input line 45
-3.
+9.
 
 
-LaTeX Warning: Reference `sec:pspec21fg' on page 20 undefined on input line 470
+LaTeX Warning: Reference `sec:pspec21fg' on page 20 undefined on input line 476
 .
 
 
-LaTeX Warning: Reference `sec:pspecIRfg' on page 20 undefined on input line 470
+LaTeX Warning: Reference `sec:pspecIRfg' on page 20 undefined on input line 476
 .
 
 [20]
 
-LaTeX Warning: Reference `sec:pspecIRfg' on page 21 undefined on input line 515
+LaTeX Warning: Reference `sec:pspecIRfg' on page 21 undefined on input line 520
 .
 
-[21]
+[21] [22] [23]
 No file xcor_paper.bbl.
 
 Package natbib Warning: There were undefined citations.
 
-[22] [23 <./images/big_foreground_masking_study_2.pdf>] [24 <./images/big_foreg
-round_masking_study_pspecs_2.pdf>] (./xcor_paper.aux)
+[24] [25 <./images/big_foreground_masking_study_2.pdf>] [26 <./images/big_foreg
+round_masking_study_pspecs_2.pdf>] [27 <./images/mwa_atlas_xspec_with_2Dsimtheo
+ry_and_2sigma_errors.pdf>] (./xcor_paper.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -857,10 +875,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3492 strings out of 493488
- 45878 string characters out of 3141326
- 105820 words of memory out of 3000000
- 6730 multiletter control sequences out of 15000+200000
+ 3503 strings out of 493488
+ 46302 string characters out of 3141326
+ 105876 words of memory out of 3000000
+ 6740 multiletter control sequences out of 15000+200000
  13673 words of font info for 55 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
  38i,10n,26p,1786b,225s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -869,27 +887,23 @@ Here is how much of TeX's memory you used:
 </usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></
 usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></u
 sr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
-r/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr
-/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/l
-ocal/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/loc
-al/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local
-/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/t
-exlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/tex
-live/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texli
-ve/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/
-2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/201
-2/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2012/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2012/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2012/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2012/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2012/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2012/texmf-di
-st/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2012/texm
-f-dist/fonts/type1/urw/ncntrsbk/uncr8a.pfb>
-Output written on xcor_paper.pdf (24 pages, 968742 bytes).
+r/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/
+local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/lo
+cal/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/loca
+l/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/
+texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/tex
+live/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texliv
+e/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2
+012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/20
+12/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2012
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2012/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2012/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2012/tex
+mf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on xcor_paper.pdf (27 pages, 845136 bytes).
 PDF statistics:
- 834 PDF objects out of 1000 (max. 8388607)
- 297 compressed objects within 3 object streams
+ 935 PDF objects out of 1000 (max. 8388607)
+ 310 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
- 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 56 words of extra memory for PDF output out of 10000 (max. 10000000)
 

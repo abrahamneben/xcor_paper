@@ -1,4 +1,4 @@
-\begin{thebibliography}{79}
+\begin{thebibliography}{81}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Ali} {et~al.}(2015){Ali}, {Parsons}, {Zheng}, {Pober}, {Liu},
@@ -234,6 +234,9 @@ Furlanetto, S.~R., \& Lidz, A. 2007, The Astrophysical Journal, 660, 1030
   \& Wright}]{Gardner2006}
 Gardner, J.~P., {et~al.} 2006, Space Science Reviews, 123, 485
 
+\bibitem[{Gong {et~al.}(2014)Gong, Silva, Cooray, \& Santos}]{Gong2014}
+Gong, Y., Silva, M., Cooray, A., \& Santos, M.~G. 2014
+
 \bibitem[{{Hall}(2005)}]{ska}
 {Hall}, P.~J. 2005, {The Square Kilometre Array: An Engineering Perspective}
 
@@ -245,6 +248,9 @@ Gardner, J.~P., {et~al.} 2006, Space Science Reviews, 123, 485
 \bibitem[{{Helou} {et~al.}(1985){Helou}, {Soifer}, \&
   {Rowan-Robinson}}]{helou85}
 {Helou}, G., {Soifer}, B.~T., \& {Rowan-Robinson}, M. 1985, \apjl, 298, L7
+
+\bibitem[{Heneka {et~al.}(2016)Heneka, Cooray, \& Feng}]{Heneka2016}
+Heneka, C., Cooray, A., \& Feng, C. 2016
 
 \bibitem[{{Heneka} {et~al.}(2016){Heneka}, {Cooray}, \& {Feng}}]{heneka16}
 {Heneka}, C., {Cooray}, A., \& {Feng}, C. 2016, ArXiv e-prints

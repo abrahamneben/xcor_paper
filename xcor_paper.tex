@@ -16,13 +16,23 @@
 %\documentclass[manuscript]{aastex}
 %% preprint2 produces a double-column, single-spaced document:
 
-%\documentclass{emulateapj}
-\documentclass[preprint]{aastex}
+\documentclass{emulateapj}
+%\documentclass[preprint]{aastex}
 
 \usepackage{natbib}
 \usepackage{amsmath}
 \bibliographystyle{apj}
 \usepackage{graphicx}
+
+\usepackage{color}
+\usepackage[normalem]{ulem}
+\usepackage{url}
+
+\DeclareUrlCommand\ULurl{%
+  \renewcommand\UrlFont{\ttfamily\color{blue}}%
+  \renewcommand\UrlLeft{\bgroup}%
+  \renewcommand\UrlRight{\egroup}}
+
 
 \newcommand{\mintext}{\text{min}}
 \newcommand{\maxtext}{\text{max}}
@@ -82,7 +92,7 @@
 
 \begin{document}
 
-\title{First limits Foreground and sensitivity analysis for 21cm/Infrared intensity mapping correlation from the Epoch of Reionization}
+\title{Foreground and sensitivity analysis for 21cm/Infrared intensity mapping correlation from the Epoch of Reionization}
 
 %% Use \author, \affil, and the \and command to format
 %% author and affiliation information.
@@ -222,7 +232,7 @@ ATLAS is a 0.5\,m (f/2.0) telescope \citep{tonry11} in Hawaii designed to perfor
 
 We perform two separate observing campaigns, which we illustrate in Fig. \ref{fig:surveyoverview}. We first perform a wide survey to best characterize bright foregrounds; . In the first campaign we raster scan a roughly $20^\circ\times20^\circ$ grid with $5^\circ$ spacing over the MWA field (dashed black circle), integrating for 2.5\,min at each pointing (blue square markers). The observations are conducted between 2016/09/07 22:00  and 2016/09/08 00:50 Hawaii-Aleutian Standard Time, when the moon was 36\% illuminated.  Later we will find that this is substantially more integration time than required to mitigate photon shot noise, but not enough to mitigate diffuse airglow structure and CCD array systematics. Still, it is sufficient for performing a source survey where source fluxes are estimated relative to the local background. 
 
-We then use {\tt swarp}\footnote{http://www.astromatic.net/software/swarp} \citep{swarp} to stack all these frames over $20^\circ$ orthographic field centered on (RA,Dec) = $(0^\circ,-30^\circ)$ (blue square) with 1.86'' resolution. We use the default background subtraction settings to mitigate temporal and spatial background variation. 
+We then use {\tt swarp}\footnote{\ULurl{http://www.astromatic.net/software/swarp}} \citep{swarp} to stack all these frames over $20^\circ$ orthographic field centered on (RA,Dec) = $(0^\circ,-30^\circ)$ (blue square) with 1.86'' resolution. We use the default background subtraction settings to mitigate temporal and spatial background variation. 
 
 % moon phase calculator: http://www.moonpage.com/index.html?go=T&auto_dst=T&tzone=ut&m=9&d=8&y=2016&hour=0&min=51&sec=45
 
@@ -249,9 +259,9 @@ To characterize the bright sources relevant to 21\,cm--Ly$\alpha$ and  21\,cm--H
 
 We use the 185\,MHz catalog reduced from deep observations of the MWA field depicted in Fig. \ref{fig:surveyoverview} by \citep{PattiCatalog1} (left panel in Fig. \ref{fig:cataloghistograms}). Unlike the other catalogs we consider, the survey depth varies somewhat over the MWA field due to the varying primary beam, though within the full-width-at-half-max it is complete to roughly 100\,mJy. MWA astrometry is at the 2--3' level due to the MWA's short baselines, though \citep{PattiCatalog1} cross-match MWA detections with higher frequency catalogs to achieve order 10'' astrometry. 
 
-We use the W2 band of ALLWISE \citep{Wright2010,allwise} as our 4.5\,um catalog. We download the list of sources within the MWA field using the All Sky Search on the NASA/IPAC Infrared Science Archive\footnote{http://irsa.ipac.caltech.edu} (center panel in Fig. \ref{fig:cataloghistograms}). This ALLWISE band is specified to be 95\% complete to 88\,$\mu$Jy (15.7 AB mag), though it has slight sky coverage non-uniformities due to satellite coverage. We will see that we run into sky coverage problems only after masking the brightest 90\% of sources.
+We use the W2 band of ALLWISE \citep{Wright2010,allwise} as our 4.5\,um catalog. We download the list of sources within the MWA field using the All Sky Search on the NASA/IPAC Infrared Science Archive\footnote{\ULurl{http://irsa.ipac.caltech.edu}} (center panel in Fig. \ref{fig:cataloghistograms}). This ALLWISE band is specified to be 95\% complete to 88\,$\mu$Jy (15.7 AB mag), though it has slight sky coverage non-uniformities due to satellite coverage. We will see that we run into sky coverage problems only after masking the brightest 90\% of sources.
 
-Lastly, we run SExtractor\footnote{http://www.astromatic.net/software/sextractors} \citep{sextractor} on our wide $20^\circ$ wide ATLAS composite image to generate an 850\,nm catalog. We allow local background bias and noise estimation, and set pixel saturation at 20,000 counts to avoid artifacts. We find the catalog is complete to roughly a mJy (right panel in Fig. \ref{fig:cataloghistograms}). 
+Lastly, we run SExtractor\footnote{\ULurl{http://www.astromatic.net/software/sextractor}} \citep{sextractor} on our wide $20^\circ$ wide ATLAS composite image to generate an 850\,nm catalog. We allow local background bias and noise estimation, and set pixel saturation at 20,000 counts to avoid artifacts. We find the catalog is complete to roughly a mJy (right panel in Fig. \ref{fig:cataloghistograms}). 
 
 
 \subsection{Catalog radio--infrared flux correlations}
@@ -354,6 +364,7 @@ In fact, while 21\,cm intensity mapping measurements in 3D are limited by radio 
 
 The FHD outputs presented in Sec. \ref{sec:mwaobservations} are naturally weighted image space cubes of the raw data ($I_\text{nat}$), the model data ($I_\text{nat,mod}$), the weights ($I_w$) (i.e., the $uv$ sampling), and the primary beam. Each of these cubes has an \textit{odd} and \textit{even} version divided up at a 2\,sec cadence. We average all these cubes over frequency to make broad band images, then apply uniform weighting as
 \begin{equation}
+\label{eqn:uniformweighting}
 I_\text{uni}(\vec{\theta}) = \frac{10^{-26}}{2k_B \lambda^2} \sum_{\vec{u}} \frac{\tilde{I}_\text{nat}(\vec{u})}{\tilde{I}_w(\vec{u})} e^{-2\pi i \vec{\theta}\cdot\vec{u}}d^2u
 \end{equation}
 $\tilde{I}_i(\vec{u}) = \sum_{\vec{\theta}} I_i(\vec{\theta}) e^{2\pi i\vec{\theta}\cdot\vec{u}} d\Omega$ for $i=\text{nat},w$.
@@ -389,12 +400,12 @@ Our approach is to mask the high resolution image at 1.86'' resolution, then coa
 \label{fig:bigfgmaskingstudy}
 \end{figure*}
 
-\begin{itemize}
-	\item [Fig. \ref{fig:bigfgmaskingstudy}, row 1] \textbf{Mask saturated regions.}Nearly saturated pixels are associated with nearby bright stars which would dominate fluctuation measurements, we thus mask 4' around all pixels within 30\% of saturation (white regions in left and center columns). On average over our fields, 92\% of fine pixels remain unmasked after this step, and 96\% of coarse pixels remain.
-	\item [Fig. \ref{fig:bigfgmaskingstudy}, row 2] \textbf{Mask sources to 5$\sigma$.} We mask circular regions with radius equal to five times the profile RMS along the minor axes of each source as measured by SExtractor (see Sec. \ref{sec:catalogs}). The reason we use the minor axis RMS is that vertical charge leakage in the CCD array results in unrealistically large major axis RMS measurements for bright sources. After this stage $\sim87$\% of fine pixels remain unmasked, and the fraction of coarse pixels remaining is unaffected.
-	\item [Fig. \ref{fig:bigfgmaskingstudy}, row 3] \textbf{Mask sources to $12\sigma$ and other emission above 100\,kJy/sr.} We use a larger masking radius to remove the remaining diffuse halos around the 5$\sigma$ source masks due to the finite point spread function. We also determine that the vertical CCD charge leakage can be isolated by looking for emission brighter that 100\,kJy, and that it can be flagged without cutting into the shot noise between sources. 58\% of fine pixels remain unmasked after this step, and again the fraction of coarse pixels remaining is unaffect.d
-	\item [Fig. \ref{fig:bigfgmaskingstudy}, row 4] \textbf{Mask fourier modes $|\ell_x|<200$ or $|\ell_y|<200$.} The previous two stages revealed a detector artifact within $\Delta\ell sim100$ of $\ell_x=0$ and $\ell_y=0$. These compact fourier systematics correspond to slight horizontal and vertical discontinuities in the center image due to imperfect gain matching between 16 different detector amplifiers servicing different regions of the CCD array. We conservatively mask all modes within $\Delta\ell=200$ of either of these axes to eliminate this effect.
-\end{itemize}
+\begin{enumerate}
+	\item \textbf{Mask saturated regions.} (Fig. \ref{fig:bigfgmaskingstudy}, row 1) Nearly saturated pixels are associated with nearby bright stars which would dominate fluctuation measurements, we thus mask 4' around all pixels within 30\% of saturation (white regions in left and center columns). On average over our fields, 92\% of fine pixels remain unmasked after this step, and 96\% of coarse pixels remain.
+	\item \textbf{Mask sources to 5$\sigma$.} (Fig. \ref{fig:bigfgmaskingstudy}, row 2) We mask circular regions with radius equal to five times the profile RMS along the minor axes of each source as measured by SExtractor (see Sec. \ref{sec:catalogs}). The reason we use the minor axis RMS is that vertical charge leakage in the CCD array results in unrealistically large major axis RMS measurements for bright sources. After this stage $\sim87$\% of fine pixels remain unmasked, and the fraction of coarse pixels remaining is unaffected.
+	\item \textbf{Mask sources to $12\sigma$ and other emission above 100\,kJy/sr.} (Fig. \ref{fig:bigfgmaskingstudy}, row 3) We use a larger masking radius to remove the remaining diffuse halos around the 5$\sigma$ source masks due to the finite point spread function. We also determine that the vertical CCD charge leakage can be isolated by looking for emission brighter that 100\,kJy, and that it can be flagged without cutting into the shot noise between sources. 58\% of fine pixels remain unmasked after this step, and again the fraction of coarse pixels remaining is unaffect.d
+	\item \textbf{Mask fourier modes matching $|\ell_x|<200$ or $|\ell_y|<200$.} (Fig. \ref{fig:bigfgmaskingstudy}, row 4) The previous two stages revealed a detector artifact within $\Delta\ell sim100$ of $\ell_x=0$ and $\ell_y=0$. These compact fourier systematics correspond to slight horizontal and vertical discontinuities in the center image due to imperfect gain matching between 16 different detector amplifiers servicing different regions of the CCD array. We conservatively mask all modes within $\Delta\ell=200$ of either of these axes to eliminate this effect.
+\end{enumerate}
 
 Note that these 850\,nm deep observations were recorded during near new moon conditions, and we find that the mean air glow in source-free regions is $\sim3\times10^3$ kJy/sr, of order 19 AB mag/arcsec$^2$. \citet{sullivan12} measure a 1020\,nm continuum air glow brightness (i.e., after spectrally masking the OH lines) of $20\pm0.5$ AB mag/asec$^2$ far away from the moon. 
 
@@ -404,7 +415,7 @@ We label the normalized estimator of the power in bin $\alpha$ as $p_\alpha$, re
 \begin{equation}
 q_\alpha = \frac{1}{2}(\xb-\langle\xb\rangle)^\dagger \Cb^{-1} C_{,\alpha}\Cb^{-1}(\xb-\langle\xb\rangle)
 \end{equation}
-where $\xb$ is a column vector containing all $N$ pixel measurements, $\Cb$ is the pixel-pixel covariance matrix, and $C_{,\alpha}=d\Cb/dp_\alpha$ is the derivative of the covariance with respect to the power in bin $\alpha$. Note that $C_{,\alpha} = \Ab^\dagger\Ab$, where $\Ab$ is a $N_\alpha\times N$ with elements $A_{ij}=\exp i\vec{\theta}_j\cdot\vec{\ell}_i$. Here $\vec{\ell}_j$ refers to the $j$'th $\vec{\ell}$ mode in bin $\alpha$. 
+where $\xb$ is a column vector containing all $N$ pixel measurements, $\Cb$ is the pixel-pixel covariance matrix, and $C_{,\alpha}=d\Cb/dp_\alpha$ is the derivative of the covariance with respect to the power in bin $\alpha$. Note that $C_{,\alpha} = \Ab^\dagger\Ab$, where $\Ab$ is a $N_\alpha\times N$ with elements $A_{ij}=\exp(i\vec{\theta}_j\cdot\vec{\ell}_i)$. Here $\vec{\ell}_j$ refers to the $j$'th $\vec{\ell}$ mode in bin $\alpha$. 
 
 The matrix of window functions (i.e., horizontal error bars) of the band powers $p_\alpha$, defined such that $\pb_\text{estimated}=\Wb\pb_\text{true}$ is given by $\Wb=\Mb\Fb$, where $\Fb$ is the Fisher matrix. The covariance between the measured $p_\alpha$ values is given by $\mathbf{\Sigma} = \Mb\Fb\Mb^t$. \citet{X13} argue that taking $\Mb\propto \Fb^{-1/2}$ is a good compromise between wanting small horizontal error bars and small vertical error bars. For simplicity, we normalize our estimates in an additional step at the end, taking $\Mb=\Fb^{-1/2}$, dividing each element of $\pb$ by the peak of the appropriate row of $\Wb$. Lastly, the elements of the Fisher matrix are given by
 \begin{equation}
@@ -414,14 +425,14 @@ The matrix of window functions (i.e., horizontal error bars) of the band powers 
 Now we turn to application of this formalism to power spectrum estimation from our maskeod IR images. Later we will adapt it to estimation of the 21\,cm--IR cross spectrum. We take $\xb$ to be a vector of all IR coarse (3.5') pixel values, with masked pixels set to zero. After gridding the high resolution images by a factor of $\sim10^4$ to reach this resolution, photon shot noise is negligible, and the covariance is the sum of the signal covariance $\Cb_\text{signal}$ and the masking covariance $\Cb_\text{mask}$. $\Cb_\text{mask}$ is a diagonal matrix with $\infty$ for masked pixels, and 0 otherwise. In practice, we replace $\infty$ with a number $10^10$ times larger than all eigenvalues of $\Cb_\text{signal}$, finding that the results are not sensitive to this parameter. The signal covariance is easily obtained by writing it in fourier space, where it is a diagonal matrix with a guess of the true power spectrum on the diagonal, then fourier transforming it into image space with fourier transform matrices $\mathcal{F}$. 
 \begin{equation}
 \label{eqn:covFTwithmask}
-	\Cb = \mathcal{F}\Cb_\text{ft}\mathcal{F}^\dagger+\Cb_\text{mask}
+	\Cb = \mathcal{F}^\dagger\Cb_\text{ft}\mathcal{F}+\Cb_\text{mask}
 \end{equation}
-Note that $\mathcal{F}$ is an $N\times N$ matrix with elements $\mathcal{F}_{ij}=\exp i \vec{\theta}_i\cdot\vec{\ell}_j$, where $i$ runs over all pixels and $j$ runs over all fourier cells. 
+Note that $\mathcal{F}$ is an $N\times N$ matrix with elements $\mathcal{F}_{ij}=\exp(-i \vec{\theta}_i\cdot\vec{\ell}_j)$, where $i$ runs over all pixels and $j$ runs over all fourier cells. 
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=4in]{images/big_foreground_masking_study_pspecs_2.pdf}
-\caption{oeu}
+\includegraphics[width=3.5in]{images/big_foreground_masking_study_pspecs_2.pdf}
+\caption{WHAT ABOUT THE UNCERTAINTY IN THE ATLAS ABSOLUTE CALIBRATION ?????}
 \label{fig:bigfgmaskingstudypspecs}
 \end{figure}
 
@@ -431,81 +442,61 @@ Lastly, excluding modes with $|\ell_x|<200$ or $|\ell_y|<200$ results in a spect
 
 \citet{zemcov14} compare the power averaged over $500<\ell<2000$ in their two bands (1.1\,$\mu$m and 1.5\,$\mu$m, each with 0.5\,$\mu$m bandwidth) with longer wavelength measurements up to 4.5\,$\mu$m by \citet{cooray12,kash3,matsumoto11}. They find that all these measurements fit a Rayleigh-Jeans spectrum, and it is unknown far into the near infrared or optical band the anisotropy spectrum continues to rise before turning over. We integrate the residual fluctuation power in our $850\pm75$\,nm band over this range in $\ell$ and find an RMS fluctuation power of $\langle\Delta(\ell)\rangle_{500<\ell<2000}=0.90\pm0.03$\,kJy/sr \footnote{These units result from taking the intensity field to be $I_f$.}, equal to $3.2\pm0.1$\,nW/m$^2$/sr \footnote{These units result from taking the intensity field to be $\lambda I_\lambda$, as in \citet{zemcov14}.}. This measurement deviates at the $20\sigma$ level from the 850\,nm Rayleigh-Jeans prediction of 5.5\,nW/m$^2$/sr, indicating that we are likely starting to see the spectrum turn over. \citet{zemcov14} observed weak evidence for this with their measurements at 1.1\,$\mu$m and 1.6\,$\mu$m, but their smaller field of view ($\sim1$ deg sq.) limited their sensitivity to these angular scales, and their measurements deviate from the Rayleigh-Jeans prediction at only the 1$\sigma$ level. 
 
-\subsection{21\,cm--Ly$\alpha$ cross spectrum limits}
+\subsection{Modeling the 21\,cm--Ly$\alpha$ cross spectrum}
 
-Having characterized the residual sky power spectrum at 185\,MHz and 850\,nm after significant foreground masking and subtraction, we now search for a correlation of the sort found between bright radio and infrared foregrounds in Sec. \ref{sec:catcorrelations}. To account for the the non-uniform $uv$ sampling of the MWA image and the image space masking of the ATLAS image, we again use the optimal quadratic estimator. In Appendix \ref{sec:optimalestimatorforcrossspectrum} we show that with the approximation that the correlation between the two images is small, the proper extension of the optimal quadratic estimator from the auto power spectrum case to the cross spectrum case is given by
+\begin{figure*}[h]
+\centering
+\includegraphics[width=7in]{images/spectra3D_to_2D.pdf}
+\caption{oeu}
+\label{fig:spectra3Dto2D}
+\end{figure*}
+
+For comparison, we generate optimistic and pessimistic theoretical cross spectra. We simulate 21\,cm and Ly-$\alpha$ cubes taking 21\,cm power spectra from \citet{PoberNextGen}, Ly-$\alpha$ power spectra from \cite{Gong2014}, and the coherence between the two fields from \citetext{Heneka2016}. Combining simulations from all these sources allows us to better estimate the modeling uncertainty. Future work is needed to more self-consistently model these fields and their correlation over a range of possible reionization scenarios. From these power spectra and coherence functions, we generate approximate 21\,cm and Ly-$\alpha$ cubes assuming gaussian statistics. The simulated cubes have (1\,Mpc)$^3$ resolution over a (218\,Mpc)$^3$ volume at $z=7$, corresponding to $\Delta z=0.6$ and 0.4' angular resolution. The 21\,cm and Ly-$\alpha$ cubes have units of mK and kJy/sr, respectively, and we average them in the line of sight direction to produce broad band images. 
+
+\citet{Gong2014} model the Ly-$\alpha$ cross spectrum and plot an uncertainty region over a range of likely values of   escape fraction of ionizing photons, fraction of radiation emitted at Ly$\alpha$, star-forming rate, and IGM clumping factor (their Fig. 1). We take the upper and lower edges of their uncertainty region as our optimistic and pessimistic power spectra, respectively. 
+
+Similarly, \citet{PoberNextGen} simulate 21\,cm power spectra over a range of reionization scenarios with various values of ionizing efficiency ($\zeta$) (including the escape fraction), the minimum virial temperature of halos ($T_\text{ir}$) producing significant ultraviolet photons, and their mean free path in the IGM ($R_\text{mfp}$). Whether the signal at our redshift of interest ($z=7$) depends largely on whether reionization is already largely finished by that time or not. So we take as our pessimistic scenario the model with $z=8$ power spectrum of the ($\zeta =31.5$, $T_\text{vir}=1.5\times10^4$\,K, $R_\text{mfp}=30$\,Mpc), whose reionization midpoint is $z=9.5$. We take as our optimistic model a late reionization scenario the model with $T_\text{vir}=3\times10^5$\,K (other parameters unchanged), whose reionization midpoint is $z=5.5$. 
+
+We plot the original 3D power spectra and coherence function in top panel of Fig. \ref{fig:spectra3Dto2D}, and the computed 2D power spectra from the line-of-sight averaged cubes, as well as their coherence, in the bottom panel. The 3D power spectra are plotted as $\Delta(k)=\sqrt{P(k)k^3/2\pi^2}$, while the 2D spectra are plotted as $\Delta(\ell)=\sqrt{C_\ell \ell^2/2\pi}$. As expected, line of sight averaging tends to remove power on short spatial scales (compared the line of sight depth of the cube), but it acts similarly on both cubes, so the coherence function is preserved. Note that the cross spectrum $\Delta_{12}$ is defined in terms of the coherence as $\Delta_{12}=c\sqrt{\Delta_1\Delta_2}$, and in the next section when we calculate the cross spectra, we assume the same coherence function from \citet{Heneka2016} in optimistic and pessimistic scenarios.
+
+\subsection{Limits on the 21\,cm--Ly$\alpha$ cross spectrum}
+
+Having characterized the residual sky power spectrum at 185\,MHz and 850\,nm after the best foreground masking and subtraction permitted by our datasets, we now search for a correlation between these radio and foreground residuals. To account for the non-uniform $uv$ sampling of the MWA image as well as the image space masking of the ATLAS image, we again use the optimal quadratic estimator. In Appendix \ref{sec:optimalestimatorforcrossspectrum} we show that with the approximation that the correlation between the two images is small, the proper extension of the optimal quadratic estimator from the auto spectrum case to the cross spectrum case is given by
 \begin{equation}
 q_\alpha \approx (\xb_{21}-\langle\xb_{21}\rangle)^\dagger \Cb_{21}^{-1} \Cb_{,\alpha}\Cb_\IR^{-1}(\xb_\IR-\langle\xb_\IR\rangle)
 \end{equation}
 \begin{equation}
 \Fb_{\alpha\beta}\approx\text{tr}\left(\Cb_{21}^{-1} \Cb_{,\alpha} \Cb_\IR^{-1}  \Cb_{,\alpha}  \right)	
 \end{equation}
-where $\Cb_{,\alpha}$ is the same matrix used in Sec. \ref{sec:resirfg}. As before we use $\Mb=F^{-1/2}$ to normalize the estimator in  $\pb=\Mb\qb$, and perform a final normalization using the peaks of the window functions $\Wb=\Mb\Fb$. We use the same IR covariance matrix given in Eqn. \ref{eqn:covFTwithmask}, and generate the 21\,cm covariance matrix by writing the diagonal covariance matrix due to sample variance and thermal noise in fourier space, then fourier transforming it as
+where $\Cb_{,\alpha}$ is the same matrix used in Sec. \ref{sec:resirfg}, $\mathbf{x}_{21}$ and $\mathbf{x}_{IR}$ are the vectors of 21\,cm and IR pixel values, respectively, and $\mathbf{w}_{21}$ is the vector of the image space radio point spread function (i.e., synthesized beam). As before we use $\Mb=F^{-1/2}$ to normalize the estimator in  $\pb=\Mb\qb$, and perform a final normalization using the peaks of the window functions $\Wb=\Mb\Fb$. We use the same IR covariance matrix given in Eqn. \ref{eqn:covFTwithmask}, and generate the 21\,cm covariance matrix by writing the diagonal thermal noise covariance matrix fourier space, then fourier transforming it as
 \begin{equation}
-\Cb_{21} = \mathcal{F}(\Cb_\text{21,signal,ft}+\Cb_\text{21,thermal,ft})\mathcal{F}^\dagger
+\label{eqn:C21}
+\Cb_{21} = \mathcal{F}^\dagger\text{diag}(|\mathcal{F}\mathbf{w}_{21}|)\mathcal{F}
 \end{equation}
+Though Fig. \ref{fig:respspecspacingsstudy} shows that thermal noise in these broad band images is quite subdominant to the foreground residuals over all $\ell$, it is still beneficial to downweight the most poorly sampled $\vec{\ell}$ modes to mitigate $uv$ gridding artifacts. 
 
+We apply this formalism to each of the four $4^\circ$ deep ATLAS fields shown in Fig. \ref{fig:surveyoverview}, pairing each IR image with the overlapping region of the MWA image cropped from the naturally weighted image. We crop the image space synthesized beam over the same field of view, use it to apply uniform weighting to the cropped MWA image using Eqn. \ref{eqn:uniformweighting}, and use it again to construct $\Cb_{21}$ in Eqn. \ref{eqn:C21}. 
 
-\section{Sensitivity study}
+\begin{figure}[h]
+\centering
+\includegraphics[width=3.6in]{images/mwa_atlas_xspec_with_2Dsimtheory_and_2sigma_errors.pdf}
+\caption{oeu}
+\label{fig:resxspec}
+\end{figure}
 
+In Fig. \ref{fig:resxspec} we plot the resulting cross spectrum (red markers) averaged over all four fields with $2\sigma$ error bars. The lowest two $\ell$ modes are marginal detections, and the rest are consistent with zero. Roughly half the estimated bandpowers are negative (triangles) and positive (circles), as expected if there is no measured correlation.  Our bins are evenly spaced in $\log \ell$, and it is beneficial to overlap them slightly since our normalization matrix $M\sim F^{-1/2}$ ensures bin errors are always uncorrlated.  We interpret the tops of the error bars as 95\% upper limits on the cosmological cross spectrum of 21\,cm and Ly$\alpha$ emission from the EOR, achieving a strongest upper limit of $\Delta_{21,\text{Ly}\alpha}<14\,(\text{kJy/sr}\cdot \text{mK})^{1/2}$ (95\%). 
 
-NEED TO START REJIGGERING THIS SECTION
+The cross spectrum uncertainty due to sample variance noise of residual foregrounds scales approximately as $d\Delta_{21,\IR}\propto f_{21\text{FG}}^{1/2}d\theta/\theta_{\text{FOV}}$, where $f_{21,\text{FG}}$ is the fraction of remaining 21\,cm foreground power, $d\theta$ is the pixel resolution, and $\theta_{\text{FOV}}$ is the field of view. Our MWA/ATLAS experiment has ($f_{21,FG}\approx0.1$, $d\theta=3'$, $\theta_{\text{FOV}}=8^\circ$). We plot the predicted sensitivities for improved experiments with (0.1, 0.3', 8$^\circ$) (solid blue), (0.01, 0.3', 8$^\circ$) (dashed blue), and (0.01, 0.3', 40$^\circ$) (dotted blue). \citet{zemcov14,cooray12} argue that the remaining IR foreground is largely due to intrahalo light around already masked sources, and cannot be masked without removing essentially all pixels in the image. We thus do not assume that IR foreground subtraction can be improved.
 
-We adapt the cross spectrum sensitivity results of \citet{lidz09} to our case of measuring the 21\,cm--IR cross spectrum of broadband images with noise and foreground residuals. 
-\begin{equation}
-\label{eqn:sense1}
-	\sigma_{21,\IR}^2(\vec{\ell})=\frac{1}{2}[C^2_{21,\IR}(\vec{\ell})+\sigma_{21}(\vec{\ell})\sigma_{\IR}(\vec{\ell})]
-\end{equation}
-\begin{equation}
-\label{eqn:sense2}
-	\sigma_{21}^2(\vec{\ell})=[C_{21,\cosmo}(\vec{\ell})+C_{21,\fg}(\vec{\ell})+C_{21,\therm}(\vec{\ell})]^2
-\end{equation}
-
-\begin{equation}
-\label{eqn:sense3}
-	\sigma_{\IR}^2(\vec{\ell})=[C_{\IR,\cosmo}(\vec{\ell})+C_{\IR,\fg}(\vec{\ell})+C_{\IR,\shot}(\vec{\ell})]^2
-\end{equation}
-where $\cosmo$ signifies the cosmological component of the signal from the EOR, $\fg$ signifies residual foregrounds, $\therm$ signifies thermal noise in 21\,cm images, and $\shot$ signifies photon shot noise in IR images. 
-
-
-Though these are the general forms of these equations, we omit the thermal and photon shot noise contributions in the rest of this section, as we have shown them to be negligible in Sections \ref{sec:pspec21fg} and \ref{sec:pspecIRfg}. We also omit the sample variance terms as they become important only in the SNR $\sim1$ regime. 
-
-Now suppose we evaluate the 2D cross spectrum as in Eqn. \ref{eqn:Cldefcross}, and bin it in annuli such that bin $\ell$ contains containing $N_\ell$ $\ell$ cells. Then the noise decreases as
-\begin{equation}
-	\sigma_{21,\IR}^2(\ell) = \frac{\sigma_{21,\IR}^2(\vec{\ell}) }{N_\ell}
-\end{equation}
-
-Then substituting Eqns. \ref{eqn:sense1}-\ref{eqn:sense3} into the above equation and omitting factors of order unity, we find that the signal to noise ratio $\SNR(\ell)$ of the measurement of cross spectrum mode $\ell$ is given by
-\begin{equation}
-	\SNR(\ell) = \sqrt{
-		2N_\ell
-	\left(\frac{C_{21,\cosmo}(\vec{\ell})  }{ C_{21,\fg}(\vec{\ell}) }\right)
-	\left(\frac{C_{\IR,\cosmo}(\vec{\ell})  }{ C_{\IR,\fg}(\vec{\ell}) }\right)
-	}
-\end{equation}
-
-Let us optimize the SNR by using only two bins, $\ell_1=\ell_\text{max}/4$ and $\ell_2=3\ell_\text{max}/4$, where $\ell_\text{max}=\pi/d\theta$ and the cell size is given by $d\ell=2\ell_\text{max}/N=2\pi/\theta_\text{FOV}$. Now let's derive some intuition into $N_\ell$ by writing it as $N_\ell=(\ell_\text{max}/d\ell)^2F_\ell=(\theta_\text{FOV}/2d\theta)^2F_\ell$, where $F_\ell$ is an order unity quantity equal to the fraction of all $\vec{\ell}$ cells included in bin $\ell$.
-
-%\begin{equation}
-%	\SNR(\ell) = \frac{\theta_\text{FOV}}{2d\theta}  \sqrt{2F_\ell
-%	\left(\frac{C_{21,\cosmo}(\vec{\ell})  }{ C_{21,\fg}(\vec{\ell}) }\right)
-%	\left(\frac{C_{\IR,\cosmo}(\vec{\ell})  }{ C_{\IR,\fg}(\vec{\ell}) }\right)
-%	}
-%\end{equation}
-
-\begin{eqnarray}
-	\SNR(\ell)&=&XX \left(\frac{\theta_\text{FOV}}{20^\circ}\right)\left(\frac{5'}{d\theta}\right)\left(\frac{F_\ell}{1}\right)^{1/2}\left(\frac{\alpha_{21}}{0.1}\right)^{1/2}
-\end{eqnarray}
-where the fraction of 21\,cm foregrounds remaining after subtraction is given by $\alpha_{21}\equiv C_{21,\res}/C_{21,\fg}$, and the fraction of IR foregrounds removed by masking is assumed to be XXX. REMEMBER, WE CAN'T MASK OUR WAY TO THE SIGNAL BECAUSE OF THE INTRAHALO LIGHT
-
-
-
-
-
+We find that after increasing the image resolution (of the 21\,cm image) by $20\times$ (to 0.3') and reducing its fractional foreground residuals by $10\times$ (to 0.01), a tenuous detection of the optimistic 21\,cm--Ly$\alpha$ cross spectrum is possible at $\ell<70$. Widening the field of view (of the IR image) by a factor of $5\times$ (to $40^\circ$) permits significant detections at $\ell<1500$. In all these cases, the cross spectrum remains out of reach in the pessimistic scenario, though ruling out the optimistic scenario would significantly constrain reionization models.
 
 \section{Discussion}
 
 
+\begin{acknowledgments}
+We acknowledge helpful discussions on optimal quadratic estimators with Adrian Liu, Josh Dillon, and Aaron Ewall-Wice. 
+Our analysis code is publicly available at \ULurl{https://github.com/abrahamneben/21cmIRxcor}
+\end{acknowledgments}
 
 \appendix
 
@@ -531,14 +522,10 @@ C_{\IR, \shot}(\vec{\ell}) = \langle N_\text{ph}\rangle \left(\frac{hf}{\Delta f
 C_{\IR, \shot}(\vec{\ell}) =\frac{I_\text{air}h\lambda}{\Delta \lambda A t_\text{int}}
 \end{equation}
 
-NOTE THAT $C_\shot$ DECREASES WITH BINNING IN THE CROSS SPECTRUM, BUT NOT IN THE AUTO SPECTRUM!!!!!!!!!!!!!!!!!!!!!!!
-
 \section{Relation between the power spectrum of image cubes and broadband images}
 \label{sec:pspecrelation}
 
-NOTE THAT THIS ONLY HOLDS FOR LARGE ELL OVER A SMALL FIELD OF VIEW
-
-We focus in this paper on the spherical power spectrum of broadband images, $C_\ell$,  instead of that of image cubes, $P(\vec{k})$, as 21\,cm observations have focused on. Here we work out the relation between the two to facilitate comparison with past 21\,cm power spectrum results. In particular, we calculate the scaling factor $B$ relating the purely transverse modes of the power spectrum $P(k_\perp,k_\parallel=0)$ of a image cube $I(\theta_x,\theta_y,f)$ to the spherical power spectrum of a broad band image $C_\ell$ as
+We focus in this paper on the spherical power spectrum of broadband images, $C_\ell$,  instead of that of image cubes, $P(\vec{k})$, as 21\,cm observations have focused on. Here we work out the approximate relation between the two over small fields of view (i.e., for large $\ell$) to facilitate comparison with past 21\,cm power spectrum results. In particular, we calculate the scaling factor $B$ relating the purely transverse modes of the power spectrum $P(k_\perp,k_\parallel=0)$ of a image cube $I(\theta_x,\theta_y,f)$ to the spherical power spectrum of a broad band image $C_\ell$ as
 \begin{equation}
 P(k_\perp,k_\parallel=0) = B C_{\ell(k_\perp)}
 \end{equation}
