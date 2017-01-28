@@ -211,6 +211,9 @@ Dunlop, J.~S., {et~al.} 2013, Monthly Notices of the Royal Astronomical
 {Ewall-Wice}, A., {Dillon}, J.~S., {Mesinger}, A., \& {Hewitt}, J. 2014,
   \mnras, 441, 2476
 
+\bibitem[{{Feng} {et~al.}(2017){Feng}, {Cooray}, \& {Keating}}]{feng17}
+{Feng}, C., {Cooray}, A., \& {Keating}, B. 2017, ArXiv e-prints
+
 \bibitem[{{Fernandez} {et~al.}(2014){Fernandez}, {Zaroubi}, {Iliev}, {Mellema},
   \& {Jeli{\'c}}}]{StarsAndReionization}
 {Fernandez}, E.~R., {Zaroubi}, S., {Iliev}, I.~T., {Mellema}, G., \&
@@ -248,6 +251,11 @@ Gong, Y., Silva, M., Cooray, A., \& Santos, M.~G. 2014
 \bibitem[{{Helou} {et~al.}(1985){Helou}, {Soifer}, \&
   {Rowan-Robinson}}]{helou85}
 {Helou}, G., {Soifer}, B.~T., \& {Rowan-Robinson}, M. 1985, \apjl, 298, L7
+
+\bibitem[{{Henden} {et~al.}(2016){Henden}, {Templeton}, {Terrell}, {Smith},
+  {Levine}, \& {Welch}}]{apass}
+{Henden}, A.~A., {Templeton}, M., {Terrell}, D., {Smith}, T.~C., {Levine}, S.,
+  \& {Welch}, D. 2016, VizieR Online Data Catalog, 2336
 
 \bibitem[{Heneka {et~al.}(2016)Heneka, Cooray, \& Feng}]{Heneka2016}
 Heneka, C., Cooray, A., \& Feng, C. 2016
@@ -317,11 +325,6 @@ Illingworth, G.~D., {et~al.} 2013, The Astrophysical Journal Supplement Series,
   {Ivezi{\'c}}, \& {Elitzur}}]{nikutta14}
 {Nikutta}, R., {Hunt-Walker}, N., {Nenkova}, M., {Ivezi{\'c}}, {\v Z}., \&
   {Elitzur}, M. 2014, \mnras, 442, 3361
-
-\bibitem[{{Offringa} {et~al.}(2010){Offringa}, {de Bruyn}, {Biehl}, {Zaroubi},
-  {Bernardi}, \& {Pandey}}]{aoflagger}
-{Offringa}, A.~R., {de Bruyn}, A.~G., {Biehl}, M., {Zaroubi}, S., {Bernardi},
-  G., \& {Pandey}, V.~N. 2010, \mnras, 405, 155
 
 \bibitem[{{Offringa} {et~al.}(2015){Offringa}, {Wayth}, {Hurley-Walker},
   {Kaplan}, {Barry}, {Beardsley}, {Bell}, {Bernardi}, {Bowman}, {Briggs},
@@ -437,11 +440,6 @@ Spergel, D., {et~al.} 2013, ArXiv e-prints, 190
   {Peoples}, {Pier}, {Richmond}, {Rockosi}, {Schlegel}, {Stoughton}, {Tucker},
   {Yanny}, \& {York}}]{tegmark02}
 {Tegmark}, M., {et~al.} 2002, \apj, 571, 191
-
-\bibitem[{{Thacker} {et~al.}(2015){Thacker}, {Gong}, {Cooray}, {De Bernardis},
-  {Smidt}, \& {Mitchell-Wynne}}]{thacker15}
-{Thacker}, C., {Gong}, Y., {Cooray}, A., {De Bernardis}, F., {Smidt}, J., \&
-  {Mitchell-Wynne}, K. 2015, \apj, 811, 125
 
 \bibitem[{Tingay {et~al.}(2013)Tingay, Goeke, Bowman, Emrich, Ord, Mitchell,
   Morales, Booler, Crosse, Wayth, Lonsdale, Tremblay, Pallot, Colegate,

@@ -134,7 +134,7 @@ At the same time, deeper galaxy redshift surveys are beginning to constrain the 
 
 Infrared intensity mapping offers several advantages compared to surveys. Power spectrum analyses can be sensitive to an EOR component even if the signal-to-noise in individual pixels small, and instead of being limited to the brightst galaxies, intensity mapping is sensitive to the cumulative light from \textit{all} sources. Indeed,  ionizing and Lyman-alpha radiation from EOR galaxies at $z\sim6-8$ redshifts into the near infrared, motivating intensity mapping at micron-scale wavelengths. Working around foregrounds is challenging, though. While early studies suggested angular fluctuations in infrared intensity maps traced EOR galaxies \citep[e.g.,][]{kash1,kash2,kash3}, \citet{kash4} find that given current constraints on the EOR, this is unlikely. In fact, \citet{cooray12,zemcov14} argue that intrahalo light, consisting of tidally stripped stars dispersed throughout host halos, is the best explanation for the observed fluctuation excess over known EOR galaxy populations. This implies that even after significant foreground masking, EOR foreground emission in wide field infrared surveys is of order $10^4$ times brighter than EOR emission at $1'-60'$ scales.
 
-Given these bright foregrounds, cross correlation with 21\,cm maps may in fact be the \textit{only} way to extract the diffuse EOR component of the near infrared background. The synergy is clear: the galaxies sourcing reionization generate strong Ly-$\alpha$ emission, while the neutral regions between them glow at rest frame 21\,cm. On typical ionized bubble scales, bright spots in IR maps likely correspond to ionized regions, and thus, 21\,cm dark spots, and vice versa, sourcing an anticorrelation seen in EOR simulations by \citet{silva12,heneka16}. 
+Given these bright foregrounds, cross correlation with 21\,cm maps may in fact be the \textit{only} way to extract the diffuse EOR component of the near infrared background. The synergy is clear: the galaxies sourcing reionization generate strong Ly-$\alpha$ emission, while the neutral regions between them glow at rest frame 21\,cm. On typical ionized bubble scales, bright spots in IR maps likely correspond to ionized regions, and thus, 21\,cm dark spots, and vice versa, sourcing an anticorrelation seen in EOR simulations by \citet{silva12,heneka16} and modeled analytically by \citet{feng17}. 
 
 A similar anticorrelation on large scales is found by \citet{lidz09,park14} in simulations of 21\,cm cross correlation with galaxy surveys, but conducting redshift surveys both wide and deep enough to cross correlate with 21\,cm maps is challenging due to the hugely different spatial scales probed by 21\,cm experiments and spectroscopic galaxy surveys. For instance, the 3' angular resolution of the MWA is of roughly the field of view of the Hubble Deep Field and the James Webb Space Telescope (JWST). It may be possible to cross-check the ionization environment of deep JWST sources by comparing the brightness temperature in the 21\,cm map \citep{beardsley15}, but even after order $\sim100$\,hour integrations such detections will be near JWST limiting sensitivities \citet{zackrisson11}.
 
@@ -160,26 +160,27 @@ and on the horizon, we study in this paper the real world prospects of detecting
 
 \subsection{Power spectrum definitions}
 
-We define the 3D power spectrum $P(\vec{k})$ of the image cube $I(x,y,z)$ following \citet{ewallwice14} as 
+We define the 3D power spectrum $P(\vec{k})$ of the image cube $I(\vec{x})$ following \citet{ewallwice14} as 
 \begin{equation}
+\label{eqn:pspec3Ddef}
 	P(\vec{k}) = \frac{\langle|\tilde{I}(\vec{k})|^2\rangle}{V}
 \end{equation}
-where
+where $\tilde{I}(\vec{k})$ is given by
 \begin{equation}
-	\tilde{I}(\vec{k})=dV\sum_{\vec{x}}I(\vec{x})e^{i\vec{k}\cdot\vec{x}}
+	\tilde{I}(\vec{k})=dV\sum_{\vec{x}}I(\vec{x})e^{i\vec{k}\cdot\vec{x}},
 \end{equation}
-and $V$ is the survey volume, and $dV$ is the voxel size.
+$V$ is the survey volume, and $dV$ is the voxel size. Note that $P(\vec{k})$ has units of $[I]^2\cdot\text{Mpc}^3$, and that we often plot instead the more dimensionally-meaningful quantity $\Delta(\vec{k})=\sqrt{k^3P(\vec{k})/2\pi^2}$.
 
-Similarly, over narrow fields of view, the angular power spectrum $C_\ell$ of a 2D (e.g, broad band) image $I(\vec{\theta})$ can be shown to be approximately
+Similarly, over narrow fields of view, the angular power spectrum $C(\vec{\ell})$ of a 2D (e.g, broad band) image $I(\vec{\theta})$ can be shown to be approximately
 \begin{equation}
 \label{eqn:Cldef0}
 	C(\vec{\ell}) = \frac{\langle|\tilde{I}(\vec{\ell})|^2\rangle}{\Omega} 
 \end{equation}
-where
+where $\tilde{I}(\vec{\ell})$ is given by
 \begin{equation}
-	\tilde{I}(\vec{\ell})=d\Omega\sum_{\vec{\theta}}I(\vec{\theta})e^{i\vec{\ell}\cdot\vec{\theta}}
+	\tilde{I}(\vec{\ell})=d\Omega\sum_{\vec{\theta}}I(\vec{\theta})e^{i\vec{\ell}\cdot\vec{\theta}},
 \end{equation}
-and $\Omega$ is the survey solid angle, and $d\Omega$ is the pixel size. Thus, we need only evaluate a fourier transform to estimate $C_\ell$ over a narrow field of view. Writing this out in detail, we find\footnote{IS IT REALLY RIGHT THAT ALL THESE PEOPLE WROTE IT UP WRONG? ARE THERE DIFFERENT NORMALIZATIONS OF C$\ell$ ? Note that the normalization of $d\theta^2/N^2$ has been misstated as $1/N^2$ by \citet{zemcov14} (Eqn. 3 of their supplement), $d\theta$ by \citet{cooray12} (Eqn. 1 of their supplement), and $N^2d\ell^2/(2\pi)^2$ by \citet{thacker15} (Eqn. B3). Using Eqn. \ref{eqn:elldef}, the last form can be shown equal $1/d\theta^2$.} 
+$\Omega$ is the survey solid angle, and $d\Omega$ is the pixel size. Thus, over a narrow field of view, we need only evaluate a fourier transform to estimate the angular power spectrum. Writing this out in detail, we find\footnote{Note that the normalization of $d\theta^2/N^2$ has been misstated as $1/N^2$ by \citet{zemcov14} (Eqn. 3 of their supplement) and $d\theta^2$ by \citet{cooray12} (Eqn. 1 of their supplement).} 
 \begin{equation}
 \label{eqn:Cldef}
 	C(\ell(a,b))=\left\langle\left|\sum_{m,n}I(m,n)\exp\left(-\frac{2\pi i}{N}  (am+bn)\right)\right|^2\right\rangle\frac{d\theta^2}{N^2}
@@ -189,89 +190,88 @@ where $d\theta=d\theta_x=d\theta_y$ is the pixel size, $N\equiv N_x=N_y$ is numb
 \ell_x&=&2\pi a/N d\theta \label{eqn:elldef}\\
 \ell_y&=&2\pi b/Nd\theta \label{eqn:elldef2}
 \end{eqnarray}
+Note that $C(\vec{\ell})$ has the units of $[I]^2d\theta^2$, and we often work with $\Delta(\vec{\ell})=\sqrt{\ell(\ell+1)C(\vec{\ell})/2\pi}$ which has the same units as I because $\ell$ has units of 1/rad. 
 
-Note that $C_\ell$ has the units of $[I^2d\theta^2]$. We will generally work with the dimensionally more intuitive power spectrum $\Delta(\ell)$, given by
+The 3D 21\,cm power spectrum is often cylindrically binned from 3D $\vec{k}$ space to 2D $(k_\perp,k_\parallel)$ space where $k_\perp^2\equiv k_x^2+k_y^2$ represents modes perpendicular to the line of sight, and $k_\parallel=k_z$ represents modes along the line of sight. We show in Appendix \ref{sec:pspecrelation} that this cylindrically binned power spectrum is related to the angular power spectrum of a broad band image (over a narrow field of view) as
 \begin{equation}
-	\Delta(\ell)=\sqrt{\frac{\ell^2}{2\pi}C(\ell)}
+P(k_\perp,k_\parallel=0)=D_c^2 \Delta D_c C_{\ell(k_\perp)}.
 \end{equation}
-which has the same units as I because $\ell$ has units of 1/rad. 
-
-The 3D power spectrum is often cylindrically binned to $(k_\perp,k_\parallel)$ space where $k_\perp^2\equiv k_x^2+k_y^2$ represents modes perpendicular to the line of sight, and $k_\parallel=k_z$ represents modes along the line of sight. We show in Appendix \ref{sec:pspecrelation}  that this cylindrically binned power spectrum is related to the angular power spectrum of a broad band image (over a narrow field of view) as
-\begin{equation}
-P(k_\perp,k_\parallel=0)=D_c^2 \Delta D_c C_{\ell(k_\perp)}	
-\end{equation}
-with $\ell=D_c k_\perp$, where $D_c$ is the comoving line of sight distance to the center of the cube, and $\Delta D_c$ is the comoving depth of the cube.
+Here $\ell=D_c k_\perp$, where $D_c$ is the comoving line of sight distance to the center of the cube, and $\Delta D_c$ is the comoving depth of the cube.
 
 \subsection{Cross spectrum vs. coherence}
 
-We extend the definition of the angular power spectrum given in Eqn. \ref{eqn:Cldef0} to the cross spectrum as
+The 3D and 2D cross spectra are defined, extending Eqns. \ref{eqn:pspec3Ddef} and \ref{eqn:Cldef0} to the cross spectrum as
+\begin{eqnarray}
+	P_{12}(\vec{k}) &=& \frac{\langle\tilde{I}_1^*(\vec{k})\tilde{I}_2(\vec{k})\rangle}{V}\\
+	C_{12}(\vec{\ell}) &=& \frac{\langle \tilde{I}_1^*(\vec{\ell})\tilde{I}_2(\vec{\ell})\rangle}{\Omega}
+\end{eqnarray}
+where $1$ and $2$ denote the 21\,cm and the IR fields, respectively. The cross spectrum is a quantity which ranges between $\pm(C_{1}(\vec{\ell})C_{2}(\vec{\ell}))^{1/2}$ in the 2D case, depending on how anti-correlated, uncorrelated, or correlated the two fields are. It is thus often renormalized as  
 \begin{equation}
 \label{eqn:Cldefcross}
-	C_{A,B}(\vec{\ell}) = \frac{\langle \tilde{I}_A^*(\vec{\ell})\tilde{I}_B(\vec{\ell})\rangle}{\Omega}
+	c_{12}(\vec{\ell}) \equiv \frac{C_{12}(\vec{\ell}) }{\sqrt{C_1(\vec{\ell})  C_2(\vec{\ell}) }}
 \end{equation}
-where $A$ and $B$ denote the 21\,cm and the IR fields. The cross spectrum is a quantity which ranges between $\pm(C_{A}(\vec{\ell})C_{B}(\vec{\ell}))^{1/2}$ depending on how correlated or anti-correlated the two fields are. 
-
-The cross spectrum is thus often renormalized as  
-\begin{equation}
-\label{eqn:Cldefcross}
-	c_{A,B}(\vec{\ell}) \equiv \frac{C_{A,B}(\vec{\ell}) }{\sqrt{C_A(\vec{\ell})  C_B(\vec{\ell}) }}
-\end{equation}
-where $c$ is known as the coherence. The coherence quantifies the fractional correlation of the two fields, and is insensitive to a simple rescaling of either one. However, large foreground residuals afflicting either field will substantially bias the coherence towards zero \citep{lidz09,furlanettolidz07}. 
+where $c$ is known as the coherence and is insensitive to a simple rescaling of either field. However, large foreground residuals in either field will substantially bias the coherence towards zero \citep{lidz09,furlanettolidz07}, whereas they merely contribute a zero mean noise to the cross spectrum. 
 
 \section{Observations and Imaging}
 \subsection{21\,cm Observations}
 \label{sec:mwaobservations}
 
-The MWA is a low frequency radio interferometer in Western Australia consisting of 128 phased array tiles, each with $\sim30^\circ\times(150\text{\,MHz}/f)$ field of view and steerable in few degree increments with a delay line beamformer. We use MWA low frequency radio observations of a quiet field centered at (RA,Dec)=($0^\circ$,$-27^\circ$) J2000 recorded over 30.72\,MHz bandwidth around 186\,MHz, corresponding to $z=6.0-7.3$. We begin with the 32 hours of observations calibrated, foreground-subtracted, and imaged by \citet{beardsley16}. These 32 hours result from applying stringent quality control cuts to roughly 80 hours of observations recorded between August and November 2013, where spectrally narrow RFI is flagged using COTTER \citep{AndreMWARFI}, based on AOFlagger\footnote{\ULurl{http://aoflagger.sourceforge.net}} \citep{aoflagger} and spectrally broad RFI is flagged by comparing the spectral smoothness of the data compared to baseline levels. 
+The MWA is a low frequency radio interferometer in Western Australia consisting of 128 phased array tiles, each with $\sim30^\circ\times(150\text{\,MHz}/f)$ full-width-at-half-max and steerable in few degree increments with a delay line beamformer. We use low frequency observations of a quiet field centered at (RA,Dec)=($0^\circ$,$-27^\circ$) J2000 recorded over 30.72\,MHz bandwidth centered at 186\,MHz, corresponding to $z=6.0-7.3$. In Sec. \ref{sec:res21fgs} we examine several datasets from the second half of 2013 to study how much data is necessary to best mitigate foregrounds, and we summarize here the initial flagging, calibration, and imaging performed by the MWA pipeline prior to our processing. 
 
-The 32 hours of observations are processed separately by \citet{beardsley16} as in 2 minute snapshots, and imaging is conducted using Fast Holographic Deconvolution\footnote{\ULurl{https://github.com/EoRImaging/FHD}} \citep{fhd}. Model visibilities are predicted from a foreground model of diffuse and point source emission in the field \citep{beardsley16,PattiCatalog1}, to be used for both calibration and foreground subtraction. For each snapshot, FHD produces naturally weighted data and model image cubes as well as primary and synthesized beam cubes. We flag the upper and lower 80\,kHz channels in each of 24 coarse channels across the band to mitigate aliasing, and average the remaining channels in frequency to make a broad band image. 
+The MWA observations are recorded as 2\,min ``snapshots'' which are flagged for RFI using COTTER \citep{AndreMWARFI}), then calibrated and imaged using Fast Holographic Deconvolution\footnote{\ULurl{https://github.com/EoRImaging/FHD}} \citep{fhd}. Model visibilities are simulated from a foreground model of diffuse \citep{beardsley16} and point source \citep{PattiCatalog1} emission in the field, and used for both calibration and foreground subtraction. For each snapshot, FHD produces naturally weighted data and model image cubes as well as primary and synthesized beam cubes. We flag the upper and lower 80\,kHz channels in each of 24 coarse channels across the band to mitigate aliasing, and average the remaining channels in frequency to make a broad band image. 
 
 FHD outputs these ``cubes'' in HEALPix format per frequency. Note that this processing is performed in parallel on ``odd'' and ``even'' data cubes whose data are interleaved in time to allow more leverage on estimating the magnitude of the noise and the noise bias. We average the cubes in frequency, rotate them so the EOR0 field center lies at the north pole, and project the pixels into the $xy$ plane, resulting in an orthographic projection to the plane tangent to  $(\text{RA}, \text{Dec})=(0,-27^\circ)$.
-
 
 \subsection{IR Observations}
 
 \begin{figure}[h]
 \centering
 \includegraphics[width=3.3in]{images/survey_overview.pdf}
-\caption{5' pixels}
+\caption{The MWA deep integration field (black dashed circle) is shown relative to our two ATLAS surveys. Blue markers show the observation centers of our wide ATLAS survey aimed at studying foregrounds, and the large blue square shows the stacked image. Red circle markers show observation centers for our slightly deeper survey, and red squares show the four stacked images we generate. Note that the ATLAS field of view is 5.5$^\circ$.}
 \label{fig:surveyoverview}
 \end{figure}
 
-ATLAS is a 0.5\,m (f/2.0) telescope \citep{tonry11} in Hawaii designed to perform a wide field sky survey for near earth asteroids. The detector is a 10,500 $\times$10,500 STA-1600 CCD array, with a pixel scale of 1.86'', with an overall field of view of $5.5^\circ$. We observe in the I band centered at 807\,nm with full width at half max 150\,nm, corresponding to $z=$5.1--6.3. While this redshift range doesn't exactly match that of our r radio observations, it overlaps sufficiently for our purpose of characterizing the effects of noise foregrounds in 21cm--IR cross correlation experiments. 
+ATLAS is a 0.5\,m (f/2.0) telescope \citep{tonry11} in Hawaii designed to perform a wide field sky survey for near earth asteroids. The detector is a 10,500 $\times$10,500 STA-1600 CCD array, with a pixel scale of 1.86'', with an overall field of view of $5.5^\circ$. We observe in the \textit{i} band centered at 810\,nm with full width at half max 150\,nm, corresponding to $z=$5.1--6.3. While this redshift range doesn't exactly match that of our radio observations, it overlaps sufficiently for our purpose of characterizing the effects of noise foregrounds in 21cm--IR cross correlation experiments, and setting the first limits on the cross spectrum of residual foregrounds. 
 
-We perform two separate observing campaigns, which we illustrate in Fig. \ref{fig:surveyoverview}. We first perform a wide survey to best characterize bright foregrounds; . In the first campaign we raster scan a roughly $20^\circ\times20^\circ$ grid with $5^\circ$ spacing over the MWA field (dashed black circle), integrating for 2.5\,min at each pointing (blue square markers). The observations are conducted between 2016/09/07 22:00  and 2016/09/08 00:50 Hawaii-Aleutian Standard Time, when the moon was 36\% illuminated.  Later we will find that this is substantially more integration time than required to mitigate photon shot noise, but not enough to mitigate diffuse airglow structure and CCD array systematics. Still, it is sufficient for performing a source survey where source fluxes are estimated relative to the local background. 
+ASK BRIAN TO WRITE A FEW SENTENCES ABOUT THE ATLAS CALIBRATION AND IMAGING PIPELINE
 
-We then use {\tt swarp}\footnote{\ULurl{http://www.astromatic.net/software/swarp}} \citep{swarp} to stack all these frames over $20^\circ$ orthographic field centered on (RA,Dec) = $(0^\circ,-30^\circ)$ (blue square) with 1.86'' resolution. We use the default background subtraction settings to mitigate temporal and spatial background variation. 
+We perform two separate observing campaigns, which we illustrate in Fig. \ref{fig:surveyoverview}. We first perform a wide survey to best characterize bright foregrounds. We raster scan a roughly $20^\circ\times20^\circ$ grid with $5^\circ$ spacing over the MWA field (dashed black circle), integrating for 2.5\,min at each pointing (blue square markers). The observations are conducted between 2016/09/07 22:00  and 2016/09/08 00:50 Hawaii-Aleutian Standard Time, when the moon was 36\% illuminated. We then use {\tt swarp}\footnote{\ULurl{http://www.astromatic.net/software/swarp}} \citep{swarp} to stack all these frames over $20^\circ$ orthographic field centered on (RA,Dec) = $(0^\circ,-30^\circ)$ (blue square) with 1.86'' resolution, using the default background subtraction settings to mitigate temporal and spatial background variation. 
 
 % moon phase calculator: http://www.moonpage.com/index.html?go=T&auto_dst=T&tzone=ut&m=9&d=8&y=2016&hour=0&min=51&sec=45
 
-Our second campaign is a deep survey designed to better mitigate airglow fluctuations and CCD systematics for the purpose of studying faint foregrounds. We select four 5 deg fields positioned around the MWA beam peak for best cross correlation precision: (RA,Dec) = $(-2.5^\circ, -24.5^\circ)$, $(2.5^\circ, -24.5^\circ)$, $(-2.5^\circ, -29.5^\circ)$, $(2.5^\circ, -29.5^\circ)$ (J2000). We raster scan a $3\times3$ grid of 30\,sec observations within each field (red circle markers) intended to mitigate slight amplifier non-uniformities across the CCD array. The observations were conducted on 2016/11/02 between 21:47 and 23:11 Hawaii-Aleutian Standard Time, when the moon was 5\% illuminated.
+Our second campaign is a slightly deeper survey designed to better mitigate airglow fluctuations and CCD systematics for the purpose of studying faint foregrounds. We select four 5 deg fields positioned around the MWA beam peak for best cross correlation precision: (RA,Dec) = $(-2.5^\circ, -24.5^\circ)$, $(2.5^\circ, -24.5^\circ)$, $(-2.5^\circ, -29.5^\circ)$, $(2.5^\circ, -29.5^\circ)$ (J2000). We raster scan a $3\times3$ grid of 30\,sec observations within each field (red circle markers) intended to mitigate slight amplifier non-uniformities across the CCD array. The observations were conducted on 2016/11/02 between 21:47 and 23:11 Hawaii-Aleutian Standard Time, when the moon was 5\% illuminated. 
 
-We stack the frames in each of the four deep fields using {\tt swarp}, saving only the central $4^\circ\times 4^\circ$ region over which all nine 30\,sec frames overlap (red squares). Otherwise slight background discontinuities would be introduced by the different temporal coverage of different regions of the stack. In this stacking, we disable background subtraction for the purpose of studying later on the effects of airglow-induced diffuse backgrounds.
-
-
-
+We stack the frames in each of the four deep fields using {\tt swarp} over only the central $4^\circ\times 4^\circ$ region over which all nine 30\,sec frames overlap (red squares). Otherwise slight background discontinuities would be introduced by the different temporal coverage of different regions of the stack. In this stacking, we disable background subtraction for the purpose of studying later on the effects of airglow-induced diffuse backgrounds.
 
 \section{Point source foregrounds}
 
 \subsection{Catalogs}
 \label{sec:catalogs}
 
-To characterize the bright sources relevant to 21\,cm--Ly$\alpha$ and  21\,cm--H$\alpha$ intensity mapping correlation measurements we calculate the correlations between catalogs at 185\,MHz, 850\,nm, and 4.5\,um as a function of mask depth. These bands correspond roughly to 21\,cm, Ly$\alpha$, and H$\alpha$ at $z\sim6-7$. 
+To characterize the bright sources relevant to broad band  21\,cm--Ly$\alpha$ and  21\,cm--H$\alpha$ intensity mapping correlation measurements we calculate the correlations between catalogs at 185\,MHz, 850\,nm, and 4.5\,um as a function of mask depth. These bands correspond roughly to 21\,cm, Ly$\alpha$, and H$\alpha$ at $z\sim6-7$, respectively. 
 
 \begin{figure*}[t]
 \centering
 \includegraphics[width=6.5in]{images/catalog_histograms.pdf}
-\caption{5' pixels}
+\caption{NEED TO REMAKE THIS PLOT WITH THE ABS CALIBRATION CORRECTION Histogram of source fluxes in the 185\,MHz catalog (left), the 4.5\,um catalog (center), and the 850\,nm catalog (right). The catalogs are complete to roughly 300\,mJy, 0.05\,mJy, and 0.3\,mJy respectively.}
 \label{fig:cataloghistograms}
 \end{figure*}
 
-We use the 185\,MHz catalog reduced from deep observations of the MWA field depicted in Fig. \ref{fig:surveyoverview} by \citep{PattiCatalog1} (left panel in Fig. \ref{fig:cataloghistograms}). Unlike the other catalogs we consider, the survey depth varies somewhat over the MWA field due to the varying primary beam, though within the full-width-at-half-max it is complete to roughly 100\,mJy. MWA astrometry is at the 2--3' level due to the MWA's short baselines, though \citep{PattiCatalog1} cross-match MWA detections with higher frequency catalogs to achieve order 10'' astrometry. 
+We use the 185\,MHz catalog reduced from deep observations of the MWA field depicted in Fig. \ref{fig:surveyoverview} by \citep{PattiCatalog1}. Fig. \ref{fig:cataloghistograms}) (left panel) shows a histogram of source fluxes in this field. The survey depth varies somewhat over the MWA field due to the varying primary beam, though within the full-width-at-half-max it is complete to roughly 300\,mJy. Note that the completeness varies across the field, with fewer fainter sources detected away from the pointing center as the beam weakens. MWA astrometry is at the 2'--3' level due to the MWA's short baselines, though \citep{PattiCatalog1} cross-match with higher frequency catalogs to achieve order 10'' astrometry. 
 
-We use the W2 band of ALLWISE \citep{Wright2010,allwise} as our 4.5\,um catalog. We download the list of sources within the MWA field using the All Sky Search on the NASA/IPAC Infrared Science Archive\footnote{\ULurl{http://irsa.ipac.caltech.edu}} (center panel in Fig. \ref{fig:cataloghistograms}). This ALLWISE band is specified to be 95\% complete to 88\,$\mu$Jy (15.7 AB mag), though it has slight sky coverage non-uniformities due to satellite coverage. We will see that we run into sky coverage problems only after masking the brightest 90\% of sources.
+We use the W2 band of ALLWISE \citep{Wright2010,allwise} as our 4.5\,um catalog. We download the list of sources within the MWA field using the All Sky Search on the NASA/IPAC Infrared Science Archive\footnote{\ULurl{http://irsa.ipac.caltech.edu}}, and plot the histogram of source fluxes in Fig. \ref{fig:cataloghistograms}) (center panel). This ALLWISE band is specified to be 95\% complete to 88\,$\mu$Jy (15.7 AB mag), though it has slight sky coverage non-uniformities due to satellite coverage.
 
-Lastly, we run SExtractor\footnote{\ULurl{http://www.astromatic.net/software/sextractor}} \citep{sextractor} on our wide $20^\circ$ wide ATLAS composite image to generate an 850\,nm catalog. We allow local background bias and noise estimation, and set pixel saturation at 20,000 counts to avoid artifacts. We find the catalog is complete to roughly a mJy (right panel in Fig. \ref{fig:cataloghistograms}). 
+Lastly, we run SExtractor\footnote{\ULurl{http://www.astromatic.net/software/sextractor}} \citep{sextractor} on our wide $20^\circ$ wide ATLAS composite image to generate an 850\,nm catalog. We allow local background bias and noise estimation, set pixel saturation at 20,000 counts to avoid artifacts, and use the {\tt AUTO} aperture profile. Given that our ATLAS observations have been calibrated and imaged through a preliminary pipeline, we cross match these sources with sources closer than 1'' in the AAVSO Photometric All Sky Survey\footnote{\ULurl{https://www.aavso.org/download-apass-data}} \citep{apass}, finding matches $\sim10\%$ of the time. Fig. \ref{fig:ATLASvsAPASS} (top) shows a 2D histogram of APASS versus ATLAS magnitude as a function of ATLAS magnitude. We fit a gaussian to the relative magnitude for sources brighter than 13 mag, and find that out roughly calibrated ATLAS sources are too bright by $0.279\pm0.003$\,mag. Applying this correction, we plot a histogram of ATLAS source fluxes in Fig. \ref{fig:cataloghistograms}) (right panel), finding that our survey is complete to roughly 1\,mJy.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=2.75in]{images/ATLAS_vs_APASS_cal.pdf}
+\caption{To improve the rough initial ATLAS calibration, we cross match ATLAS sources with those from APASS, and plot a 2D histogram (top) of the relative magnitude as a function of ATLAS magnitude, then fit a gaussian to the magnitude offset for sources brighter than 13\,mag. We find that our roughly calibrated ATLAS sources are too bright by $0.279\pm0.003$\,mag.}
+\label{fig:ATLASvsAPASS}
+\end{figure}
+
+We find the catalog is complete to roughly a mJy (right panel in Fig. \ref{fig:cataloghistograms}). 
+
 
 
 \subsection{Catalog radio--infrared flux correlations}
@@ -284,7 +284,7 @@ Our approach is different. For all the advantages of broad band intensity mappin
 \begin{figure*}[h]
 \centering
 \includegraphics[width=5.5in]{images/source_correlation_grids_and_snrs.pdf}
-\caption{5' pixels}
+\caption{NEED TO REMAKE THIS PLOT WITH THE ABS CALIBRATION CORRECTION}
 \label{fig:correlationsandSNRs}
 \end{figure*}
 
@@ -367,6 +367,7 @@ Lastly, we ask to what extent this unwanted radio--infrared foreground correlati
 In this section we characterize the power spectra and correlation properties of the residual 185\,MHz and 850\,nm foregrounds after subtraction and masking of the the bright sources identified by the surveys discussed in the previous section.
 
 \subsection{Residual 21\,cm foregrounds}
+\label{sec:res21fgs}
 
 We use the broad band 185\,MHz images from the FHD pipeline summarized in Sec. \ref{sec:mwaobservations} to verify that the level of foreground residuals are as expected by comparison with 3D foreground power spectrum measurements. We also study how much observation time is required to achieve the best foreground subtraction with an eye towards the large survey areas required to mitigate the sample variance noise due to uncorrelated radio and infrared foregrounds in cross spectrum analyses. 
 
