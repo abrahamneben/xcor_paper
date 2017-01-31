@@ -288,7 +288,7 @@ Our approach is different. For all the advantages of broad band intensity mappin
 \label{fig:correlationsandSNRs}
 \end{figure*}
 
-We begin by gridding all three catalog fluxes in Jy to the $20^\circ\times20^\circ$ grid centered at (RA,Dec) = $(0, -27^\circ)$ depicted in Fig. \ref{fig:surveyoverview}, and calculating the zero delay correlations between the images as
+We begin by gridding all three catalog fluxes in Jy to the $20^\circ\times20^\circ$ grid centered at (RA,Dec) = $(0, -30^\circ)$ depicted in Fig. \ref{fig:surveyoverview}, and calculating the zero delay correlations between the images as
 \begin{equation}
 \label{eqn:imagecorrdef}
 	c = \frac{\langle I_\rad I_\IR\rangle-\langle I_\rad\rangle\langle I_\IR\rangle}{\sqrt{(\langle I_\rad^2\rangle -\langle I_\rad\rangle^2)(\langle I_\IR^2\rangle -\langle I_\IR\rangle^2)}}
@@ -343,7 +343,7 @@ We observe that the radio--infrared flux correlation for some type of objects is
 \begin{figure*}[h]
 \centering
 \includegraphics[width=6in]{images/sim_rad_ir_luminosity_functions.pdf}
-\caption{AGN and SF luminosity functions at 1.4\,GHz from \citet{mauch07} and at 8\,$\mu$m from \citet{fu10} (left panel).}
+\caption{AGN and SF luminosity functions at 8\,$\mu$m from \citet{fu10} (left panel) and at 1.4\,GHz from \citet{mauch07} (right panel).}
 \label{fig:luminosityfunctions}
 \end{figure*}
 
@@ -456,7 +456,7 @@ Our final residual power spectrum agrees well with the CIBER measurements. Below
 \begin{figure*}[h]
 \centering
 \includegraphics[width=7in]{images/spectra3D_to_2D.pdf}
-\caption{As described in Sec. \ref{sec:modelingthecrossspectrum}, we identify optimistic and pessimistic Ly-$\alpha$ (top left) and 21\,cm (top center) 3D power spectra from \citet{Gong2014} and \citet{PoberNextGen}, respectively, and use the coherence function from \citet{Heneka2016} (top right) for both scenarios. We then simulate approximate cubes assuming gaussian statistics, average them over frequency, and plot the angular power spectra of Ly-$\alpha$ (bottom left) and 21\,cm emission (bottom center), and their coherence functions (bottom right). Power on short angular scales ($\ell\gtrsim10^4$) is suppressed by a factor of $\sim100$ (in power units), while power on longer angular scales ($\ell\gtrsim10^4$) is suppressed by only a factor of $\sim2$. This indicates that there remains significant observable signal in broad band 21\,cm--Ly-$\alpha$ cross spectrum observations. Solid and dashed black lines show the optimistic and pessimistic models derived in Sec. \ref{sec:modelingthecrossspectrum}. Solid, dashed, and dotted blue lines show the predicted sensitivities for improved experiments.}
+\caption{As described in Sec. \ref{sec:modelingthecrossspectrum}, we identify optimistic and pessimistic Ly-$\alpha$ (top left) and 21\,cm (top center) 3D power spectra from \citet{Gong2014} and \citet{PoberNextGen}, respectively, and use the coherence function from \citet{Heneka2016} (top right) for both scenarios. We then simulate approximate cubes assuming gaussian statistics, average them over frequency, and plot the angular power spectra of Ly-$\alpha$ (bottom left) and 21\,cm emission (bottom center), and their coherence functions (bottom right). Power on short angular scales ($\ell\gtrsim10^4$) is suppressed by a factor of $\sim100$ (in power units), while power on longer angular scales ($\ell\gtrsim10^4$) is suppressed by only a factor of $\sim2$. This indicates that there remains significant observable signal in broad band 21\,cm--Ly-$\alpha$ cross spectrum observations. }
 \label{fig:spectra3Dto2D}
 \end{figure*}
 
@@ -492,7 +492,7 @@ We apply this formalism to each of the four $4^\circ$ deep ATLAS fields shown in
 \begin{figure}[h]
 \centering
 \includegraphics[width=3.6in]{images/mwa_atlas_xspec_with_2Dsimtheory_and_2sigma_errors_6bins.pdf}
-\caption{Measured cross spectrum between 185\,MHz and 850\,nm images after our best foreground subtraction and masking (red markers). All are essentially consistent with zero, and roughly half are positive (circles) and negative (triangles), as expected if there is no measurement correlation. Error bars show $2\sigma$ uncertainties, and we take the topes of these error bars as upper limits on the cross spectrum of 21\,cm--Ly$\alpha$ emission from the EOR. We a lowest upper limit of $\Delta_{21,\text{Ly}\alpha}<13.3\,(\text{kJy/sr}\cdot \text{mK})^{1/2}$ (95\%) at $\ell\sim400$. }
+\caption{Measured cross spectrum between 185\,MHz and 850\,nm images after our best foreground subtraction and masking (red markers). All are essentially consistent with zero, and roughly half are positive (circles) and negative (triangles), as expected if there is no measurement correlation. Error bars show $2\sigma$ uncertainties, and we take the topes of these error bars as upper limits on the cross spectrum of 21\,cm--Ly$\alpha$ emission from the EOR. We a lowest upper limit of $\Delta_{21,\text{Ly}\alpha}<13.3\,(\text{kJy/sr}\cdot \text{mK})^{1/2}$ (95\%) at $\ell\sim400$. Solid and dashed black lines show the optimistic and pessimistic models derived in Sec. \ref{sec:modelingthecrossspectrum}. Solid, dashed, and dotted blue lines show the predicted sensitivities for improved experiments.}
 \label{fig:resxspec}
 \end{figure}
 
