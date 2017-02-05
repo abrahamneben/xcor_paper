@@ -6,5 +6,8 @@ xcor_paper_rev4.pdf
 xcor_paper_rev5.pdf
 xcor_paper_rev6.pdf
 xcor_paper_rev7.pdf
+*.aux
+*.bbl
+*.log
 .texpadtmp/
 .DS_Store

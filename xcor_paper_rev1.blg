@@ -1,0 +1,52 @@
+This is BibTeX, Version 0.99d (TeX Live 2012)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: xcor_paper_rev1.aux
+The style file: apj.bst
+Database file #1: xcor_paper_rev1Notes.bib
+Database file #2: xcor_paper_new.bib
+Warning--I didn't find a database entry for "allwise"
+Warning--empty journal in Gong2014
+Warning--empty publisher in ska
+Warning--empty journal in Heneka2016
+You've used 80 entries,
+            2988 wiz_defined-function locations,
+            1109 strings with 41930 characters,
+and the built_in function-call counts, 48936 in all, are:
+= -- 2874
+> -- 5541
+< -- 14
++ -- 1850
+- -- 1762
+* -- 5295
+:= -- 9802
+add.period$ -- 80
+call.type$ -- 80
+change.case$ -- 498
+chr.to.int$ -- 80
+cite$ -- 83
+duplicate$ -- 1485
+empty$ -- 2142
+format.name$ -- 2051
+if$ -- 9025
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 78
+newline$ -- 244
+num.names$ -- 321
+pop$ -- 515
+preamble$ -- 1
+purify$ -- 498
+quote$ -- 0
+skip$ -- 1252
+stack$ -- 0
+substring$ -- 1599
+swap$ -- 22
+text.length$ -- 2
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 717
+warning$ -- 3
+while$ -- 229
+width$ -- 0
+write$ -- 791
+(There were 4 warnings)
