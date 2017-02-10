@@ -82,7 +82,7 @@
 %% head is a modified title of up to roughly 44 characters.
 %% Running heads will not print in the manuscript style.
 
-\shorttitle{Foreground and sensitivity analysis for 21cm/Infrared studies}
+\shorttitle{Foreground and sensitivity analysis for broad band 21\,cm--Ly$\alpha$ and 21\,cm--H$\alpha$ correlation experiments}
 \shortauthors{Neben et al.}
 
 %% This is the end of the preamble.  Indicate the beginning of the
@@ -106,7 +106,7 @@ Brian Stalder\altaffilmark{2},
 John L. Tonry\altaffilmark{2},
 Jacqueline N. Hewitt\altaffilmark{1}}
 
-\affil{\altaffilmark{1}MIT Kavli Institute, Massachusetts Institute of Technology, Cambridge, MA, 02139 USA}
+\affil{\altaffilmark{1}MIT Kavli Institute, Massachusetts Institute of Technology, Cambridge, MA 02139}
 \affil{\altaffilmark{2}Institute for Astronomy, University of Hawaii, 2680 Woodlawn Drive, Honolulu, HI 96822}
 
 %% Notice that each of these authors has alternate affiliations, which
@@ -317,9 +317,20 @@ To further probe which mid infrared sources are responsible for this correlation
 \label{fig:wisexspec}
 \end{figure*}
 
-%argue that LRGs are negligible in terms of radio emission compared to LRGs
-
 The fall of the correlation towards high $\ell$ is likely due in part to the MWA's 2' resolution at 185\,MHz, corresponding to a maximum $\ell$ of roughly 6000, and in part to the similar fall in the 4.5\,$\mu$m catalog power spectrum. Both the falling 4.5\,$\mu$m catalog power spectrum and the relatively flat 185\,MHz power spectrum are functions of the detailed properties of these surveys. \citet{tegmark02,dodelson02} show that the galaxy angular power spectrum $C_\ell$ is approximately equal to the 3D matter power spectrum $P(k(\ell))$ convolved with with a window function which depends on the redshift coverage and flux limit of the sample. The matter power spectrum is known to rise as $k^{1}$ for $k\lesssim0.02$\,h/Mpc, then falls as $k^{-3}$. Galaxy surveys typically probe the regime just above the turnover where the slope is transitioning from 0 to -3 \citep{tegmark02b}. In order to maximize its sensitivity to low surface EOR 21\,cm emission, the MWA was designed as a relatively compact array in comparison to higher resolution radio interferometers such as the Very Large Array. This low resolution makes the MWA catalog severely flux limited \citep{PattiCatalog1}, which in turn effectively masks many galaxies which would otherwise be seen. This large spatial mask translates into a wide fourier convolution kernel, explaining why the MWA catalog power spectrum is so flat. 
+
+Lastly, we hypothesize that the absence of an observed 185\,MHz--850\,nm correlation is due to the larger fraction of stars in 850\,nm images than at 4.5\,$\mu$m images. To check this, we study the fraction of stars and galaxies in a similar Galactic field observed by Sloan Digital Sky Survey (SDSS) \citep{sdssiii} DR13 \citep{sdssdr13}. SDSS catalog\footnote{\ULurl{http://skyserver.sdss.org/dr13/en/tools/search/rect.aspx}} objects are conveniently classified as either stars or galaxies using \textit{ugriz} photometry, though unfortunately SDSS doesn't reach the declination of our MWA field at (RA,Dec)=($0,-27^\circ$). We thus use a $5^\circ$ field centered at (RA,Dec)=($205^\circ$,$22^\circ$), which has the same galactic longitude but is flipped to the other side of the galactic plane, giving a similar line of sight through the galaxy.
+
+In Fig. \ref{fig:sdssstarsgals} we plot a histogram of the fluxes of the objects marked as stars (red) and galaxies (blue) in this field at the SDSS i band $(762\pm65)$\,nm. We observe that stars dominate the field above  $10^{-4}$\,Jy, this is a factor of a few below the survey depth of our wide ATLAS 850\,nm image, and thus none of the flux cuts explored above were deep enough to reveal the extragalactic sources. This is consistent with the fact that the 185\,MHz--4.6\,$\mu$m correlation only appeared after the stars were removed, a procedure easier in the mid-infrared than the near-infrared. 
+
+\begin{figure*}[h]
+\centering
+\includegraphics[width=3in]{images/sdss_stars_galaxies_hist_l=15_b=78_500000sources.pdf}
+\caption{Histogram of fluxes of stars and galaxies in a $5^\circ$ SDSS field at the same galactic longitude as the MWA field, but flipped to the other side of the galactic plane. These fluxes are in the SDSS i band $(762\pm65)$\,nm. }
+\label{fig:sdssstarsgals}
+\end{figure*}
+
+
 
 \subsection{Simulations of distance-induced flux correlation}
 
