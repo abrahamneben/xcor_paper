@@ -16,7 +16,7 @@
 %\documentclass[manuscript]{aastex}
 %% preprint2 produces a double-column, single-spaced document:
 
-\documentclass{emulateapj}
+\documentclass[numberedappendix]{emulateapj}
 %\documentclass[preprint]{aastex}
 
 \usepackage{natbib}
@@ -33,7 +33,6 @@
   \renewcommand\UrlLeft{\bgroup}%
   \renewcommand\UrlRight{\egroup}}
 
-
 \newcommand{\mintext}{\text{min}}
 \newcommand{\maxtext}{\text{max}}
 \newcommand{\rad}{\text{rad}}
@@ -45,6 +44,8 @@
 \newcommand{\res}{\text{res}}
 \newcommand{\shot}{\text{shot}}
 \newcommand{\SNR}{\text{SNR}}
+\newcommand{\fov}{\text{FOV}}
+\newcommand{\FOV}{\text{FOV}}
 
 \newcommand{\Fb}{\mathbf{F}}
 \newcommand{\Mb}{\mathbf{M}}
@@ -53,8 +54,7 @@
 \newcommand{\xb}{\mathbf{x}}
 \newcommand{\pb}{\mathbf{p}}
 \newcommand{\qb}{\mathbf{q}}
-\newcommand{\Wb}{\mathbf{W}}
-
+\newcommand{\Wb}{\mathbf{W}}         
 
 %% Sometimes a paper's abstract is too long to fit on the
 %% title page in preprint2 mode. When that is the case,
@@ -457,7 +457,7 @@ Note that $\mathcal{F}$ is an $N_\text{pix}\times N_\text{pix}$ matrix with elem
 \begin{figure*}[h]
 \centering
 \includegraphics[width=7in]{images/big_foreground_masking_study_pspecs_2_magoffset=20_56+0_274.pdf}
-\caption{\textbf{Left panel:} Power spectra of our broad band ATLAS images after various stages of foreground removal as described in Sec. \ref{sec:resirfg}. The error bars show the sample variance noise estimated by the standard deviation over our four $4^\circ$ fields (see Fig. \ref{fig:surveyoverview}). Black dots show our final ATLAS 850\,nm power spectrum after all stages of foreground removal. \textbf{Right panel:} We compare our ATLAS power spectrum (black dots) to the 1.1\,$\mu$m power spectrum of \citet{zemcov14} (Z14) (cyan dots) using the CIBER experiment and the 850\,nm power spectrum of \citet{mw15} (MW15) using $10'$ Hubble mosaics. We show the intrahalo light (IHL) models of \citet{zemcov14} (cyan dashed line) and \citet{mw15} (red dashed line), as well as the diffuse galactic light (DGL) model of the latter authors. These results show that finer angular resolution can help reduce the foregrounds in the $\ell\sim10^2-10^4$ modes that can be cross correlated with 21\,cm EOR intensity mapping experiments. The gray area shows the predicted EOR contribution to the infrared anisotropies from \citet{mw15}.}
+\caption{\textbf{Left panel:} Power spectra of our broad band ATLAS images after various stages of foreground removal as described in Sec. \ref{sec:resirfg}. The error bars show the sample variance noise estimated by the standard deviation over our four $4^\circ$ fields (see Fig. \ref{fig:surveyoverview}). Black dots show our final ATLAS 850\,nm power spectrum after all stages of foreground removal. \textbf{Right panel:} We compare our ATLAS power spectrum (black dots) to the 1.1\,$\mu$m power spectrum of \citet{zemcov14} (Z14) (cyan dots) using the CIBER experiment and the 850\,nm power spectrum of \citet{mw15} (MW15) using $10'$ Hubble mosaics. We show the intrahalo light (IHL) models of ZI4 (cyan dashed line) and MW15 (red dashed line), as well as the diffuse galactic light (DGL) model of the latter authors. These results show that finer angular resolution can help reduce the foregrounds in the $\ell\sim10^2-10^4$ modes that can be cross correlated with 21\,cm EOR intensity mapping experiments. The gray area shows the predicted EOR contribution to the infrared anisotropies from MW15.}
 \label{fig:bigfgmaskingstudypspecs}
 \end{figure*}
 
@@ -485,7 +485,7 @@ Similarly, \citet{PoberNextGen} simulate 21\,cm power spectra over a range of re
 
 From these power spectra and coherence functions, we generate approximate 21\,cm and Ly$\alpha$ cubes assuming gaussian statistics, a rough approximation given the 21\,cm field is expected to become somewhat less  gaussian as reionization proceeds \citep{skew}. The simulated cubes have (1\,Mpc)$^3$ resolution over a (218\,Mpc)$^3$ volume at $z=7$, corresponding to $\Delta z=0.6$ and $0.4'$ angular resolution. Our 21\,cm and Ly$\alpha$ cubes have units of mK and kJy/sr, respectively, and we average them in the line of sight direction to produce broad band images.
 
-We plot the original 3D spherically averaged power spectra and coherence function as solid lines in Fig. \ref{fig:spectra3Dto2D}, and the computed 2D power spectra from the line-of-sight averaged cubes, as well as their coherence as dashed lines. The 3D power spectra are plotted as $\Delta(k)$ and $\Delta(\ell)$ as defined in Sec. \ref{sec:pspecdefs}. As expected, line of sight averaging tends to remove power on short spatial scales (compared to the line of sight depth of the cube), but it acts similarly on both cubes, so the coherence function is preserved. Note that the cross spectrum $\Delta_{12}$ is defined in terms of the coherence as $\Delta_{12}=c[\Delta_1\Delta_2]^{1/2}$ for both the 3D and 2D cases, and we use the same coherence function from \citet{Heneka2016} in the optimistic and pessimistic scenarios.
+We plot the original 3D spherically averaged power spectra and coherence function as solid lines in Fig. \ref{fig:spectra3Dto2D}, and the computed 2D power spectra from the line-of-sight averaged cubes, as well as their coherence as dashed lines. The 3D power spectra are plotted as $\Delta(k)$ and $\Delta(\ell)$ as defined in Sec. \ref{sec:pspecdefs}. As expected, line of sight averaging tends to remove power on short spatial scales (compared to the line of sight depth of the cube), but it acts similarly on both cubes, so the coherence function is preserved. Note that the cross spectrum $\Delta_{12}$ is defined in terms of the coherence as $\Delta^2_{12}=c[\Delta^2_1\Delta_2^2]^{1/2}$ for both the 3D and 2D cases, and we use the same coherence function from \citet{Heneka2016} in the optimistic and pessimistic scenarios.
 
 
 \subsection{Limits on the 21\,cm--Ly$\alpha$ cross spectrum and an experimental design study}
@@ -500,10 +500,6 @@ q_\alpha \approx (\xb_{21}-\langle\xb_{21}\rangle)^t \Cb_{21}^{-1} \Cb_{,\alpha}
 \end{equation}
 where $\Cb_{,\alpha}$ is the same matrix used in Sec. \ref{sec:resirfg}, $\mathbf{x}_{21}$ and $\mathbf{x}_{\IR}$ are the vectors of 21\,cm and IR pixel values. As before we use normalization $\Mb=\Fb^{-1/2}$ in $\pb=\Mb\qb$, and perform a final normalization using the peaks of the window functions $\Wb=\Mb\Fb$. We use the same IR covariance matrix given in Eqn. \ref{eqn:covFTwithmask}, and use power spectrum of the residual MWA broadband images to construct the radio covariance matrix.
 
-We apply this formalism to each of the four $4^\circ$ deep ATLAS fields shown in Fig. \ref{fig:surveyoverview}, pairing each IR image with the overlapping region of the MWA image cropped from the naturally weighted image. We crop the image space synthesized beam over the same field of view, use it to apply uniform weighting to the cropped MWA image using Eqn. \ref{eqn:uniformweighting}. In Fig. \ref{fig:resxspec} we plot the resulting cross spectrum (red markers) averaged over all four fields with $2\sigma$ error bars. All are consistent with zero, and roughly half the estimated bandpowers are negative (triangles) and positive (circles), as expected if there is no measured correlation. Our bins are evenly spaced in $\log \ell$, and it is beneficial to overlap them slightly since our normalization matrix $M\sim F^{-1/2}$ ensures bin errors are always uncorrelated. We take the tops of the error bars as 95\% upper limits on the cosmological cross spectrum of 21\,cm and Ly$\alpha$ emission from the EOR, achieving an upper limit of $\Delta_{21,\text{Ly}\alpha}\lesssim17\,(\text{kJy/sr}\cdot \text{mK})^{1/2}$ (95\%) at all except the largest $\ell$ bin. For comparison, we plot optimistic (black solid) and pessimistic (black dashed) model cross spectra as discussed in the previous section.
- 
-Also in Fig. \ref{fig:resxspec} we plot the radio--infrared foreground cross spectrum that a 5\% flux correlation would produce (green line), as motivated by our results in Sections \ref{sec:fluxcorsims} and \ref{sec:catcorrelations}. Such a slight geometric flux correlation is thus still predicted to be below the sensitivity of our MWA--ATLAS experiment, but is it significant for other classes of experiments? To study this we .....
- 
 \begin{figure}[h]
 \centering
 \includegraphics[width=3.5in]{images/mwa_atlas_xspec_with_2Dsimtheory_and_2sigma_errors_6bins.pdf}
@@ -511,47 +507,103 @@ Also in Fig. \ref{fig:resxspec} we plot the radio--infrared foreground cross spe
 \label{fig:resxspec}
 \end{figure}
 
+We apply this formalism to each of the four $4^\circ$ deep ATLAS fields shown in Fig. \ref{fig:surveyoverview}, pairing each IR image with the overlapping region of the MWA image cropped from the naturally weighted image. We crop the image space synthesized beam over the same field of view, use it to apply uniform weighting to the cropped MWA image using Eqn. \ref{eqn:uniformweighting}. In Fig. \ref{fig:resxspec} we plot the resulting cross spectrum (red markers) averaged over all four fields with $2\sigma$ error bars. All are consistent with zero, and roughly half the estimated bandpowers are negative (triangles) and positive (circles), as expected if there is no measured correlation. Our bins are evenly spaced in $\log \ell$, and it is beneficial to overlap them slightly since our normalization matrix $M\sim F^{-1/2}$ ensures bin errors are always uncorrelated. We take the tops of the error bars as 95\% upper limits on the cosmological cross spectrum of 21\,cm and Ly$\alpha$ emission from the EOR, achieving an upper limit of $\Delta_{21,\text{Ly}\alpha}\lesssim17\,(\text{kJy/sr}\cdot \text{mK})^{1/2}$ (95\%) at all except the largest $\ell$ bin. For comparison, we plot optimistic (black solid) and pessimistic (black dashed) model cross spectra as discussed in the previous section.
+ 
+Also in Fig. \ref{fig:resxspec} we plot the radio--infrared foreground cross spectrum that a 5\% flux correlation would produce (green line), as motivated by our results in Sections \ref{sec:fluxcorsims} and \ref{sec:catcorrelations}. Such a slight geometric flux correlation is thus still predicted to be slightly below the sensitivity of our MWA--ATLAS experiment, but is it significant for other classes of experiments? To study this we predict for a range of current and future radio--IR surveys both the foreground sample variance noise and the foreground cross spectrum for a slight geometric correlation. 
+
+\begin{table}
+\caption{Current and future radio and IR surveys\label{tab:expts}}
+\begin{tabular}{|l | l | l|}
+\hline
+\textbf{Radio Survey} & \textbf{Resolution} & \textbf{$S_\text{max}$} \\
+\hline
+MWA & $6'$ & 150 mJy \\
+MWA (GMRT catalog) & $6'$ & 25 mJy \\
+HERA (GMRT catalog) & $12'$ & 25 mJy \\
+GMRT & $40''$ & 25 mJy \\
+LOFAR & $20''$ & 3 mJy \\
+SKA & $10''$ & 0.1 mJy \\
+\hline\hline
+\textbf{IR Survey} & \textbf{Field of View} & \textbf{$f_\ir$}\footnote{Fraction of IR foreground power remaining relative to our ATLAS analysis.} \\
+\hline
+ATLAS & $8^\circ$ & 1.0 \\
+WideATLAS & $40^\circ$ & 1.0 \\
+Hubble mosaic & $4^\circ$ & 0.01 \\
+DES mosaic & $40^\circ$ & 0.01 \\
+\hline
+\end{tabular}
+\end{table}
+
+
+We describe the radio and IR surveys we study here, and summarize them side by side in Table \ref{tab:expts}. \\
+
+\noindent\textbf{Radio surveys}
+\begin{itemize}
+\item \textit{MWA}. We use the $6'$ resolution permitted by our MWA analysis, corresponding to a maximum baseline length of 700\,m, and a survey depth at 50\% completeness of 150\,mJy (see Sec. \ref{sec:catalogs}).
+\item \textit{HERA}. Primarily designed for 3D power spectrum measurements which are severely thermal noise limited, HERA is a compact redundant array, and even the outriggers only improve the resolution to $12'$. We assume the GMRT catalog is used for source subtraction (see below) \citet{deboer16}.
+\item \textit{GMRT}. We assume a maximum baseline length of 10\,km, within which the $uv$ plane is filled relatively uniformly, this corresponds to a $40''$ resolution. \citet{intema17} demonstrate a catalog depth of 25\,mJy at 50\% completeness.
+\item \textit{LOFAR}. Similarly, we use a maximum baseline length of 20\,km, to maintain a relatively filled $uv$ plane, corresponding to a $20''$ resolution. \citet{lofareorpaper} report a catalog depth of 3\,mJy. 
+\item \textit{SKA}. \citet{prandoni15} report a nominal SKA-LOG confusion-limited survey depth of 0.1\,mJy at $10''$ resolution.
+\end{itemize}
+
+\noindent\textbf{IR surveys}
+\begin{itemize}
+\item \textit{ATLAS}. Our four ATLAS stacking field give a total field of view of $8^\circ$, though we are planning a future wider survey with a $40^\circ$ field of view. 
+\item \textit{Hubble mosaic}. \citet{mw15} have demonstrated high fidelity mosaicing using the technique of \citet{fixen00}, producing $10'$ wide mosaics from the $\sim2'$ Hubble field of view. We assume that a $4^\circ$ Hubble field can be used through some combination of mosaicing (making larger IR images) and tiling (calculating the cross spectrum between each of many small Hubble fields and the radio image, then averaging the results). Motivated by the results of \citet{mw15}, we assume that the fine resolution of Hubble permits removal of IR foregrounds by a factor of $\sim100$.
+\item \textit{DES mosaic}. Along these lines, we assume a similar analysis can be conducted using the Dark Energy Survey\footnote{\ULurl{https://www.darkenergysurvey.org/the-des-project/instrument/}} over a field of view which is 10$\times$ larger on a side, due to the instrument's correspondingly larger field of view. We assume the same improvement in foreground removal as in the Hubble mosaic discussed previously.
+\end{itemize}
+
+Neglecting the small correlation, the sample variance noise due to uncorrelated foregrounds is
+\begin{eqnarray}
+\Delta^2_\text{noise}(\ell) &=& \sqrt{\frac{\Delta^2_\IR(\ell) \Delta^2_\rad(\ell)}{2N_\ell}} \nonumber \\
+&=&\sqrt{\frac{\Delta^2_{\text{ATLAS}}(\ell) \Delta^2_{\text{MWA}}(\ell)f_\rad f_\ir}{2N_\ell}} \nonumber \\
+&&\times \left( \frac{\theta_{\fov,\text{ATLAS}}}{\theta_\fov}\right)\left(\frac{d\theta}{d\theta_{\text{MWA}}}\right)
+\end{eqnarray}
+where $f_\ir$ and $f_\rad$ are the fractions of IR and radio foreground power remaining relative to those in our ATLAS and MWA analyses. Using the empirical formula for radio source counts given in \citet{dimatteo02}, $f_\rad$ scales as $f_\rad\propto S_\text{max}^{1.25}$, where $S_\text{max}$ is the flux limit of the subtraction. Scaling this relative to our MWA analysis gives $f_\rad=(S_\text{max}/S_{\text{max},\text{MWA}})^{1.25}$.
+
+Similarly, then the foreground cross spectrum for a correlation $c$ is given by
+\begin{eqnarray}
+\Delta^2_\text{FG}(\ell)& =&c\sqrt{\Delta^2_\IR(\ell) \Delta^2_\rad(\ell)} \nonumber \\
+&=&c\sqrt{\Delta^2_{\text{ATLAS}}(\ell) \Delta^2_{\text{MWA}}(\ell)f_\rad f_\ir }
+\end{eqnarray}
+
 \begin{figure}[h]
 \centering
 \includegraphics[width=3.5in]{images/noise_vs_corr_expt_study.pdf}
-\caption{aoeuaoeu.}
+\caption{Foreground cross spectrum due to percent-level geometric correlations (y-axis) due to sample variance noise due to the uncorrelated component of foregrounds (x-axis) for a number of possible radio--IR intensity mapping survey pairs. This work (black circle) is the only one limited by sample variance noise, even a nominal improvement using the deeper GMRT catalog becomes foreground correlation-limited. Deeper radio (e.g., LOFAR and SKA) and IR (e.g., Hubble and DES mosaics) are needed to give the foreground removal required to suppress the geometric foreground correlation below the optimistic hexpected EOR signal.}
 \label{fig:noisecorrstudy}
 \end{figure}
 
-%The cross spectrum uncertainty due to sample variance noise of residual foregrounds scales approximately as $d\Delta_{21,\IR}\propto f_{21,\text{FG}}^{1/2}d\theta/\theta_{\text{FOV}}$, where $f_{21,\text{FG}}$ is the fraction of remaining 21\,cm foreground power, $d\theta$ is the pixel resolution, and $\theta_{\text{FOV}}$ is the field of view. Our MWA/ATLAS experiment has ($f_{21,\text{FG}}\approx0.1$, $d\theta=6'$, $\theta_{\text{FOV}}=8^\circ$). We plot the predicted sensitivities for improved experiments with (0.1, $0.3'$, 8$^\circ$) (solid blue), (0.01, $0.3'$, 8$^\circ$) (dashed blue), and (0.01, $0.3'$, 40$^\circ$) (dotted blue). \citet{zemcov14,cooray12} argue that the remaining IR foreground is largely due to intrahalo light around already masked sources, and cannot be masked without removing essentially all pixels in the image. We thus do not assume that IR foreground subtraction can be improved.
+In Fig. \ref{fig:noisecorrstudy} we plot the foreground sample variance noise versus foreground cross spectrum for a range of current and future radio and infrared survey pairs. We calculate these for the $\ell=400$ bin and assume a 1\% geometric foreground correlation. The diagonal black line separates the regions within which each of these effects dominates. We observe that our MWA/ATLAS analysis (black circle) is the only experiment limited by sample variance noise of uncorrelated foregrounds. An improved analysis using the GMRT catalog for radio source subtraction from MWA images and widening the ATLAS survey to a wide $40^\circ$ (black star) falls barely in the foreground correlation limited regime. A similar analysis using HERA instead of the MWA (yellow star) produces similar results, as HERA is not optimized for the wide field, high resolution radio surveys that broad band correlation experiments require. 
 
-%We find that after increasing the image resolution (of the 21\,cm image) by $20\times$ (to 0.3') and reducing its fractional foreground residuals by $10\times$ (to 0.01), a tenuous detection of the optimistic 21\,cm--Ly$\alpha$ cross spectrum is possible at $\ell<700$. Widening the field of view (of the IR image) by a factor of $5\times$ (to $40^\circ$) permits significant detections at $\ell<1500$. In all these cases, the cross spectrum remains out of reach in the pessimistic scenario, though ruling out the optimistic scenario would significantly constrain reionization models.
+LOFAR reaches within a factor of a few in power of the optimistic EOR cross spectrum model when correlated against the Hubble (red triangle) or DES (red square) mosaics, and the SKA coupled with the same IR surveys achieves a convincing detection of the optimistic model (white square and white triangle). None of the experiments considered can reach the pessimistic model, but excluding the optimistic model already begins to exclude late reionization scenarios, and performing the same correlation experiment at higher redshifts can likely give more leverage on earlier ones. 
+
+Interestingly, we note that virtually all the intermediate experiments between this work and the ultimate detection will be limited by the geometric foreground correlations. Motivated by our results in Sec. \ref{sec:catcorrelations}, we have assumed here that the coherence remains at the percent-level irrespective of mask depth, though more work is needed to model this effect more completely and self-consistently. Luckily, the negative sign of the predicted 21\,cm--Ly$\alpha$ correlation from the EOR should clearly distinguish itself from this foreground effect, meaning there is still hope to make the measurements simulated by \citet{mao14,StarsAndReionization}.
 
 \section{Discussion}
 
-The goals 
-reminder of what the ultimate goals are
-correlations can verify purported detections, extend the science returns of 21cm measurements, 
-complementary to deep galaxy surveys (go below detection limits, probing the ionizing population)
-3D is cool, but expensive, 2D is much easier, and can do from the ground
+Radio and infrared surveys are on the cusp of direct observations of the two sides of the EOR. Deep infrared surveys are beginning to probe the bright end of ionizing population itself, and low frequency radio surveys are constraining the 21\,cm brightness of the neutral IGM. New radio and infrared instruments are all but assured to yield the first direct constraints on the astrophysics of the EOR, and combining these measurements will be crucial to confirm the first detections and extend their science reach. In particular, measurements of the predicted anticorrelation between redshifted radio and Ly$\alpha$ emission can shed light on properties and statistics of the ionizing sources which 21\,cm measurements are not directly sensitive to, while simultaneously yielding redshift information on the near infrared background for the first time. 
 
+3D correlation measurements are ultimate goal, but making infrared maps with sufficient resolution over large enough fields to match the comoving volumes probed by low frequency 21\,cm experiments is challenging and expensive. In contrast, 2D (i.e., broad band) infrared maps can be measured by many existing ground- and space-based observatories, and are a natural first step towards 3D experiments. 
 
+We have shown that foregrounds pose two significant challenges for 2D intensity mapping correlation experiments: (1) the largely uncorrelated radio and infrared foreground residuals contribute a sample variance noise to the cross spectrum; and (2) simple geometric effects result in percent-level correlations between fluxes in these two bands, even if their luminosities are uncorrelated. 
 
 important points of this paper
 - there are FG flux correlations
 
-- can see NIRB flucts from the ground
-
-- first simulations of 2D vs 3D spectra
+- can match CIBER performance from the ground, can probably do better with higher res surveys (eg, DES, happening now)
 
 - first limits on the EOR 21cm-Ly-alpha xspec
-- sensitivity estimates
 
-what about foreground flux correlations
+- first simulations of 2D vs 3D spectra
+2D experiments probe much of the same science on long wavelength scales...i.e., the ones where the anticorrelation is strongest
 
-clear improvements:
-GMRT for source subtraction
-more resolution using MWA/HERA's long baselines
-wider IR (eg, ATLAS) survey
+what does it take to reach the EOR signal
 
+2D vs 3D experiments refrain, and optimism for the future
 
 \begin{acknowledgments}
-We acknowledge helpful discussions on optimal quadratic estimators with Adrian Liu, Josh Dillon, and Aaron Ewall-Wice, and discussions on MWA image products from the FHD pipeline with Adam Beardsley, Danny Jacobs, and Nichole Barry. Our analysis code is publicly available at \ULurl{https://github.com/abrahamneben/21cmIRxcor}
+We acknowledge helpful discussions on optimal quadratic estimators with Adrian Liu, Josh Dillon, and Aaron Ewall-Wice, and discussions on MWA image products from the FHD pipeline with Adam Beardsley, Danny Jacobs, and Nichole Barry. 
 \end{acknowledgments}
 
 \appendix
@@ -577,6 +629,7 @@ C_{\IR, \shot}(\vec{\ell}) = \langle N_\text{ph}\rangle \left(\frac{hf}{\Delta f
 \begin{equation}
 C_{\IR, \shot}(\vec{\ell}) =\frac{I_\text{air}h\lambda}{\Delta \lambda A t_\text{int}}
 \end{equation}
+which gives $\Delta(\ell=10^3)=6\times10^{-2}$\,kJy/sr for our deep fields with $t_\text{int}=2.5$\,min. %sqrt((10^6)/6*5.e3*6.6e-34*1.e23*800/(150*.25*30*9))
 
 \section{Relation between the power spectrum of image cubes and broadband images}
 \label{sec:pspecrelation}
