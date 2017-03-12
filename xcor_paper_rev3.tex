@@ -82,7 +82,7 @@
 %% head is a modified title of up to roughly 44 characters.
 %% Running heads will not print in the manuscript style.
 
-\shorttitle{Foreground and sensitivity analysis for broad band 21\,\MakeLowercase{cm}--L\MakeLowercase{y}$\alpha$ and 21\,\MakeLowercase{cm}--H$\alpha$ correlation experiments}
+\shorttitle{Foreground and sensitivity analysis for broad band (2D) 21\,\MakeLowercase{cm}--L\MakeLowercase{y}$\alpha$ and 21\,\MakeLowercase{cm}--H$\alpha$ correlation experiments}
 \shortauthors{Neben et al.}
 
 %% This is the end of the preamble.  Indicate the beginning of the
@@ -92,7 +92,7 @@
 
 \begin{document}
 
-\title{Foreground and sensitivity analysis for broad band 21\,\MakeLowercase{cm}--L\MakeLowercase{y}$\alpha$ and 21\,\MakeLowercase{cm}--H$\alpha$ correlation experiments probing the Epoch of Reionization}
+\title{Foreground and sensitivity analysis for broad band (2D) 21\,\MakeLowercase{cm}--L\MakeLowercase{y}$\alpha$ and 21\,\MakeLowercase{cm}--H$\alpha$ correlation experiments probing the Epoch of Reionization}
 
 %% Use \author, \affil, and the \and command to format
 %% author and affiliation information.
@@ -121,7 +121,8 @@ Jacqueline N. Hewitt\altaffilmark{1}}
 %% editorial office after submission.
 
 \begin{abstract}
-NEED TO WRITE THE ABSTRACT
+
+A detection of the predicted anticorrelation between $21$\,cm and either Ly$\alpha$ or H$\alpha$ from the Epoch of Reionization (EOR) would be a powerful probe of the astrophysics of the EOR. While 3D intensity maps isolate foregrounds in the lowest $k_\parallel$ modes, infrared surveys cannot yet match the field of view and redshift resolution of radio intensity mapping experiments. In contrast, 2D (i.e., broad band) infrared intensity maps can be measured with current experiments and are not sensitivity limited. We show that 2D experiments can mesaure close to 100\% of the 3D fluctuation power at $k<0.2$\,Mpc$^{-1}$, and preserve the correlation properties. However, we show that foregrounds pose two challenges: (1) simple geometric effects result in percent-level correlations between fluxes in these two bands, even if their luminosities are uncorrelated; and (2) the largely uncorrelated radio and infrared foreground residuals contribute a sample variance noise to the cross spectrum. The first challenge demands measurements over large fields of view with many independent samples in order to average down uncorrelated radio and infrared power, while the second improves only with better foreground masking and subtraction. Using radio and infrared observations from the Murchison Widefield Array (MWA), the Asteroid Terrestrial-impact Last Alert System (ATLAS), and Wide-field Infrared Survey Explorer (WISE), we subtract and mask foregrounds XXXX orders of magnitude of foregrounds and set the first limits on the 21\,cm--Ly$\alpha$ power spectrum at $z\sim7$. We predict the levels of radio--infrared foreground correlation and the sample variance noise in several possible future experiments, and show that higher resolution radio and infrared surveys such as LOFAR, SKA-LOW, Hubble, Dark Energy Survey can start to probe optimistic models of the EOR cross spectrum.
 \end{abstract}
 
 \keywords{cosmology: observations --- dark ages, reionization, first stars --- infrared: diffuse background}
@@ -473,7 +474,7 @@ In Fig. \ref{fig:bigfgmaskingstudypspecs} (right panel) we compare our final res
 \begin{figure*}[h]
 \centering
 \includegraphics[width=7in]{images/spectra3D_to_2D.pdf}
-\caption{As described in Sec. \ref{sec:modelingthecrossspectrum}, we identify optimistic (red solid lines) and pessimistic (black solid lines) Ly$\alpha$ (left panel) and 21\,cm (center panel) 3D power spectra from \citet{Gong2014} and \citet{PoberNextGen}, respectively, and use the coherence function from \citet{Heneka2016} (right panel, black solid) for both scenarios. We then simulate approximate cubes assuming gaussian statistics, average them over frequency, and plot the angular power spectra of Ly$\alpha$ (left panel, dashed lines) and 21\,cm emission (center panel, dashed lines), and their coherence functions (right panel, dashed lines). Power on short angular scales ($\ell\gtrsim10^4$) is suppressed by a factor of $\sim100$ (in power units), while power on longer angular scales ($\ell\gtrsim10^4$) is suppressed by only a factor of $\sim2$ compared to the 3D power spectrum. This indicates that there remains significant observable signal in broad band 21\,cm--Ly$\alpha$ cross spectrum observations. }
+\caption{As described in Sec. \ref{sec:modelingthecrossspectrum}, we identify optimistic (red solid lines) and pessimistic (black solid lines) Ly$\alpha$ (left panel) and 21\,cm (center panel) 3D power spectra from \citet{Gong2014} and \citet{PoberNextGen}, respectively, and use the coherence function from \citet{Heneka2016} (right panel, black solid) for both scenarios. We then simulate approximate cubes assuming gaussian statistics, average them over frequency, and plot the angular power spectra of Ly$\alpha$ (left panel, dashed lines) and 21\,cm emission (center panel, dashed lines), and their coherence functions (right panel, dashed lines). Power on short angular scales ($\ell\gtrsim10^4$) is suppressed by a factor of $\sim100$ (in power units), while power on longer angular scales ($\ell\lesssim10^2$) is suppressed by only a factor of $\sim2$ compared to the 3D power spectrum. This indicates that there remains significant observable signal in broad band 21\,cm--Ly$\alpha$ cross spectrum observations. }
 \label{fig:spectra3Dto2D}
 \end{figure*}
 
