@@ -1,0 +1,51 @@
+This is BibTeX, Version 0.99d (TeX Live 2012)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: /Users/abrahamn/Documents/Physics/papers/xcor_paper/submission_rev4/xcor_paper_rev4_submit.aux
+The style file: apj.bst
+Database file #1: xcor_paper_rev4_submitNotes.bib
+Database file #2: xcor_paper_new.bib
+Reallocated str_pool (elt_size=1) to 130000 items from 65000.
+Warning--empty institution in allwise
+Warning--empty publisher in ska
+You've used 124 entries,
+            2988 wiz_defined-function locations,
+            1335 strings with 64199 characters,
+and the built_in function-call counts, 76705 in all, are:
+= -- 4445
+> -- 8779
+< -- 22
++ -- 2927
+- -- 2794
+* -- 8357
+:= -- 15384
+add.period$ -- 124
+call.type$ -- 124
+change.case$ -- 768
+chr.to.int$ -- 123
+cite$ -- 126
+duplicate$ -- 2305
+empty$ -- 3342
+format.name$ -- 3239
+if$ -- 14135
+int.to.chr$ -- 2
+int.to.str$ -- 1
+missing$ -- 118
+newline$ -- 376
+num.names$ -- 499
+pop$ -- 784
+preamble$ -- 1
+purify$ -- 767
+quote$ -- 0
+skip$ -- 1942
+stack$ -- 0
+substring$ -- 2481
+swap$ -- 38
+text.length$ -- 4
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 1113
+warning$ -- 2
+while$ -- 355
+width$ -- 0
+write$ -- 1228
+(There were 2 warnings)
