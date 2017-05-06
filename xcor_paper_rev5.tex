@@ -234,7 +234,7 @@ We rotate these HEALPix maps so the MWA field center lies at the north pole, the
 \label{eqn:uniformweighting}
 I_\text{uni}(\vec{\theta}) = \frac{10^{-26}\lambda^2}{k_B } \sum_{\vec{u}} \frac{\tilde{I}_\text{nat}(\vec{u})}{\tilde{I}_w(\vec{u})} e^{-2\pi i \vec{\theta}\cdot\vec{u}}d^2u
 \end{equation}
-where $\tilde{I}_i(\vec{u}) = \sum_{\vec{\theta}} I_i(\vec{\theta}) e^{2\pi i\vec{\theta}\cdot\vec{u}} d\Omega$ for $i=\text{nat},w$. The units of $I_\text{nat}$ and $I_w$ are most easily seen from their approximate definitions of $I_\text{nat}(\vec{\theta})\approx\sum_j V(\vec{u}_j)e^{-2\pi i\vec{u}_j\cdot\vec{\theta}}du^2$ and $I_w(\vec{\theta})\approx\sum_j e^{-2\pi i\vec{u}_j\cdot\vec{\theta}}du^2$, where the sums are over all measured visibilities $V(\vec{u}_j)$ in units of Jy. These definitions are only approximate because FHD performs corrections to account for $w$ terms.
+where $\tilde{I}_i(\vec{u}) = \sum_{\vec{\theta}} I_i(\vec{\theta}) e^{2\pi i\vec{\theta}\cdot\vec{u}} d\Omega$ for $i=\text{nat},w$. The units of $I_\text{nat}$ and $I_w$ are most easily seen from their approximate definitions of $I_\text{nat}(\vec{\theta})\approx\sum_j V(\vec{u}_j)e^{-2\pi i\vec{u}_j\cdot\vec{\theta}}du^2$ and $I_w(\vec{\theta})\approx\sum_j e^{-2\pi i\vec{u}_j\cdot\vec{\theta}}du^2$, where the sums are over all measured visibilities $V(\vec{u}_j)$ in units of Jy. These definitions are only approximate because FHD performs corrections to account for wide-field effects.
 
 \subsection{IR Observations}
 
