@@ -9,43 +9,43 @@ Warning--empty institution in allwise
 Warning--empty publisher in ska
 You've used 124 entries,
             2988 wiz_defined-function locations,
-            1335 strings with 64146 characters,
-and the built_in function-call counts, 76705 in all, are:
-= -- 4445
-> -- 8779
+            1336 strings with 64291 characters,
+and the built_in function-call counts, 76636 in all, are:
+= -- 4439
+> -- 8759
 < -- 22
-+ -- 2927
-- -- 2794
-* -- 8357
-:= -- 15384
++ -- 2919
+- -- 2786
+* -- 8354
+:= -- 15366
 add.period$ -- 124
 call.type$ -- 124
-change.case$ -- 768
+change.case$ -- 763
 chr.to.int$ -- 123
 cite$ -- 126
 duplicate$ -- 2305
-empty$ -- 3342
-format.name$ -- 3239
-if$ -- 14135
+empty$ -- 3348
+format.name$ -- 3232
+if$ -- 14130
 int.to.chr$ -- 2
 int.to.str$ -- 1
 missing$ -- 118
 newline$ -- 376
 num.names$ -- 499
-pop$ -- 784
+pop$ -- 777
 preamble$ -- 1
-purify$ -- 767
+purify$ -- 762
 quote$ -- 0
-skip$ -- 1942
+skip$ -- 1946
 stack$ -- 0
-substring$ -- 2481
+substring$ -- 2494
 swap$ -- 38
 text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 1113
 warning$ -- 2
-while$ -- 355
+while$ -- 354
 width$ -- 0
-write$ -- 1228
+write$ -- 1229
 (There were 2 warnings)
