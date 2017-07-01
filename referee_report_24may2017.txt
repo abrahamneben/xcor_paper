@@ -1,0 +1,60 @@
+Referee Report 
+Reviewer's Comments:
+This paper is a valuable first step towards a cross-correlation of 21 cm emission with other spectral lines during the epoch of reionization. It uses both 21 cm and IR data to perform an initial cross-correlation study, while also using simple models of foregrounds for both observations to explain the effects seen and extrapolate to future observations. The paper is generally quite well written. As it stands, the observed correlation and simulations are interesting, although they are not always rigorous enough to completely justify some of the conclusions of the authors (more on this below). However, I believe the ultimate cross spectrum result (Figure 14 and section 5.4) is highly problematic for two reasons. 
+
+(1) The redshifts of the two observations are only slightly overlapping. The radio observations cover 21 cm redshifts of 6 - 7.3, whereas the IR observations cover Lyman alpha redshifts of 5.1 - 6.3. A simple correlation of these two data sets cannot be interpreted as an upper limit on the cross spectrum; for this to be a valid limit, the authors would need to simulate the amount of correlation that is actually present in such a small overlap of redshift space. The authors seem to recognize this and state in section 3.2 that "it overlaps sufficiently for our purpose of characterizing the noise and foregrounds." I agree with this sentiment, since the foregrounds should not dramatically evolve over these wavelengths/frequencies. The data can still serve the purpose of a "Foreground and Sensitivity Analysis" (as stated in the title), but the cross spectrum result needs to be modified/abandoned.
+
+(2) Independent of the above fact, the current cross spectrum analysis as conducted is also potentially problematic for the purposes of a foreground study. The details of the analysis are not clear enough for me to be sure this is an issue, so if nothing else, the analysis needs to be better explained. Fundamentally, the question is about the nature of the error bars in Figure 14. In the analyses cited for the OQE formalism (e.g. Dillon et al. 2014), the error bars include the contribution from the foreground covariance (which is often estimated empirically, in, e.g., Dillon et al. 2015). Thus the errors are uncertainties on any 21 cm signal - a detection of foreground power well above the thermal noise levels will still result in error bars consistent with zero if the foreground covariance is well-enough modeled. That may be useful for a signal upper limit, but for a study of foregrounds and sensitivities, those inflated errors hide much of the useful information. A better explanation of what goes into these errors and the associated covariance matrices is required. The authors use the residual 21 cm map power spectrum to estimate the 21 cm covariance matrix (section 5.3), so my suspicion is that the errors do include foreground (since the residual power spectra from Beardsley are still dominated by foreground power). What fraction of the errors in Figure 14 come from the thermal noise in the 21 cm map, and what fraction from the foregrounds? The IR covariance matrix is better explained, but the relative contributions of the different covariance terms should be estimated. The fact that the points in Figure 14 are both positive and negative is indeed indicative of uncorrelated signals, but the exact breakdown of the uncertainties in these measurements are needed to justify many of the conclusions of the paper, e.g., that the 1% geometric flux correlation is below the sensitivity of this study.
+
+The major critiques need to be addressed before I can recommend this paper for publication. I also have several other questions/critiques, as well as a number of other minor points that I list at the end of this report.
+
+1)	It is stated that FHD outputs "odd" and "even" data cubes to eliminate a noise bias in the power spectrum estimation. Is this necessary for a cross spectrum? Or are the authors throwing away SNR by keeping this separation? 
+2)	The authors project the wide field MWA maps onto an orthographic coordinate grid. Is this lossless? Or are the effects simply unimportant given the smaller 4 degree ATLAS fields?
+3)	Just after equation 12, the authors state the units are "easily seen," but don't actually state the units of I, just that V is in Jy. It's not obvious what units I has.
+4)	The authors use APASS cross matching to better determine the flux scale of their ATLAS observations, but only 20% of sources are found to have a match. Is this low fraction expected? Why are the matches relatively poor?
+5)	The authors speculate that some of the fall in coherence vs. ell (right panel of Figure 6) is due to the MWA resolution, which they say corresponds to a maximum ell of ~4000. The coherence already seems to have asymptoted at ell ~ 1000, though. Is this consistent?
+6)	Equations 15 and 16 are not substantiated well enough. I was able to work out equation 15 with moderate algebra, but equation 16 needs to be derived more thoroughly.
+7)	Last paragraph in section 4: why are the luminosity bins for the mock catalogs logarithmically spaced and not linear? It's not surprising this yields a better result, but should be explained.
+8)	The first paragraph in section 5.1 is misleading, particularly the second half. It says 3D 21 cm experiments need long integrations to detect the signal, but that a broadband experiment quickly detects foreground residuals. However, a 3D experiment detects strong foregrounds with similar low integration times. Is the claim simply that the uv plane is filled more quickly using multifrequency synthesis?
+9)	The authors perform a "cross-check" of their analysis by comparing to the k_parallel = 0 bin of the Beardsley result. It looks like this doesn't really agree with any of the "raw" power spectra for the data. Why is this?
+10)	The authors claim ionosphere-related errors cause data from a single night to integrate down slower than data spanning multiple nights. This is one possible cause, but hardly conclusive. It's fine to offer this as a possible explanation, but unwarranted to conclude a change of observation strategy is necessary (which is suggested in section 6) without a more thorough investigation.
+11)	The 5 and 12 sigma cuts in IR source masking are confusing. Why are they applied as separate steps? Why aren't sources just masked with the larger masking radius to begin with?
+12)	The discussion of normalization prior to equation 19 is confusing. The authors discuss using the peak value of the appropriate row of W for normalization instead of the sum to avoid bias. This seems like a fundamentally different normalization, in the sense that only one can be correct. This should be explained. 
+13)	The authors state that they estimate their ATLAS power spectrum error bars "conservatively" by taking the standard deviation of the bandpowers across the four fields. This is incorrect. If one has a Gaussian distribution and draws samples from it, then measures the standard deviation of those samples, those standard deviations will be drawn from a Chi^2 distribution. For a Gaussian distribution with standard deviation 1.0, drawing 4 samples and measuring their standard deviation has an expectation value of 0.8. So it's a small bias, but it does mean the error bars are being incorrectly estimated, and not conservatively-so.
+14)	In the third to last paragraph of section 5.2, the authors state that increasing any of the masking parameters doesn't change the results. This is confusing, since increasing the masking radius from 5 to 12 sigma clearly changes the answer. Do they mean going beyond 12 sigma has no additional affect?
+15)	Section 5.3 needs more detail in several places:
+a.	What is the redshift range over which the Gong et al. results are valid? Does it match well with the z = 7 range in which the mocks are being simulated?
+b.	The Pober et al. paper is using 21cmFAST from Mesinger et al. for its simulations. That paper should be properly cited.
+c.	Why are the authors using a z = 8 power spectrum for their pessimistic z = 7 mock? What redshift are they using for the optimistic mock? And in both cases, what is the actual neutral fraction at z = 7 in these models?
+d.	The Heneka coherence functions are not discussed in any depth. Where do they come from? How are the mock 21 cm and LyA cubes actually generated to have the given coherence functions? Are the coherence functions expected to be redshift dependent?
+e.	The authors use Gaussian statistics in their mock cubes, but they note that reionization is expected to become "somewhat less Gaussian" as it proceeds. Reionization, especially near the tail end, is highly non-Gaussian. The authors should comment on what effect this would have on their simulations.
+16)	The authors say that the formulae in Appendix C are valid if the correlation between the two images is small. How small is small? Are these equations valid if no foreground removal or masking is performed?
+17)	How realistic is it for the Hubble 2' field to be mosaicked into a 4 degree field? How many orbits of Hubble would that require?
+18)	Figure 15 and associated text: how significant are the "detections" corresponding to the edges of the orange and gray squares? The SKA+Hubble/DES detections are described as "convincing", but if those are 1 sigma errors, those are anything but convincing.
+19)	At the every end of section 5, the authors mention the expected anti-correlation of LyA/21 cm as a clear way to distinguish between geometric foreground correlation and the signal. This is not discussed previously in any detail, and if it's really so clear, why spend so much time calculating the geometric foreground correlation?
+20)	In the third to last paragraph of the conclusions, the authors say they "simulate the signal loss"; this is technically true, but signal loss is a loaded term in cosmology. The authors, through simulated mock cubes, calculate the amplitude of the 21 cm and LyA power spectra compared with 3D cubes (for Gaussian fields). There are many other sources of signal loss left unexplored.
+21)	The final concluding paragraph suggests that the predicted EOR anticorrelation is "close to being within reach." Figure 15, frankly, suggests otherwise.
+
+Minor points:
+
+- First sentence in second paragraph in section 1: ...the only way to extract the EOR... is hyperbole, or at least unsubstantiated.
+
+- Proper names of mathematicians are repeatedly left uncapitalized when referring to functions they are credited with (e.g. Fourier, Poisson, Cartesian, Gaussian, etc.).
+
+- The authors frequently use Delta(vector{k}) and C(vector{ell}). These functions do not make sense when the arguments are vectors. Delta, in particular, must be a spherically averaged power spectrum; only P(vector{k}) is well defined.
+
+- Equations 6 & 7: a and b are not defined.
+
+- The color scale in Figure 5 is not defined. Is it simply number counts?
+
+- 5th paragraph in 4.3: fiducial survey parameters have a zmax and a dmin. Is there a reason for this inconsistency?
+
+- Just after equation 17, the phrase "difference cube" is used. I think this corresponds to the difference between the "even" and "odd" cubes mentioned earlier, but it should be defined.
+
+- The very last sentence of section 5.1 is confusingly worded. I understand what it's trying to say, but it could be put much more straightforwardly.
+
+- C_ft in equation 20 is undefined.
+
+- In the list of radio surveys, SKA-LOG is mentioned. I presume this means SKA-Low.
+    Corrected.
+

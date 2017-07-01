@@ -1,15 +1,15 @@
 This is BibTeX, Version 0.99d (TeX Live 2012)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
-The top-level auxiliary file: /Users/abrahamn/Documents/Physics/papers/xcor_paper/xcor_paper_rev5.aux
+The top-level auxiliary file: /Users/abrahamn/Documents/Physics/papers/xcor_paper/rev4_rev5_diff.aux
 The style file: apj.bst
-Database file #1: xcor_paper_rev5Notes.bib
+Database file #1: rev4_rev5_diffNotes.bib
 Database file #2: xcor_paper_new.bib
 Reallocated str_pool (elt_size=1) to 130000 items from 65000.
 Warning--empty institution in allwise
 Warning--empty publisher in ska
 You've used 125 entries,
             2988 wiz_defined-function locations,
-            1341 strings with 64436 characters,
+            1341 strings with 64433 characters,
 and the built_in function-call counts, 77086 in all, are:
 = -- 4478
 > -- 8789
