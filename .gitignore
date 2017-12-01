@@ -12,3 +12,4 @@ xcor_paper_rev7.pdf
 *.log
 .texpadtmp/
 .DS_Store
+**/*.pdf
