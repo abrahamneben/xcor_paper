@@ -1,0 +1,51 @@
+This is BibTeX, Version 0.99d (TeX Live 2012)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: xcor_paper_rev6.aux
+The style file: apj.bst
+Database file #1: xcor_paper_rev6Notes.bib
+Database file #2: xcor_paper_new1.bib
+Warning--empty institution in allwise
+Reallocated str_pool (elt_size=1) to 130000 items from 65000.
+Warning--empty publisher in ska
+You've used 124 entries,
+            2988 wiz_defined-function locations,
+            1341 strings with 63380 characters,
+and the built_in function-call counts, 76320 in all, are:
+= -- 4468
+> -- 8632
+< -- 22
++ -- 2875
+- -- 2744
+* -- 8278
+:= -- 15252
+add.period$ -- 124
+call.type$ -- 124
+change.case$ -- 765
+chr.to.int$ -- 123
+cite$ -- 126
+duplicate$ -- 2323
+empty$ -- 3371
+format.name$ -- 3187
+if$ -- 14115
+int.to.chr$ -- 2
+int.to.str$ -- 1
+missing$ -- 117
+newline$ -- 376
+num.names$ -- 499
+pop$ -- 784
+preamble$ -- 1
+purify$ -- 764
+quote$ -- 0
+skip$ -- 1968
+stack$ -- 0
+substring$ -- 2520
+swap$ -- 51
+text.length$ -- 5
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 1113
+warning$ -- 2
+while$ -- 358
+width$ -- 0
+write$ -- 1230
+(There were 2 warnings)

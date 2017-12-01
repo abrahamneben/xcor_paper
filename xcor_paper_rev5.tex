@@ -240,7 +240,7 @@ where $\tilde{I}_i(\vec{u}) = \sum_{\vec{\theta}} I_i(\vec{\theta}) e^{2\pi i\ve
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=3.3in]{chap5_xcor/survey_overview.pdf}
+\includegraphics[width=3.3in]{survey_overview.pdf}
 \caption[Diagram of the MWA deep integration field and our ATLAS surveys.]{The MWA deep integration field (black dashed circle) is shown relative to our two ATLAS surveys. Blue markers show the observation centers of our wide ATLAS survey aimed at studying foregrounds, and the large blue square shows the stacked image. Red circle markers show observation centers for our slightly deeper survey, and red squares show the four stacked images we generate. Note that the ATLAS field of view is 5.5$^\circ$.}
 \label{fig:surveyoverview}
 \end{figure}
@@ -268,7 +268,7 @@ To characterize the bright sources relevant to broad band  21\,cm--Ly$\alpha$ an
 
 \begin{figure*}[t]
 \centering
-\includegraphics[width=6.5in]{chap5_xcor/catalog_histograms.pdf}
+\includegraphics[width=6.5in]{catalog_histograms.pdf}
 \caption[Histogram of source fluxes in the 185\,MHz, 850\,nm, and 4.5\,$\mu$m catalogs.]{Histogram of source fluxes in the 185\,MHz catalog (left), the 4.5\,$\mu$m catalog (center), and the 850\,nm catalog (right). The catalogs are complete to roughly 250\,mJy, 0.09\,mJy, and 0.5\,mJy respectively.}
 \label{fig:cataloghistograms}
 \end{figure*}
@@ -281,7 +281,7 @@ Lastly, we run SExtractor\footnote{\ULurl{http://www.astromatic.net/software/sex
 
 \begin{figure}[t]
 \centering
-\includegraphics[width=2.75in]{chap5_xcor/ATLAS_vs_APASS_cal.pdf}
+\includegraphics[width=2.75in]{ATLAS_vs_APASS_cal.pdf}
 \caption[To improve the rough initial ATLAS calibration, we cross match ATLAS sources with those from APASS.]{To improve the rough initial ATLAS calibration, we cross match ATLAS sources with those from APASS, and plot a 2D histogram (top) of the relative magnitude as a function of ATLAS magnitude, then fit a Gaussian to the magnitude offset for sources brighter than 13\,mag. We find that our roughly calibrated ATLAS sources are too bright by $0.279\pm0.003$\,mag.}
 \label{fig:ATLASvsAPASS}
 \end{figure}
@@ -296,7 +296,7 @@ Our approach is different. For all the advantages of broad band intensity mappin
 
 \begin{figure*}[h]
 \centering
-\includegraphics[width=5.5in]{chap5_xcor/source_correlation_grids_and_snrs.pdf}
+\includegraphics[width=5.5in]{source_correlation_grids_and_snrs.pdf}
 \caption[Image space correlation coefficient between 185\,MHz and 4.5\,$\mu$m sources (left), and 185\,MHz and 850\,nm sources (right).]{Image space correlation coefficient between 185\,MHz and 4.5\,$\mu$m sources (top left), and 185\,MHz and 850\,nm sources (top right), both as a function of radio and infrared flux cuts. In the second row we calculate the SNR in each bin. The bottom two rows show the correlations and SNRs after flipping the 185\,MHz image about its vertical axis before the correlation calculation, giving an independent estimate of the noise. A significant correlation between 185\,MHz and 4.5\,$\mu$m sources appears after masking infrared sources down to 1\,mJy, which we show in Fig. \ref{fig:wisecolorcolor} cleanly removes the stars from the sample. The 185\,MHz and 850\,nm sources exhibit a marginal correlation after masking down to 1\,mJy, though it does not appear significant in comparison to the noise correlation seen after flipping the radio image. We show in Fig. \ref{fig:sdssstarsgals} that this is due to increased stellar contamination at 850\,nm than at 4.5\,$\mu$m.}
 \label{fig:correlationsandSNRs}
 \end{figure*}
@@ -316,7 +316,7 @@ To understand these findings, we begin by investigating which 4.5\,$\mu$m source
 
 \begin{figure*}[h]
 \centering
-\includegraphics[width=6in]{chap5_xcor/wise_color_color_figure_max=1e-3_5Jy.pdf}
+\includegraphics[width=6in]{wise_color_color_figure_max=1e-3_5Jy.pdf}
 \caption[Color-color plots of ALLWISE sources showing that cutting out the brightest 10\% cleanly removes the stars.]{The ALLWISE sources are plotted in the color--color space of \citet{Wright2010} prior to any flux cuts (left panel), showing cluster of stars near (0,0). The colorbar shows the number of sources in each cell. Then after cutting out the brightest 10\% of sources (fainter than 18.25\, AB mag), the stars are cleanly removed. We roughly split the remaining sources into AGNs ($W_{12}>0.6$) and starburst galaxies (SF) ($W_{12}<0.6$) \citep{mingo16}, where  $W_{12}\equiv$ [3.4\,$\mu$m] -- [4.6\,$\mu$m].}.
 \label{fig:wisecolorcolor}
 \end{figure*}
@@ -325,7 +325,7 @@ To further probe which mid infrared sources are responsible for this correlation
 
 \begin{figure*}[h]
 \centering
-\includegraphics[width=7in]{chap5_xcor/mwa_wise_qsoagn_gal_xspec.pdf}
+\includegraphics[width=7in]{mwa_wise_qsoagn_gal_xspec.pdf}
 \caption[Auto and cross spectra of 185\,MHz and 4.5\,$\mu$m sources, for both AGN and SF cuts of the infrared catalog.]{Power spectrum of 185\,MHz sources (left panel), 4.5\,$\mu$m sources (center panel), and coherence between 185\,MHz and 4.5\,$\mu$m sources (right panel). We roughly separate the 4.5\,$\mu$m sources into starforming galaxies (SF) and active galactic nuclei (AGN) as illustrated in Fig.  \ref{fig:wisecolorcolor}. We find that the 185\,MHz--4.5\,$\mu$m correlation observed in Fig. \ref{fig:correlationsandSNRs} holds only for the starforming galaxies in the infrared sample. }
 \label{fig:wisexspec}
 \end{figure*}
@@ -338,7 +338,7 @@ In Fig. \ref{fig:sdssstarsgals} we plot a histogram of the fluxes of the objects
 
 \begin{figure*}[h]
 \centering
-\includegraphics[width=3in]{chap5_xcor/sdss_stars_galaxies_hist_l=15_b=78_500000sources.pdf}
+\includegraphics[width=3in]{sdss_stars_galaxies_hist_l=15_b=78_500000sources.pdf}
 \caption[Histogram of SDSS fluxes of stars and galaxies in a similar field to our ATLAS field.]{Histogram of fluxes of stars and galaxies in a $5^\circ$ SDSS field at the same galactic longitude as the MWA field, but flipped to the other side of the galactic plane. These fluxes are in the SDSS i band $(762\pm65)$\,nm. }
 \label{fig:sdssstarsgals}
 \end{figure*}
@@ -370,7 +370,7 @@ We observe that the radio--infrared flux correlation $c$ for some type of object
 
 \begin{figure*}[h]
 \centering
-\includegraphics[width=6in]{chap5_xcor/sim_rad_ir_luminosity_functions.pdf}
+\includegraphics[width=6in]{sim_rad_ir_luminosity_functions.pdf}
 \caption[AGN and SF luminosity functions at 8\,$\mu$m from (left) and at 1.4\,GHz (right).]{AGN and SF luminosity functions at 8\,$\mu$m from \citet{fu10} (left panel) and at 1.4\,GHz from \citet{mauch07} (right panel).}
 \label{fig:luminosityfunctions}
 \end{figure*}
@@ -381,7 +381,7 @@ We pick fiducial survey parameters of $d_\mintext=20$\,Mpc and $d_\maxtext=3000\
 
 \begin{figure*}[h]
 \centering
-\includegraphics[width=6in]{chap5_xcor/sim_correlation_agn_and_sf.pdf}
+\includegraphics[width=6in]{sim_correlation_agn_and_sf.pdf}
 \caption[Apparent correlation of radio and mid-infrared fluxes from a mock survey.]{Apparent correlation of radio and mid-infrared fluxes from a mock survey with independent radio and mid-infrared luminosities using the luminosity functions from Fig. \ref{fig:luminosityfunctions} for AGN and SF. Without any flux cuts (lower right corner of each plot) we observe a significant correlation between radio and mid-infrared fluxes for SF objects, and a near-zero correlation for AGN. This agrees with our measurements on real 185\,MHz and 4.5\,$\mu$m sources in Fig. \ref{fig:correlationsandSNRs}. As fainter and fainter objects are masked, we observe that the AGN correlation gradually strengthens, while the SF correlation weakens somewhat. }
 \label{fig:simagnlfcorrelations}
 \end{figure*}
@@ -408,7 +408,7 @@ summing over all the $\vec{\ell}$ values in each $\ell$ bin, where $N$ is the nu
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=3.5in]{chap5_xcor/res_pspec_of_100_obsids_with_diff_spacings_6amin_delta.pdf}
+\includegraphics[width=3.5in]{res_pspec_of_100_obsids_with_diff_spacings_6amin_delta.pdf}
 \caption[Raw, residual (post foreground subtraction), and noise power spectra of 185\,MHz broad band images from various data selections.]{Raw, residual (post foreground subtraction), and noise power spectra of 185\,MHz broad band images from various 3\,hour data selections (solid lines) and from the 32\,hour data selection used by  \citet{beardsley16} (black dashed). The $uv$ plane is nearly filled after only 3\,hours, yet we find that spacing these $\sim100$ two-minute integrations over many independent nights reduces the foreground residuals by a factor of up to $\sim4$ in power. As a cross check on our analysis, we plot the $k_\parallel=0$ bin of the 3D power spectrum of \citet{beardsley16} converted to an angular power spectrum using Eqn. \ref{eqn:convertP3toP2} (magenta dashed).}
 \label{fig:respspecspacingsstudy}
 \end{figure}
@@ -426,7 +426,7 @@ Our approach is to mask each image at ATLAS's native $1.86''$ resolution, then c
 
 \begin{figure*}[h]
 \centering
-\includegraphics[width=7in]{chap5_xcor/big_foreground_masking_study_2_magoffset=20_56+0_274.pdf}
+\includegraphics[width=7in]{big_foreground_masking_study_2_magoffset=20_56+0_274.pdf}
 \caption[Images of our 850\,nm field after various stages of foreground masking.]{The rows of this figure illustrate our four stages of foreground removal on ATLAS images, as detailed in Sec. \ref{sec:resirfg}. We apply this process to all four $4^\circ$ deep ATLAS fields shown in Fig. \ref{fig:surveyoverview}, but here show the one centered at (RA,Dec)$=2.74^\circ, -24.79^\circ$) for illustration. The first row shows the results of masking $4'$ around all nearly saturated regions; the second row shows the results of masking out to $5\sigma$; the third row shows the results after masking out to $12\sigma$ and all pixels above 70\,kJy/sr over the background, and the last row shows the results after masking the nearly horizontal or vertical Fourier modes. In each row, we show the central $9'$ field at $1.86''$ resolution (left), the entire $4^\circ$ field after coarse gridding to $3.5'$ (center), and the FFT of the coarse gridded field to highlight systematics (right). Note that the left and center panels of the bottom row are identical to those in the row above it, illustrating that the image space mask is the same, only the Fourier mask is different.}
 \label{fig:bigfgmaskingstudy}
 \end{figure*}
@@ -462,7 +462,7 @@ Note that $\mathcal{F}$ is an $N_\text{pix}\times N_\text{pix}$ matrix with elem
 
 \begin{figure*}[h]
 \centering
-\includegraphics[width=7in]{chap5_xcor/big_foreground_masking_study_pspecs_2_magoffset=20_56+0_274.pdf}
+\includegraphics[width=7in]{big_foreground_masking_study_pspecs_2_magoffset=20_56+0_274.pdf}
 \caption[Power spectra of our 850\,nm field after various stages of foreground masking.]{\textbf{Left panel:} Power spectra of our broad band ATLAS images after various stages of foreground removal as described in Sec. \ref{sec:resirfg}. The error bars show the sample variance noise estimated by the standard deviation over our four $4^\circ$ fields (see Fig. \ref{fig:surveyoverview}). Black dots show our final ATLAS 850\,nm power spectrum after all stages of foreground removal. \textbf{Right panel:} We compare our ATLAS power spectrum (black dots) to the 1.1\,$\mu$m power spectrum of \citet{zemcov14} (Z14) (cyan dots) using the CIBER experiment and the 850\,nm power spectrum of \citet{mw15} (MW15) using $10'$ Hubble mosaics. We show the intrahalo light (IHL) models of ZI4 (cyan dashed line) and MW15 (red dashed line), as well as the diffuse galactic light (DGL) model of the latter authors. These results show that finer angular resolution can help reduce the foregrounds in the $\ell\sim10^2-10^4$ modes that can be cross correlated with 21\,cm EOR intensity mapping experiments. The gray area shows the predicted EOR contribution to the infrared anisotropies from MW15.}
 \label{fig:bigfgmaskingstudypspecs}
 \end{figure*}
@@ -480,7 +480,7 @@ In Fig. \ref{fig:bigfgmaskingstudypspecs} (right panel) we compare our final res
 
 \begin{figure*}[h]
 \centering
-\includegraphics[width=7in]{chap5_xcor/spectra3D_to_2D.pdf}
+\includegraphics[width=7in]{spectra3D_to_2D.pdf}
 \caption[Study of the relationship between power spectra recovered from 2D and 3D surveys, both for 21\,cm and 850\,nm cubes.]{As described in Sec. \ref{sec:modelingthecrossspectrum}, we identify optimistic (red solid lines) and pessimistic (black solid lines) Ly$\alpha$ (left panel) and 21\,cm (center panel) 3D power spectra from \citet{Gong2014} and \citet{PoberNextGen, 21cmfast}, respectively, and use the coherence function from \citet{Heneka2016} (right panel, black solid) for both scenarios. We then simulate approximate cubes assuming Gaussian statistics, average them over frequency, and plot the angular power spectra of Ly$\alpha$ (left panel, dashed lines) and 21\,cm emission (center panel, dashed lines), and their coherence functions (right panel, dashed lines). Power on short angular scales ($\ell\gtrsim10^4$) is suppressed by a factor of $\sim100$ (in power units), while power on longer angular scales ($\ell\lesssim10^2$) is suppressed by only a factor of $\sim2$ compared to the 3D power spectrum. This indicates that there remains significant observable signal in broad band 21\,cm--Ly$\alpha$ cross spectrum observations. }
 \label{fig:spectra3Dto2D}
 \end{figure*}
@@ -510,7 +510,7 @@ where $\Cb_{,\alpha}$ is the same matrix used in Sec. \ref{sec:resirfg}, $\mathb
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=3.5in]{chap5_xcor/mwa_atlas_xspec_with_2Dsimtheory_and_2sigma_errors_6bins.pdf}
+\includegraphics[width=3.5in]{mwa_atlas_xspec_with_2Dsimtheory_and_2sigma_errors_6bins.pdf}
 \caption[Measured cross spectrum between 185\,MHz and 850\,nm images after our best foreground subtraction and masking.]{Measured cross spectrum between 185\,MHz and 850\,nm images after our best foreground subtraction and masking. Our optimal quadratic estimator results are shown as red markers, while our FFT-based cross spectrum results are shown as grey markers. Most are consistent with zero, and roughly half are positive (circles) and negative (triangles), as expected if there is no measured correlation. Error bars show $2\sigma$ uncertainties, and we take the tops of these error bars as upper limits on the cross spectrum of 21\,cm--Ly$\alpha$ emission from the EOR. We achieve an upper limit of $\Delta^2<181$\,$(\text{kJy/sr}\cdot \text{mK})$ (95\%) at $\ell\sim800$. We also plot the radio--infrared foreground cross spectrum that a 1\% flux correlation would produce (green line), and find that it is below the sensitivity of our MWA--ATLAS experiment.}
 \label{fig:resxspec}
 \end{figure}
@@ -579,7 +579,7 @@ Similarly, then the foreground cross spectrum for a correlation $c$ is given by
 
 \begin{figure}[h]
 \centering
-\includegraphics[width=3.5in]{chap5_xcor/noise_vs_corr_expt_study.pdf}
+\includegraphics[width=3.5in]{noise_vs_corr_expt_study.pdf}
 \caption[Experimental design study for 21\,cm--Ly$\alpha$ cross spectrum measurements, weighting foreground cross spectra due to flux correlatians against foreground sample variance.]{Foreground cross spectrum due to percent-level geometric correlations (y-axis) due to sample variance noise due to the uncorrelated component of foregrounds (x-axis) for a number of possible radio--IR intensity mapping survey pairs. This work (black circle) is the only one limited by sample variance noise, even a nominal improvement using the deeper GMRT catalog becomes foreground correlation-limited. Deeper radio (e.g., LOFAR and SKA) and IR (e.g., Hubble and DES mosaics) are needed to give the foreground removal required to suppress the geometric foreground correlation below the optimistic hexpected EOR signal.}
 \label{fig:noisecorrstudy}
 \end{figure}

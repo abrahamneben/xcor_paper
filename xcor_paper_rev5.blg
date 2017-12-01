@@ -4,48 +4,48 @@ The top-level auxiliary file: /Users/abrahamn/Documents/Physics/papers/xcor_pape
 The style file: apj.bst
 Database file #1: xcor_paper_rev5Notes.bib
 Database file #2: xcor_paper_new.bib
-Reallocated str_pool (elt_size=1) to 130000 items from 65000.
 Warning--empty institution in allwise
+Reallocated str_pool (elt_size=1) to 130000 items from 65000.
 Warning--empty publisher in ska
-You've used 125 entries,
+You've used 124 entries,
             2988 wiz_defined-function locations,
-            1341 strings with 64436 characters,
-and the built_in function-call counts, 77086 in all, are:
-= -- 4478
-> -- 8789
+            1337 strings with 63327 characters,
+and the built_in function-call counts, 76112 in all, are:
+= -- 4446
+> -- 8632
 < -- 22
-+ -- 2929
-- -- 2795
-* -- 8392
-:= -- 15450
-add.period$ -- 125
-call.type$ -- 125
-change.case$ -- 770
-chr.to.int$ -- 124
-cite$ -- 127
-duplicate$ -- 2324
-empty$ -- 3375
-format.name$ -- 3244
-if$ -- 14219
++ -- 2877
+- -- 2744
+* -- 8265
+:= -- 15241
+add.period$ -- 124
+call.type$ -- 124
+change.case$ -- 765
+chr.to.int$ -- 123
+cite$ -- 126
+duplicate$ -- 2306
+empty$ -- 3349
+format.name$ -- 3189
+if$ -- 14052
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 119
-newline$ -- 379
-num.names$ -- 503
-pop$ -- 785
+missing$ -- 118
+newline$ -- 376
+num.names$ -- 499
+pop$ -- 781
 preamble$ -- 1
-purify$ -- 769
+purify$ -- 764
 quote$ -- 0
-skip$ -- 1961
+skip$ -- 1946
 stack$ -- 0
-substring$ -- 2515
+substring$ -- 2497
 swap$ -- 38
 text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1122
+type$ -- 1113
 warning$ -- 2
-while$ -- 358
+while$ -- 356
 width$ -- 0
-write$ -- 1239
+write$ -- 1229
 (There were 2 warnings)
